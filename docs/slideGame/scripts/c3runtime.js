@@ -3389,7 +3389,7 @@ value:this.WaveFunc(this._i)*this._mag}]}]}}};
 		() => "gameover",
 		p => {
 			const v0 = p._GetNode(0).GetVar();
-			return () => (and("Congratulations!\nYou complete the level in\n", v0.GetValue()) + "s");
+			return () => (and("CHÚC MỪNG!\nBẠN HOÀN THÀNH\nTRONG ", v0.GetValue()) + "s");
 		},
 		p => {
 			const n0 = p._GetNode(0);
