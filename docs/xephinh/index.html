@@ -45,16 +45,19 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script>
 		$( document ).ready(function() {
+			
 			loaddata(); //Load the saved data
 			// function loadData
 			function loaddata() {
 				if (localStorage.mydata == null) {
 					
 					$('.start').show();
+					$( ".editName" ).hide();
 				}else {
 					
 					$('.start').fadeOut();
 					$('#nameUser').html(localStorage.mydata);
+					$( ".editName" ).show();
 				}
 			}
 			
@@ -69,6 +72,7 @@
 			$( "#btnSubmit" ).click(function() {
 				$('#nameUser').html(name_user);
 				$('.start').fadeOut();
+				$( ".editName" ).show();
 				
 			});
 			
