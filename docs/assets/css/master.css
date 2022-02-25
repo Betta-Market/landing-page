@@ -2443,6 +2443,9 @@ background: -ms-linear-gradient(left, rgba(28,167,236,1) 0%, rgba(75,0,224,1) 10
 		margin-left: auto !important;
 		margin-right: 0 !important;
 	}
+	.copy-right {
+		text-align: left;
+	}
 }
 .footer-logo {
 	display: flex;
@@ -2456,4 +2459,27 @@ background: -ms-linear-gradient(left, rgba(28,167,236,1) 0%, rgba(75,0,224,1) 10
 }
 .copy-right {
 	font-size: 14px;
+	
 }
+
+@media (min-width: 767px) and (max-width: 991px) {
+	.copy-right, .footer-copyright ul.social-media {
+		text-align: left !important;
+	}
+}
+@media (max-width: 767px) {
+	.footer-logo {
+		display: block;
+		text-align: center;
+	}
+	.facebook {
+		margin: 12px auto;
+		width: 130px;
+		overflow: hidden;
+	}
+}
+
+
+
+
+
