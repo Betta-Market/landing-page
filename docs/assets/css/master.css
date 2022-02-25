@@ -2435,3 +2435,25 @@ background: -ms-linear-gradient(left, rgba(28,167,236,1) 0%, rgba(75,0,224,1) 10
 	justify-content: center;
 	align-items: center;
 }
+@media only screen and (min-width: 993px) {
+	.attr-nav > ul {
+		display: none;
+	}
+	nav.navbar.bootsnav.menu-center ul.nav.navbar-center {
+		margin-left: auto !important;
+		margin-right: 0 !important;
+	}
+}
+.footer-logo {
+	display: flex;
+}
+.footer-logo .icon-logo {
+	font-size: 24px;
+}
+.facebook {
+	margin-top: 3px;
+    margin-left: 12px;
+}
+.copy-right {
+	font-size: 14px;
+}
