@@ -1,0 +1,110 @@
+/* Scss Document */
+@import "variables.scss";
+
+#kv_page{
+  background: url("../img/news/kv.jpg") no-repeat center / cover;
+}
+#news{
+  #container{
+    .news-txt{
+      text-align: center;
+      margin: 0 auto 30px;
+      max-width: 1100px;
+    }
+    @include sp(){
+      padding-bottom: 10vw;
+      .news-txt{
+        text-align: left;
+      }
+    }
+  }
+
+}
+h1.news-ttl{
+  font-weight: 500 !important;
+  padding-bottom: 9px !important;
+  margin: 10px 0 15px !important;
+}
+#news_detail{
+  #container{
+    padding-top: 8px;
+    margin-bottom: 65px;
+    .wrap{
+      max-width: 1450px;
+      justify-content: space-between;
+    }
+  }
+  #content{
+    background: #fff;
+  }
+  .detail_thumb{
+    width: 100%;
+    img{
+      width: 100%;
+    }
+  }
+  .news-ttl{
+    margin-top: 10px !important;
+  }
+  .content{
+    padding: 25px 30px 140px;
+    text-align: justify;
+    p + p{
+      margin-top: 24px;
+    }
+  }
+  #sidebar{
+    .ttl{
+      text-transform: inherit;
+      font-size: 25px;
+      margin-bottom: 0 !important;
+      text-align: left;
+      &:before{
+        left: 0;
+        transform: translateX(0);
+        width: 103px;
+      }
+    }
+    ul{
+      li{
+        border-bottom: 1px solid #dcdcdc;
+        padding-bottom: 10px;
+        margin-top: 20px;
+        font-size: 17px;
+        line-height: 1.41;
+        a{
+          overflow: hidden;
+          display: block;
+          -webkit-line-clamp: 3;
+          display: box;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          text-overflow: ellipsis;
+          white-space: normal;
+        }
+        .more-date{
+          display: block;
+          font-style: italic;
+          color: #cc9d6e;
+          font-size: 15px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+  @include pc(){
+    #content{
+      width: 64.81%;
+      
+    }
+    #sidebar{
+      width: 31.85%;
+    }
+  }
+  @include sp(){
+    .content{
+      padding: 25px 20px 50px;
+      margin-bottom: 30px;
+    }
+  }
+}

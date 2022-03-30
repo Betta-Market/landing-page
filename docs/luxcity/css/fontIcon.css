@@ -1,0 +1,172 @@
+@font-face {
+  font-family: 'luxIcon';
+  src: url("../fonts/luxIcon.eot?w58kje");
+  src: url("../fonts/luxIcon.eot?w58kje#iefix") format("embedded-opentype"), url("../fonts/luxIcon.ttf?w58kje") format("truetype"), url("../fonts/luxIcon.woff?w58kje") format("woff"), url("../fonts/luxIcon.svg?w58kje#luxIcon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block; }
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'luxIcon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-mail-o:before {
+  content: "\e932"; }
+
+.icon-wechat:before {
+  content: "\e930"; }
+
+.icon-whatapp:before {
+  content: "\e931"; }
+
+.icon-air-conditioner:before {
+  content: "\e919"; }
+
+.icon-alarm-clock:before {
+  content: "\e91a"; }
+
+.icon-bath-01:before {
+  content: "\e91b"; }
+
+.icon-bath-amenities:before {
+  content: "\e91c"; }
+
+.icon-bathrobe-Slippers:before {
+  content: "\e91d"; }
+
+.icon-Bedding:before {
+  content: "\e91e"; }
+
+.icon-Bluetooth-music:before {
+  content: "\e91f"; }
+
+.icon-coffee-machine:before {
+  content: "\e920"; }
+
+.icon-dining-service:before {
+  content: "\e921"; }
+
+.icon-hair-dryer:before {
+  content: "\e922"; }
+
+.icon-Internet:before {
+  content: "\e923"; }
+
+.icon-ironing:before {
+  content: "\e924"; }
+
+.icon-key-card:before {
+  content: "\e925"; }
+
+.icon-kitchen:before {
+  content: "\e926"; }
+
+.icon-local-calls:before {
+  content: "\e927"; }
+
+.icon-Oversized-umbrella:before {
+  content: "\e928"; }
+
+.icon-receptionist:before {
+  content: "\e929"; }
+
+.icon-safe-box:before {
+  content: "\e92a"; }
+
+.icon-Socket:before {
+  content: "\e92b"; }
+
+.icon-telephone:before {
+  content: "\e92c"; }
+
+.icon-television:before {
+  content: "\e92d"; }
+
+.icon-wardrobe:before {
+  content: "\e92e"; }
+
+.icon-work-desk:before {
+  content: "\e92f"; }
+
+.icon-arrow-down:before {
+  content: "\e900"; }
+
+.icon-arrow-left:before {
+  content: "\e901"; }
+
+.icon-arrow-right:before {
+  content: "\e902"; }
+
+.icon-arrow-up:before {
+  content: "\e903"; }
+
+.icon-bath:before {
+  content: "\e904"; }
+
+.icon-bed-room:before {
+  content: "\e905"; }
+
+.icon-bed:before {
+  content: "\e906"; }
+
+.icon-calendar:before {
+  content: "\e907"; }
+
+.icon-children:before {
+  content: "\e908"; }
+
+.icon-cocktail:before {
+  content: "\e909"; }
+
+.icon-Facebook:before {
+  content: "\e90a"; }
+
+.icon-game:before {
+  content: "\e90b"; }
+
+.icon-hot-tub:before {
+  content: "\e90c"; }
+
+.icon-house:before {
+  content: "\e90d"; }
+
+.icon-Instagram:before {
+  content: "\e90e"; }
+
+.icon-lens:before {
+  content: "\e90f"; }
+
+.icon-location:before {
+  content: "\e910"; }
+
+.icon-mail:before {
+  content: "\e911"; }
+
+.icon-phone:before {
+  content: "\e912"; }
+
+.icon-size:before {
+  content: "\e913"; }
+
+.icon-swim:before {
+  content: "\e914"; }
+
+.icon-telegram:before {
+  content: "\e915"; }
+
+.icon-user:before {
+  content: "\e916"; }
+
+.icon-wheelchair:before {
+  content: "\e917"; }
+
+.icon-wifi:before {
+  content: "\e918"; }

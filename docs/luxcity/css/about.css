@@ -1,0 +1,140 @@
+/* Scss Document */
+/* Font Color */
+#kv_page {
+  background: url("../img/location/kv.jpg") no-repeat center/cover; }
+
+#container {
+  text-align: center;
+  margin: 0 auto 103px; }
+  #container h2 {
+    text-align: center; }
+  #container h3 {
+    font-weight: 600; }
+  #container .location-txt {
+    margin: 0 auto 60px;
+    width: 100%;
+    max-width: 1100px; }
+    #container .location-txt .video-intro {
+      margin: 40px 0;
+      position: relative;
+      padding-top: 62.25%;
+      overflow: hidden; }
+      #container .location-txt .video-intro iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0; }
+    #container .location-txt p {
+      margin-bottom: 1.7em; }
+  #container ul {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    margin: 50px auto 55px;
+    width: 100%;
+    max-width: 970px;
+    justify-content: center;
+    color: #a97643; }
+    #container ul i {
+      margin: auto;
+      display: block; }
+      #container ul i img {
+        height: 100%; }
+    @media screen and (min-width: 768px) {
+      #container ul li {
+        margin: 0 20px; }
+        #container ul li i {
+          height: 100px; } }
+    @media screen and (min-width: 768px) and (max-width: 840px) {
+      #container ul {
+        justify-content: space-between; }
+        #container ul li {
+          margin: 0; } }
+    @media screen and (max-width: 767px) {
+      #container ul {
+        flex-wrap: wrap;
+        max-width: inherit;
+        margin: 0 auto 7vw; }
+        #container ul li {
+          margin: 0 0 15px;
+          text-align: center; }
+          #container ul li i {
+            height: 90px; } }
+  @media screen and (max-width: 767px) {
+    #container {
+      margin: 0 0 15vw; }
+      #container h2 {
+        padding-top: 5vw; }
+      #container .location-txt {
+        line-height: 1.7;
+        text-align: left;
+        margin-top: 10vw; }
+        #container .location-txt .video-intro {
+          margin-left: -5%;
+          margin-right: -5%; }
+        #container .location-txt p {
+          box-sizing: border-box;
+          text-align: justify; } }
+
+#rule {
+  text-align: left;
+  padding-top: 100px; }
+  #rule h3 {
+    margin-bottom: 10px; }
+  #rule .rule_row {
+    margin-top: 30px; }
+    #rule .rule_row p {
+      margin-left: 20px;
+      margin-bottom: 10px; }
+  #rule .note {
+    margin-top: 30px; }
+  @media screen and (max-width: 767px) {
+    #rule {
+      padding-top: 40px;
+      text-align: justify; } }
+
+#faq {
+  padding-top: 100px;
+  text-align: left; }
+  #faq .ttl {
+    padding-bottom: 0.7em; }
+    #faq .ttl span:nth-child(1) {
+      text-transform: lowercase; }
+    #faq .ttl span:last-child {
+      text-transform: capitalize;
+      line-height: 1.5;
+      display: block;
+      font-size: 25px;
+      margin-top: -1em; }
+  #faq dl {
+    margin-bottom: 30px; }
+    #faq dl dt {
+      position: relative;
+      color: #cc9d6e;
+      margin-bottom: 10px;
+      font-weight: 500;
+      padding-left: 40px; }
+      #faq dl dt:before {
+        content: "Q";
+        position: absolute;
+        top: -5px;
+        left: 0;
+        background: #cc9d6e;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        color: #fff; }
+    #faq dl dd {
+      padding-left: 40px; }
+  @media screen and (max-width: 767px) {
+    #faq {
+      text-align: justify;
+      padding-top: 40px; }
+      #faq .ttl span:last-child {
+        font-size: 17px;
+        margin-top: 0; } }

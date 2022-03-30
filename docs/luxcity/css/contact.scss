@@ -1,0 +1,159 @@
+/* Scss Document */
+@import "variables.scss";
+
+#kv_page{
+  background: url("../img/contact/kv.jpg") no-repeat center / cover;
+}
+
+.section-contact {
+  background: url("../img/contact/deco.png") no-repeat top center;
+	max-width: 1450px;
+	margin-bottom: 70px;
+	justify-content: space-between;
+	.information {		
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    p{
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      align-items: flex-start;
+      &:not(:last-child){
+        border-bottom: 1px solid #dcdcdc;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+      }            
+      
+      .footer-mail{
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        align-items: center;
+      }
+      &:nth-child(3) i{          
+        &:before{
+          font-size: 21px;
+        }
+      }
+      
+      .footer-tel{
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        font-weight: 600;
+        align-items: center;
+        
+      }
+      .link-telegram{
+        text-decoration: underline;
+        &:hover{
+          opacity: 1;
+          text-decoration: none;
+        }
+      }
+      
+    }
+    i{
+        color: $primary;
+        margin-right: 8px;
+        &:before{
+          font-size: 24px;
+        }
+      }
+    .contact-tel{
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      align-items: flex-start;
+      line-height: 1.5;
+      p{
+        display: block;
+      }
+      i, a{
+        display:block;
+      }
+    }
+	}
+	.contact-form {		
+		.btn-primary {
+			background-color: $primary;
+			display: flex;
+			width: 116px;
+			height: 56px;
+			align-items: center;
+			justify-content: center;
+			color: $white;
+			text-decoration: none;
+			transition: background-color 0.2s $eio;
+			font-size: 17px;
+      letter-spacing: 0.26em;
+			border: none;
+			cursor: pointer;
+			&:hover {
+				background-color: $primary-2;
+			}
+		}
+    label{
+      font-size: 17px;
+      margin-bottom: 7px;
+    }
+    input, textarea{
+      background: #f1f1f1;
+      padding: 16px;
+    }
+    .form-group{
+      margin-bottom: 25px;
+    }
+	}
+  @include pc(){
+    .information{
+      width: 42.6%;
+    }
+    .contact-form {
+		  width: 50%;
+    }
+  }
+  @include sp(){
+    .contact-form {
+      margin-top: 10vw;
+      input, textarea{
+        padding: 10px 15px;
+      }
+    }
+    .information{
+      text-align: left;
+    }
+  }
+}
+
+.ttl{
+  text-transform: inherit;
+  font-size: 25px;
+  text-align: left;
+  &:before{
+    left: 0;
+    transform: translateX(0);
+    width: 103px;
+  }
+}
+
+#gmap{
+  width: 100%;
+  height: 465px;
+  iframe{
+    width: 100%;
+    height: 100%;
+  }
+  @include sp(){
+    height: 300px;
+  }
+}

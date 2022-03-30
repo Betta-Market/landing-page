@@ -1,0 +1,92 @@
+/* Scss Document */
+@import "variables.scss";
+
+#kv_page{
+  background: url("../img/location/kv.jpg") no-repeat center / cover;
+}
+.breakcum .wrap{
+  margin-bottom: 20px;
+}
+ #location-group{
+  border-top: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+  margin-top: 50px;
+   margin-bottom: 80px;
+   .ttl{
+     text-align: left;
+     &:before{
+       left: 0;
+       transform: translateX(0);
+     }
+   } 
+   .location-info{     
+     li{
+       width: 67.2%;
+       margin: 0 auto 20px;
+       line-height: 1.57;
+     }
+     .location-icon{
+       width: 55px;
+       margin-right: 9.5%;
+     }
+     dl{
+       width: calc(90.5% - 55px);
+       font-size: 14px;
+       dt{
+         margin-bottom: 6px;
+         font-weight: bold;
+       }
+     }
+   }
+   #gmap{      
+      iframe{
+        width: 100%;
+        height: 100%;
+      }
+      
+    }
+   @include pc(){
+     position: relative;
+     padding-top: 30px;
+     padding-bottom: 17px;
+     .ttl{
+       margin-bottom: 35px !important;
+     }
+     .location-info{
+       width: 50%;
+     }
+     #gmap{
+       position: absolute;
+       top: 0;
+       right: 0;
+       width: 50%;
+       height: 100%;
+     }
+   } 
+   @media screen and (max-width: 1200px) and (min-width: 768px) {
+     .location-info{
+       li{
+         width: 90%;
+         margin-left: 0;
+       }
+     }
+   }
+   @include sp(){
+     margin-top: 40px;
+     padding-top: 30px;
+     .location-info{
+       li{
+         width: 100%;
+         margin-left: 0;
+       }
+       dl{
+         font-size: 15px;
+       }
+     }
+     #gmap{
+       height: 300px;
+       margin-top: 70px;
+     }
+  }
+}
+

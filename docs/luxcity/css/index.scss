@@ -1,0 +1,232 @@
+/* Scss Document */
+@import "variables.scss";
+
+header .slider-fade{
+  z-index: 0;
+  .slick-dots{
+    position: absolute;
+    bottom: 49px;
+    left: 0;
+    width: 100%;
+  }
+}
+.ttl{
+  margin-bottom: 30px !important;
+}
+.booking-box{
+  margin-top: -1px;
+  .form-group{
+    margin-bottom: 0;
+  }
+}
+@include pc(){
+  .has_nav .slider-fade{
+    margin-top: 91px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1050px){
+  .has_nav .slider-fade{
+    margin-top: 60px;
+  }
+	header .slider-fade .slick-dots{
+		bottom: 28px;
+	}
+}
+@include sp(){
+	header .slider-fade .slick-dots{
+		bottom: 3vw;
+	}
+  header .slider-fade [class^=kv_]{
+    height: 290px;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+
+#about{
+  text-align: center;
+  margin: 50px auto 103px;
+  background: url("../img/index/about_bg.jpg") no-repeat top center;
+  h2{
+    padding-top: 31px;
+  }
+  .about-txt{
+    p{
+      margin-bottom: 1.33em;
+    }
+  }
+  .readmore-link{
+    justify-content: center;
+    margin-bottom: 85px;
+  }
+  @include sp(){
+    margin: 8vw 0 15vw;
+    h2{      
+      padding-top: 5vw;
+    }
+    .about-txt{
+      line-height: 1.7;
+      text-align: left;
+    }
+    .readmore-link{
+      margin-bottom: 15vw;
+    }
+  }
+}
+
+#room{
+  background: url("../img/index/room_deco2.jpg") no-repeat left center / auto 100%, url("../img/index/room_deco.jpg") no-repeat right center / auto 100% #171514;
+  color: $white;
+  line-height: 1.7;
+  padding: 88px 0 77px;
+  ul{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+    li{
+      width: calc((100% - 90px)/4);
+      &:not(:first-child){
+        margin-left: 30px;
+      }
+    }
+    .room-ttl{
+      padding: 16px 0 10px;
+      font-size: 20px;
+      line-height: 29px;
+    }
+    .room_desc{
+      font-size: 16px;
+      font-weight: 300;
+      margin-bottom: 12px;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    background: url("../img/index/room_deco2.jpg") no-repeat left top, url("../img/index/room_deco.jpg") no-repeat right top #171514;
+    padding: 60px 0 43px;
+    ul li:not(:first-child){
+      margin-left: 15px;
+    }
+    ul{
+      justify-content: space-between;
+      li{
+        width: 47.5%;
+        margin-left: 0 !important;
+          margin-bottom: 40px;
+      }
+      .room-ttl{
+        padding: 13px 0 4px;
+      }
+      .room_desc{
+        margin-bottom: 8px;
+      }
+    }
+  }
+  @media screen and (max-width: 767px){
+    padding: 58px 0 25px;
+    ul{
+      li{
+        margin-left: 0 !important;
+        width: 100%;
+        margin-bottom: 50px;
+      }
+      .room_desc{
+        text-align: left;
+      }
+    }
+  }
+}
+
+#location{
+  text-align: center;
+  max-width: 1200px;
+  ul{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    margin: auto;
+    width: 100%;
+    max-width: 970px;
+    justify-content: center;
+    color: $primary-2;    
+    i{
+      margin: auto;
+      display: block;
+      img{
+        height: 100%;
+      }
+    }
+  }
+  .readmore-link{
+      justify-content: center;
+      line-height: 1.33;
+      margin: 35px 0;
+    }
+  @include pc(){
+    margin: 73px auto 110px;
+    
+    ul{
+      li{
+        margin: 0 20px;
+        i{
+          height: 100px;
+        }
+      }     
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 840px) {
+    ul{
+      justify-content: space-between;
+      li{
+        margin: 0;
+      }
+    }
+  }
+  @include sp(){
+    padding: 10vw 16px;
+    .location-txt{
+      text-align: left;
+    }
+    .readmore-link{
+      margin: 5vw 0 7vw;
+    }
+    ul{
+      flex-wrap: wrap;
+      max-width: inherit;
+      width: 100%;
+      li{
+        margin: 0 6px 15px;
+        i{
+          height: 90px;
+        }
+      }
+    }
+  }
+}
+
+#news{
+  background: $primary-1 url("../img/index/news_bg.jpg") no-repeat top left / auto 100%;
+  padding: 73px 0 67px;
+  .ttl{
+    text-align: center;
+  }
+  .news-txt{
+    text-align: center;
+    margin: 0 auto 30px;
+    max-width: 1100px;
+  }
+  @include sp(){
+    padding: 10vw 0;
+    .news-txt{
+      text-align: left;
+    }
+  }
+}

@@ -1,0 +1,78 @@
+/* Scss Document */
+/* Font Color */
+#kv_page {
+  background: url("../img/news/kv.jpg") no-repeat center/cover; }
+
+#news #container .news-txt {
+  text-align: center;
+  margin: 0 auto 30px;
+  max-width: 1100px; }
+@media screen and (max-width: 767px) {
+  #news #container {
+    padding-bottom: 10vw; }
+    #news #container .news-txt {
+      text-align: left; } }
+
+h1.news-ttl {
+  font-weight: 500 !important;
+  padding-bottom: 9px !important;
+  margin: 10px 0 15px !important; }
+
+#news_detail #container {
+  padding-top: 8px;
+  margin-bottom: 65px; }
+  #news_detail #container .wrap {
+    max-width: 1450px;
+    justify-content: space-between; }
+#news_detail #content {
+  background: #fff; }
+#news_detail .detail_thumb {
+  width: 100%; }
+  #news_detail .detail_thumb img {
+    width: 100%; }
+#news_detail .news-ttl {
+  margin-top: 10px !important; }
+#news_detail .content {
+  padding: 25px 30px 140px;
+  text-align: justify; }
+  #news_detail .content p + p {
+    margin-top: 24px; }
+#news_detail #sidebar .ttl {
+  text-transform: inherit;
+  font-size: 25px;
+  margin-bottom: 0 !important;
+  text-align: left; }
+  #news_detail #sidebar .ttl:before {
+    left: 0;
+    transform: translateX(0);
+    width: 103px; }
+#news_detail #sidebar ul li {
+  border-bottom: 1px solid #dcdcdc;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  font-size: 17px;
+  line-height: 1.41; }
+  #news_detail #sidebar ul li a {
+    overflow: hidden;
+    display: block;
+    -webkit-line-clamp: 3;
+    display: box;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    white-space: normal; }
+  #news_detail #sidebar ul li .more-date {
+    display: block;
+    font-style: italic;
+    color: #cc9d6e;
+    font-size: 15px;
+    margin-bottom: 5px; }
+@media screen and (min-width: 768px) {
+  #news_detail #content {
+    width: 64.81%; }
+  #news_detail #sidebar {
+    width: 31.85%; } }
+@media screen and (max-width: 767px) {
+  #news_detail .content {
+    padding: 25px 20px 50px;
+    margin-bottom: 30px; } }

@@ -1,0 +1,42 @@
+/* Scss Document */
+/* Font Color */
+.list-category-food {
+  display: flex;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 9; }
+  .list-category-food li {
+    width: 33.333333%; }
+    .list-category-food li a {
+      display: block;
+      padding: 16px;
+      background-color: #FFFCF5;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      text-align: center; }
+
+.wrapper-list .category .head-category {
+  padding: 4px 16px;
+  background-color: #DEBC7E;
+  font-size: 14px;
+  font-weight: 500;
+  position: sticky;
+  top: 57px; }
+.wrapper-list .category .body-category .item-category {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: aquamarine; }
+  .wrapper-list .category .body-category .item-category:nth-child(odd) {
+    background-color: #ffffff; }
+.wrapper-list .category:nth-child(2) .body-category .item-category {
+  background-color: beige; }
+  .wrapper-list .category:nth-child(2) .body-category .item-category:nth-child(odd) {
+    background-color: #ffffff; }
+.wrapper-list .category:nth-child(3) .body-category .item-category {
+  background-color: antiquewhite; }
+  .wrapper-list .category:nth-child(3) .body-category .item-category:nth-child(odd) {
+    background-color: #ffffff; }

@@ -1,0 +1,471 @@
+@import "fontIcon.scss";
+@import "variables.scss";
+   
+/* Select style */
+$select-color: #000;
+$select-background: #fff;
+$select-width: 100%;
+$select-height: 45px; 
+.select-hidden {
+  display: none;
+  visibility: hidden;
+  padding-right: 10px;
+} 
+.select { 
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+  color: $select-color;
+  width: $select-width;
+  height: $select-height;
+	border: 1px solid $border-color-form;
+	box-sizing: border-box;
+}
+.select-styled {
+  position: absolute; 
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $select-background; 
+  padding: 8px 15px;
+	display: flex;
+	align-items: center;
+  transition: all 0.2s ease-in;
+  &:after {
+	content:"\e900";
+	font-family: 'luxIcon' !important;
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 9px;
+	right: 30px;
+	color: $primary;
+  }
+  &:hover {
+    background-color: darken($select-background, 2);
+  }
+  &:active, &.active {
+    background-color: darken($select-background, 3);
+    &:after {
+      content:"\e903";
+    }
+  }
+}
+
+.select-options {
+	width: 100%;
+  opacity: 0;
+	pointer-events: none;
+  position: absolute;
+  top: 80%;
+	transition: all 0.2s $eio;
+  left: -1px;
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: darken($select-background, 3);
+	border: 1px solid #cccccc;
+	border-top-width: 0;
+	&.showMenu {
+		opacity: 1;
+		top: 100%;
+		pointer-events: auto;
+	}
+  li {
+    margin: 0;
+    padding: 16px 0;
+    text-indent: 15px;
+    border-top: 1px solid darken($select-background, 10);
+    transition: all 0.2s ease-in;
+    &:hover {
+      //color: $select-background;
+      background: $primary-1;
+    }
+    &[rel="hide"] {
+      display: none;
+    }
+  }
+}
+/* End select style */
+
+/* Form control */
+.form-group {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+	label {
+		margin-bottom: 10px;
+		font-size: 14px;
+	}
+	&.inline-form {
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: space-between;
+		input {
+			width: calc(100% - 148px);
+		}
+		button {
+			display: flex;
+			width: 140px;
+		}
+	}
+}
+.form-control {
+	border: 1px solid $border-color-form;
+	box-sizing: border-box;
+	padding: 11px 16px;
+	&:focus {
+		outline: 0;
+		border-color: $border-color-form;
+		box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(255, 100, 255, 0);
+	}
+}
+.form-datepicker {
+	position: relative;
+	input {
+		width: 100%;
+		padding-right: 56px;
+		
+	}
+	.icon-calendar {
+		position: absolute;
+		right: 16px;
+		top: 11px;
+		font-size: 20px;
+		color: $primary;
+		pointer-events: none;
+	}
+}
+//custom datepicker
+.ui-datepicker {
+	padding: 12px 12px 8px 12px;
+}
+.ui-datepicker td span, .ui-datepicker td a {
+	padding: 8px;
+}
+.ui-widget.ui-widget-content {
+	margin-top: -1px;
+	border-color: $border-color-form;
+}
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
+	top: 4px;
+}
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {
+	border-top-right-radius: 0;
+}
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl {
+	border-top-left-radius: 0;
+}
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {
+	position: relative;
+	&:before {
+		font-family: 'luxIcon' !important;
+		font-size: 17px;
+		color: $text-body;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+}
+.ui-datepicker .ui-datepicker-prev span {
+	&:before {
+		content:"\e901";
+	}
+}
+.ui-datepicker .ui-datepicker-next span {
+	&:before {
+		content:"\e902";
+	}
+}
+.ui-datepicker .ui-icon{
+	text-indent: 0 !important;
+	font-size: 0;
+}
+.ui-widget-header {
+	background-color: $primary-1;
+	border: none;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+	background-color: $border-color-form-1;
+	border-color: $border-color-form-1;
+}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+	background-color: $primary-1;
+	border-color: $primary-1;
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+	background-color: $primary;
+	border-color: $primary;
+}
+.ui-state-default:hover {
+	background-color: $border-color-form;
+	border-color: $border-color-form;
+}
+.ui-datepicker .ui-datepicker-prev:hover, .ui-datepicker .ui-datepicker-next:hover {
+	background-color: rgba($primary,0.4);
+	border: none;
+}
+/////datepicker dark theme/////
+.ui-widget.ui-widget-content {
+	&.dark-theme {
+		background-color: $black;
+		border-color: $border-color-form-dark;
+		color: rgba($white,0.6);
+		.ui-widget-header {
+			background-color: rgba($white,0.1);
+			color: rgba($white,0.6);
+		}
+		.ui-datepicker-prev span:before, .ui-datepicker-next span:before {
+			color: rgba($white,0.6);
+		}
+		.ui-datepicker-prev:hover, .ui-datepicker-next:hover {
+			background-color: rgba($white,0.2);
+			border: none;
+		}
+		.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+			background-color: rgba($white,0.1);
+			color: rgba($white,0.6);
+			border-color: rgba($white,0.1);
+		}
+		.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+			background-color: rgba($primary-1,0.3);
+			color: $white;
+			border-color: rgba($primary-1,0.3);
+		}
+		.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+			background-color: $primary;
+			color: $white;
+			border-color: $primary;
+		}
+
+	}
+	
+}
+
+@include sp(){
+  .ui-datepicker{
+    width: 19em;
+  }
+}
+
+//////BOOKING BOX///////
+#booking-box{
+	background: url("../img/index/room_deco2.jpg") no-repeat left center / auto 100%, url("../img/index/room_deco.jpg") no-repeat right center / auto 100% $black;
+}
+.booking-box {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;	
+	align-items: flex-end;
+	padding: 30px;
+  
+	.form-group {
+		width: 100%;
+		label {
+			color: $white;
+		}
+		.form-control {
+			border-color: $border-color-form-dark;
+			background-color: $black;
+			color: rgba($white,0.5);
+		}
+		.select {
+			border-color: $border-color-form-dark;
+		}
+		.select-styled {
+			background-color: $black;;
+		}
+		
+	}
+	.btn-primary {
+		background-color: $primary;
+		display: flex;
+		height: 45px;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+		color: $white;
+		text-decoration: none;
+		transition: background-color 0.2s $eio;
+		font-size: 14px;
+		span {
+			margin-right: 10px;
+			font-size: 24px;
+		}
+		&:hover {
+			background-color: $primary-2;
+      opacity: 1;
+		}
+	}
+	.select {
+		color: rgba($white,0.5);
+	}
+	.select-options {
+		background-color: $black;
+		border-color: $border-color-form-dark;
+		
+		li {
+			border-color: $border-color-form-dark;
+			&:hover {
+				background-color: rgba($white, 0.2);
+				color: $white;
+			}
+		}
+	}
+	.ui-widget-content {
+		background-color: $black;
+	}
+}
+.col {
+	display: flex;
+  justify-content: space-between;
+  
+  @include pc(){
+    &:not(:first-child){
+      margin-left: 20px;
+    }
+    &:last-child{
+      width: calc((100% - 100px)/6);      
+    }
+    &:first-child{
+      width: calc((100% - 40px)/3);
+      .form-group{
+        width: calc((100% - 20px)/2);
+      }
+    }
+    &:nth-child(2){
+      width: calc((100% - 40px)/2);
+      .form-group{
+        width: calc((100% - 40px)/3);
+      }
+    }
+  }
+  
+}
+@media screen and (min-width: 768px) and (max-width: 960px){
+  .col{
+    width: 15.6%;
+  }
+	.booking-box .btn-primary{
+		font-size: 12px;
+		span{
+			font-size: 20px;
+		}
+	}
+}
+@include sp(){
+	.booking-box{
+		display: block;
+    padding: 30px 16px;
+	}
+	.col{
+		width: 100%;
+		margin-bottom: 25px;
+    &:first-child{
+      .form-group{
+        width: calc((100% - 20px)/2);
+      }
+    }
+    &:nth-child(2){
+      .form-group{
+        width: calc((100% - 40px)/3);
+      }
+    }
+	}
+	.form-group label{
+		margin-bottom: 5px;
+	}
+}
+
+
+//////HANBUGER BUTTON///////
+
+.hamburger {	
+	display: inline-block;
+	cursor: pointer;
+	transition-property: opacity, filter;
+	transition-duration: 0.15s;
+	transition-timing-function: linear;
+	font: inherit;
+	color: inherit;
+	text-transform: none;
+	background-color: transparent;
+	border: 0;
+	margin: 0;
+	overflow: visible;
+}
+.hamburger-box {
+	width: 25px;
+	height: 19px;
+	display: inline-block;
+	position: relative;
+}
+.hamburger-inner {
+	display: block;
+	top: 50%;
+	margin-top: -2px;
+}
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+	width: 25px;
+	height: 2px;
+	background-color: #fff;
+	border-radius: 4px;
+	position: absolute;
+	transition-property: transform;
+	transition-duration: 0.15s;
+	transition-timing-function: ease;
+}
+.hamburger-inner::before, .hamburger-inner::after {
+	content: "";
+	display: block;
+}
+.hamburger-inner::before {
+	top: -9px;
+}
+.hamburger-inner::after {
+	bottom: -9px;
+}
+
+.hamburger .hamburger-inner {
+	transition-duration: 0.2s;
+	transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+.hamburger .hamburger-inner::before, .hamburger .hamburger-inner::after {
+	transition-duration: 0s;
+	transition-delay: 0.1s;
+	transition-timing-function: linear;
+}
+.hamburger .hamburger-inner::before {
+	transition-property: top, opacity;
+}
+.hamburger .hamburger-inner::after {
+	transition-property: bottom, transform;
+}
+.navOpen .hamburger .hamburger-inner {
+	transform: rotate(-765deg);
+	transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+.navOpen .hamburger .hamburger-inner::before, .navOpen .hamburger .hamburger-inner::after {
+	transition-delay: 0s;
+}
+.navOpen .hamburger .hamburger-inner::before {
+	top: 0;
+	opacity: 0;
+}
+.navOpen .hamburger .hamburger-inner::after {
+	bottom: 0;
+	transform: rotate(-90deg);
+}
+/* btn shared*/
+
+
+
+
+
+
+
+

@@ -1,0 +1,38 @@
+$primary-1: #fae1c8;
+$primary: #cc9d6e;
+$primary-2: #a97643;
+$primary-3: #c18a52;
+$bg-body: #f1f1f1;
+$black: #181514;
+$white: #ffffff;
+$yellow: #fff500;
+$red: #d90000;
+
+$text-body: #333333;
+
+$border-color-form-1: #f0f0f0;
+$border-color-form: #cccccc;
+$border-color-form-dark: #434241;
+
+/* Font Color */
+$font-size: 14px;
+$font-body: Roboto, Helvetica,Arial,sans-serif; 
+
+$eio: ease-in-out;
+
+$width-wrap: 768px;
+$width-sp: 767px;
+$width-sp-xm: 480px;
+
+
+@mixin pc($w:768) {
+	@media screen and (min-width: $w + px) {
+		@content;
+	}
+}
+
+@mixin sp($w:$width-sp) {
+	@media screen and (max-width: $w) {
+		@content;
+	}
+}

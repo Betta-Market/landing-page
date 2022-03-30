@@ -1,0 +1,174 @@
+/* Scss Document */
+/* Font Color */
+header .slider-fade {
+  z-index: 0; }
+  header .slider-fade .slick-dots {
+    position: absolute;
+    bottom: 49px;
+    left: 0;
+    width: 100%; }
+
+.ttl {
+  margin-bottom: 30px !important; }
+
+.booking-box {
+  margin-top: -1px; }
+  .booking-box .form-group {
+    margin-bottom: 0; }
+
+@media screen and (min-width: 768px) {
+  .has_nav .slider-fade {
+    margin-top: 91px; } }
+@media screen and (min-width: 768px) and (max-width: 1050px) {
+  .has_nav .slider-fade {
+    margin-top: 60px; }
+
+  header .slider-fade .slick-dots {
+    bottom: 28px; } }
+@media screen and (max-width: 767px) {
+  header .slider-fade .slick-dots {
+    bottom: 3vw; }
+
+  header .slider-fade [class^=kv_] {
+    height: 290px; }
+    header .slider-fade [class^=kv_] img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; } }
+#about {
+  text-align: center;
+  margin: 50px auto 103px;
+  background: url("../img/index/about_bg.jpg") no-repeat top center; }
+  #about h2 {
+    padding-top: 31px; }
+  #about .about-txt p {
+    margin-bottom: 1.33em; }
+  #about .readmore-link {
+    justify-content: center;
+    margin-bottom: 85px; }
+  @media screen and (max-width: 767px) {
+    #about {
+      margin: 8vw 0 15vw; }
+      #about h2 {
+        padding-top: 5vw; }
+      #about .about-txt {
+        line-height: 1.7;
+        text-align: left; }
+      #about .readmore-link {
+        margin-bottom: 15vw; } }
+
+#room {
+  background: url("../img/index/room_deco2.jpg") no-repeat left center/auto 100%, url("../img/index/room_deco.jpg") no-repeat right center/auto 100% #171514;
+  color: #ffffff;
+  line-height: 1.7;
+  padding: 88px 0 77px; }
+  #room ul {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap; }
+    #room ul li {
+      width: calc((100% - 90px)/4); }
+      #room ul li:not(:first-child) {
+        margin-left: 30px; }
+    #room ul .room-ttl {
+      padding: 16px 0 10px;
+      font-size: 20px;
+      line-height: 29px; }
+    #room ul .room_desc {
+      font-size: 16px;
+      font-weight: 300;
+      margin-bottom: 12px; }
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    #room {
+      background: url("../img/index/room_deco2.jpg") no-repeat left top, url("../img/index/room_deco.jpg") no-repeat right top #171514;
+      padding: 60px 0 43px; }
+      #room ul li:not(:first-child) {
+        margin-left: 15px; }
+      #room ul {
+        justify-content: space-between; }
+        #room ul li {
+          width: 47.5%;
+          margin-left: 0 !important;
+          margin-bottom: 40px; }
+        #room ul .room-ttl {
+          padding: 13px 0 4px; }
+        #room ul .room_desc {
+          margin-bottom: 8px; } }
+  @media screen and (max-width: 767px) {
+    #room {
+      padding: 58px 0 25px; }
+      #room ul li {
+        margin-left: 0 !important;
+        width: 100%;
+        margin-bottom: 50px; }
+      #room ul .room_desc {
+        text-align: left; } }
+
+#location {
+  text-align: center;
+  max-width: 1200px; }
+  #location ul {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    margin: auto;
+    width: 100%;
+    max-width: 970px;
+    justify-content: center;
+    color: #a97643; }
+    #location ul i {
+      margin: auto;
+      display: block; }
+      #location ul i img {
+        height: 100%; }
+  #location .readmore-link {
+    justify-content: center;
+    line-height: 1.33;
+    margin: 35px 0; }
+  @media screen and (min-width: 768px) {
+    #location {
+      margin: 73px auto 110px; }
+      #location ul li {
+        margin: 0 20px; }
+        #location ul li i {
+          height: 100px; } }
+  @media screen and (min-width: 768px) and (max-width: 840px) {
+    #location ul {
+      justify-content: space-between; }
+      #location ul li {
+        margin: 0; } }
+  @media screen and (max-width: 767px) {
+    #location {
+      padding: 10vw 16px; }
+      #location .location-txt {
+        text-align: left; }
+      #location .readmore-link {
+        margin: 5vw 0 7vw; }
+      #location ul {
+        flex-wrap: wrap;
+        max-width: inherit;
+        width: 100%; }
+        #location ul li {
+          margin: 0 6px 15px; }
+          #location ul li i {
+            height: 90px; } }
+
+#news {
+  background: #fae1c8 url("../img/index/news_bg.jpg") no-repeat top left/auto 100%;
+  padding: 73px 0 67px; }
+  #news .ttl {
+    text-align: center; }
+  #news .news-txt {
+    text-align: center;
+    margin: 0 auto 30px;
+    max-width: 1100px; }
+  @media screen and (max-width: 767px) {
+    #news {
+      padding: 10vw 0; }
+      #news .news-txt {
+        text-align: left; } }
