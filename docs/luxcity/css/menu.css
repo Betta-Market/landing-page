@@ -111,7 +111,8 @@
     .wrapper-list .category .body-category .item-category .info-item {
       margin-left: 12px; }
       .wrapper-list .category .body-category .item-category .info-item h4 {
-        font-size: 16px; }
+        font-size: 16px;
+        text-align: left; }
         .wrapper-list .category .body-category .item-category .info-item h4 span {
           border: 1px dashed #DEBC7E;
           border-radius: 4px;
