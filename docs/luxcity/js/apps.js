@@ -154,3 +154,6 @@ function initialize() {
   map.setMapTypeId('sample');
 }
 google.maps.event.addDomListener(window, 'load', initialize);
+
+
+
