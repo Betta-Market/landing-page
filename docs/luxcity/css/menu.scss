@@ -180,6 +180,63 @@
       }
     }
     
+    &.list-drink {
+      .body-category {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        .item-category {
+          flex-flow: column;
+          width: calc((100% - 32px)/3);
+          border: none;
+          margin-right: 16px;
+          &:nth-child(3n + 3) {
+            margin-right: 0;
+          }
+          img {
+            width: 116px;
+            height: 116px;
+          }
+          .info-item {
+            margin-left: 0;
+            h4 {
+              text-align: left;
+              font-size: 14px;
+              line-height: 20px;
+              margin-top: 4px;
+            }
+            .w-price {
+              margin-top: 8px;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              span {
+                border: 1px dashed #DEBC7E;
+                border-radius: 4px;
+                margin-right: 8px;
+                display: inline-block;
+                padding: 0 8px;
+                font-size: 12px;
+                line-height: 20px;
+                font-weight: 500;
+                background-color: #FFF8EC;
+              }
+            }
+            .price {
+              position: relative;
+              bottom: auto;
+              right: auto;
+              background: none;
+              padding: 0;
+              &:before {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
     
   }
 }

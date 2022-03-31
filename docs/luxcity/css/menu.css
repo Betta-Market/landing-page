@@ -148,6 +148,51 @@
         right: 100%;
         top: 0;
         background: url("../img/shared/bg-price.svg") no-repeat; }
+.wrapper-list .category.list-drink .body-category {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: flex-start; }
+  .wrapper-list .category.list-drink .body-category .item-category {
+    flex-flow: column;
+    width: calc((100% - 32px)/3);
+    border: none;
+    margin-right: 16px; }
+    .wrapper-list .category.list-drink .body-category .item-category:nth-child(3n + 3) {
+      margin-right: 0; }
+    .wrapper-list .category.list-drink .body-category .item-category img {
+      width: 116px;
+      height: 116px; }
+    .wrapper-list .category.list-drink .body-category .item-category .info-item {
+      margin-left: 0; }
+      .wrapper-list .category.list-drink .body-category .item-category .info-item h4 {
+        text-align: left;
+        font-size: 14px;
+        line-height: 20px;
+        margin-top: 4px; }
+      .wrapper-list .category.list-drink .body-category .item-category .info-item .w-price {
+        margin-top: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        .wrapper-list .category.list-drink .body-category .item-category .info-item .w-price span {
+          border: 1px dashed #DEBC7E;
+          border-radius: 4px;
+          margin-right: 8px;
+          display: inline-block;
+          padding: 0 8px;
+          font-size: 12px;
+          line-height: 20px;
+          font-weight: 500;
+          background-color: #FFF8EC; }
+      .wrapper-list .category.list-drink .body-category .item-category .info-item .price {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        background: none;
+        padding: 0; }
+        .wrapper-list .category.list-drink .body-category .item-category .info-item .price:before {
+          display: none; }
 
 .wrapper-tabMenu {
   background-color: #ffffff; }
