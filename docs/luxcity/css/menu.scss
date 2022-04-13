@@ -245,15 +245,209 @@
   background-color: $white;
 }
 .wrapper-tabMenu.isDrinkMenu {
-  .list-category-menu li {
-    height: 130px;
-    a span {
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      display: block;
+  .list-category-menu {
+    height: 132px;
+    li {
+      height: 130px;
+      a span {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        display: block;
+      }
     }
   }
+  
   .wrapper-list .category .head-category {
     top: 184px;
+  }
+}
+
+.bottom-bar {
+  position: fixed;
+  padding: 16px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: $white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.17);
+}
+.btn-cart {
+  background-color: $primary;
+  color: $white;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &.btn-disable {
+    background-color: #E6E6E6;
+    color: rgba($black,0.2);
+  }
+}
+.order-dishes {
+  padding: 16px;
+  .btn-cart {
+    margin: 20px -16px -16px;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+  .info-item {
+    margin: 12px 0;
+    position: relative;
+    h4 {
+      font-size: 16px;
+      text-align: left;
+      span {
+        border: 1px dashed #DEBC7E;
+        border-radius: 4px;
+        margin-right: 8px;
+        display: inline-block;
+        padding: 0 8px;
+        font-size: 12px;
+        line-height: 20px;
+        font-weight: 500;
+        background-color: #FFF8EC;
+        transform: translateY(-3px);
+      }
+    }
+    p {
+      font-size: 12px;
+      color: #9A9A9A;
+      line-height: 16px;
+      width: calc(100% - 70px);
+    }
+  }
+  .price {
+    position: absolute;
+    bottom: 0;
+    right: -16px;
+    height: 27px;
+    padding: 0 16px 0 12px;
+    background-color: #FBF3E6;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 14px;
+    font-weight: 500;
+    &:before {
+      content: "";
+      height: 27px;
+      width: 9px;
+      position: absolute;
+      right: 100%;
+      top: 0;
+      background: url('../img/shared/bg-price.svg') no-repeat;
+    }
+  }
+}
+.quality {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .btn-quality {
+    border: 1px solid #EBEBEB;
+    background-color: $white;
+    width: 34px;
+    height: 34px;
+    color: $primary;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  span {
+    font-size: 18px;
+    font-weight: 700;
+    display: block;
+    padding: 0 12px;
+    
+  }
+}
+.your-cart {
+  .head {
+    text-transform: uppercase;
+    background-color: #F3F3F3;
+    padding: 12px 16px;
+  }
+  .body {
+    
+    .empty-cart {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 48px;
+      line-height: 24px;
+      box-sizing: border-box;
+      font-size: 18px;
+      font-weight: 400;
+    }
+    .bill {
+      padding: 16px;
+      height: 360px;
+      overflow-y: auto;
+    }
+    .list-dishes {
+      
+    }
+    .info-dishes {
+      padding-bottom: 16px;
+      margin-bottom: 16px;
+      border-bottom: 1px dashed #D8C9AE;
+      h4 {
+        font-size: 14px;
+        text-align: left;
+        span {
+          border: 1px dashed #DEBC7E;
+          border-radius: 4px;
+          margin-right: 8px;
+          display: inline-block;
+          padding: 0 8px;
+          font-size: 12px;
+          line-height: 20px;
+          font-weight: 500;
+          background-color: #FFF8EC;
+          transform: translateY(-3px);
+        }
+      }
+      .note {
+        font-size: 12px;
+        color: #888888;
+      }
+    }
+    .w-price {
+      display: flex;
+      margin: 8px 0 0 0;
+      justify-content: space-between;
+      align-items: center;
+      .quality span {
+        font-size: 14px;
+      }
+    }
+    .total {
+      display: flex;
+      justify-content: space-between;
+    }
+    .vat {
+      padding: 16px;
+      background-color: $white;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.17);
+      position: relative;
+      .note-vat {
+        background-color: #FFF8EC;
+        border: 1px dashed #DEBC7E;
+        font-size: 12px;
+        line-height: 18px;
+        padding: 12px;
+      }
+    }
+  }
+  .foot {
+    .btn-cart {
+      width: 100%;
+      border: none;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: center;
+    }
   }
 }

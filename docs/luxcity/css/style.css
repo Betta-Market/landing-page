@@ -1059,3 +1059,31 @@ copyright {
   border: none;
   cursor: pointer;
   text-transform: uppercase; }
+
+.blocker {
+  z-index: 11 !important; }
+  .blocker .modal {
+    padding: 0 !important;
+    border-radius: 0; }
+
+.modal a.close-modal {
+  top: 100% !important;
+  left: calc(50% - 15px) !important;
+  margin-top: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 16px; }
+
+.form-group {
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 20px; }
+  .form-group label {
+    font-size: 14px; }
+  .form-group .form-control {
+    border: 1px solid #E0E0E0;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px; }
+    .form-group .form-control::placeholder {
+      font-weight: bold;
+      color: #b7b7b7; }

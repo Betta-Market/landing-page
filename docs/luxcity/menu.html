@@ -6,8 +6,10 @@
   <meta name="viewport" content="width=device-width, shrink-to-fit=no, user-scalable=no">
   
 <link rel="stylesheet" href="css/style.css">
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 <link rel="stylesheet" href="css/menu.css">
- 
+
   
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -73,46 +75,46 @@
         <div class="category" id="appetizer">
           <div class="head-category">Appetizers - 开胃菜 </div>
           <div class="body-category">
-            <div class="item-category">
+            <a href="#detail001" class="item-category">
               <img src="img/menu/foods/mon/mon1.jpg" alt="">
               <div class="info-item">
                 <h4><span>01</span>Chicken Caesar Salad - 凯撒鸡肉沙拉</h4>
                 <p>Romaine Lettuce in a savory anchovy, croutons, shaved parmesan and bacon bits with Caesar dressing</p>
               </div>
               <div class="price">$ 6</div>
-            </div>
-            <div class="item-category">
+            </a>
+            <a href="#detail002" class="item-category">
               <img src="img/menu/foods/mon/mon2.jpg" alt="">
               <div class="info-item">
                 <h4><span>02</span>Tuna Niçoise Salad - 金枪鱼 Niçoise 沙拉</h4>
                 <p>Green Lettuce with fresh vegetable, boiled egg and black olives with dressing anchovies</p>
               </div>
               <div class="price">$ 6</div>
-            </div>
-            <div class="item-category">
+            </a>
+            <a href="#detail003" class="item-category">
               <img src="img/menu/foods/mon/mon3.jpg" alt="">
               <div class="info-item">
                 <h4><span>03</span>Smoked Salmon Salad - 烟熏三文鱼沙拉</h4>
                 <p>Green Mixed Lettuce with, Cherry Tomato, Caper, Shallot with Sesame dressing</p>
               </div>
               <div class="price">$ 6</div>
-            </div>
-            <div class="item-category">
+            </a>
+            <a href="#detail004" class="item-category">
               <img src="img/menu/foods/mon/mon4.jpg" alt="">
               <div class="info-item">
                 <h4><span>04</span>Seafood Glass Noodle Salad- 海鲜玻璃面沙拉</h4>
                 <p>Romaine Lettuce in a savory anchovy, croutons, shaved parmesan and bacon bits with Caesar dressing</p>
               </div>
               <div class="price">$ 6</div>
-            </div>
-            <div class="item-category">
+            </a>
+            <a href="#detail005" class="item-category">
               <img src="img/menu/foods/mon/mon5.jpg" alt="">
               <div class="info-item">
                 <h4><span>05</span>Vietnamese Fresh Spring Rolls - 越南新鲜春卷</h4>
                 <p>Rice Paper Roll with Prawn, Pork, Lettuce, Carrot, Cucumber with Vermicelli Dressing</p>
               </div>
               <div class="price">$ 6</div>
-            </div>
+            </a>
           </div>
         </div>
         <div class="category" id="soup">
@@ -884,9 +886,148 @@
     </div><!-- end #drinkMenu -->
     
   </div>
+
+  <div class="bottom-bar">
+    <a href="#yourCart" class="btn-cart">
+      <span class="cart-l">
+        <strong>Your cart - </strong>
+        <span>0</span>
+        <span>dishes</span>
+      </span>
+      <span class="cart-r">
+        <span>$</span>
+        <strong>0</strong>
+      </span>
+    </a>
+  </div>
   
+  <!-- Đặt món -->
+  <div id="detail001" class="modal">
+    <div class="order-dishes">
+      <img src="img/menu/foods/mon/mon1.jpg" alt="">
+      <div class="info-item">
+        <h4><span>01</span>Chicken Caesar Salad - 凯撒鸡肉沙拉</h4>
+        <p>Romaine Lettuce in a savory anchovy, croutons, shaved parmesan and bacon bits with Caesar dressing</p>
+        <div class="price">$ 6</div>
+      </div>
+      <div class="form-group">
+        <label for="">Note:</label>
+        <input type="text" class="form-control" placeholder="Optional">
+      </div>
+      <div class="quality">
+        <button type="button" class="btn-quality">-</button>
+        <span>2</span>
+        <button type="button" class="btn-quality">+</button>
+      </div>
+      <a href="#yourcart" class="btn-cart">
+        <span>
+          <strong>Add to cart - </strong>
+          <span>$</span> 
+          <strong>12</strong>
+        </span>
+      </a>
+    </div>
+  </div>
+  <!-- end đặt món -->
+  
+  <!-- Your cart empty
+  <div id="yourCart" class="modal">
+    <div class="your-cart">
+      <div class="head">Your cart</div>
+      <div class="body">
+        <div class="empty-cart">You have not selected a dish. Please choose the item, thanks!</div>
+      </div>
+      <div class="foot">
+        <button class="btn-cart btn-disable" type="button">Order now</button>
+      </div>
+    </div>
+  </div>
+  end Your cart empty -->
+  
+  <!-- Your cart -->
+  <div id="yourCart" class="modal">
+    <div class="your-cart">
+      <div class="head">Your cart</div>
+      <div class="body">
+        <div class="bill">
+          <ul class="list-dishes">
+            <li class="info-dishes">
+              <h4><span>01</span>Chicken Caesar Salad - 凯撒鸡肉沙拉</h4>
+              <div class="w-price">
+                <div class="quality">
+                  <button type="button" class="btn-quality">-</button>
+                  <span>3</span>
+                  <button type="button" class="btn-quality">+</button>
+                </div>
+                <div class="price">$ <strong>15</strong></div>
+              </div>
+            </li>
+            <li class="info-dishes">
+              <h4><span>06</span>Smoked Salmon Salad - 烟熏三文鱼沙拉</h4>
+              <div class="w-price">
+                <div class="quality">
+                  <button type="button" class="btn-quality">-</button>
+                  <span>1</span>
+                  <button type="button" class="btn-quality">+</button>
+                </div>
+                <div class="price">$ <strong>8</strong></div>
+              </div>
+            </li>
+            <li class="info-dishes">
+              <h4><span>09</span>Tuna Niçoise Salad - 金枪鱼 Niçoise 沙拉</h4>
+              <p class="note">less sugar, less spicy</p>
+              <div class="w-price">
+                <div class="quality">
+                  <button type="button" class="btn-quality">-</button>
+                  <span>2</span>
+                  <button type="button" class="btn-quality">+</button>
+                </div>
+                <div class="price">$ <strong>12</strong></div>
+              </div>
+            </li>
+            <li class="info-dishes">
+              <h4><span>04</span>Smoked Salmon Salad - 烟熏三文鱼沙拉</h4>
+              <div class="w-price">
+                <div class="quality">
+                  <button type="button" class="btn-quality">-</button>
+                  <span>1</span>
+                  <button type="button" class="btn-quality">+</button>
+                </div>
+                <div class="price">$ <strong>7</strong></div>
+              </div>
+            </li>
+            <li class="info-dishes">
+              <h4><span>29</span>Seafood Glass Noodle Salad- 海鲜玻璃面沙拉</h4>
+              <div class="w-price">
+                <div class="quality">
+                  <button type="button" class="btn-quality">-</button>
+                  <span>1</span>
+                  <button type="button" class="btn-quality">+</button>
+                </div>
+                <div class="price">$ <strong>8</strong></div>
+              </div>
+            </li>
+          </ul>
+          <div class="total">
+            <span>Tổng cộng</span>
+            <span>
+              $ <strong>50</strong>
+            </span>
+          </div>
+        </div>
+        <div class="vat">
+          <div class="note-vat">Above Prices are Inclusive of 5% Service Charge and 10% VAT 以上价格已包含 5% 服务费和 10% 增值税</div>
+        </div>
+      </div>
+      <div class="foot">
+        <button class="btn-cart" type="button">Order now</button>
+      </div>
+    </div>
+  </div>
+  <!-- end Your cart -->
 
 <script src="js/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
   
 <script>
   
@@ -923,7 +1064,7 @@
       //console.log('curentItem:' + curentItem);
       var heightMenu;
       if ($("#drinkMenu").hasClass("active")) {
-        heightMenu = 130;
+        heightMenu = 132;
       }else {
         heightMenu = 153;
       }
@@ -932,12 +1073,25 @@
         $('html, body').animate({
             scrollTop: $(curentItem).offset().top - $('.menu-luxcity').height() - heightMenu
         }, 0); 
-        
       }, 300);
-      setTimeout(function(){
-        
-      }, 400);
     });
+    
+    //modal đặt món
+    $('a[href="#detail001"]').click(function(event) {
+      event.preventDefault();
+      $(this).modal({
+        fadeDuration: 250
+      });
+    });
+    
+    //modal your cart
+    $('a[href="#yourCart"]').click(function(event) {
+      event.preventDefault();
+      $(this).modal({
+        fadeDuration: 250
+      });
+    });
+    
   });
 </script>
 

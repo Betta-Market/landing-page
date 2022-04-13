@@ -181,9 +181,8 @@
     display: -o-flex;
     display: flex;
     margin-bottom: 10px !important;
-    font-size: 16px;
     line-height: 1.88;
-    i{
+    em {
       display: block;
       margin-right: 8px;
       margin-top: -2px;
@@ -199,7 +198,7 @@
     padding-left: 18px;
     position: relative;
     margin-bottom: 2px;
-    font-size: 16px;
+    
     &:before{
       content:"";
       position: absolute;
