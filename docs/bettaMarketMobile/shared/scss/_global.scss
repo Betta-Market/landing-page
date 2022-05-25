@@ -99,13 +99,13 @@ footer {
   .wave-bottom {
     position: absolute;
     left: 50%;
-    top: -18px;
+    top: -24px;
     transform: translateX(-50%);
     &:before {
       content: "";
-      width: 86px;
+      width: 92px;
       left: -24px;
-      height: 18px;
+      height: 24px;
       position: absolute;
       background: url("../img/wave-bottom.svg") no-repeat;
     }
