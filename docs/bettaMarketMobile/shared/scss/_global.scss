@@ -3,10 +3,11 @@
 @import "font.css";
 
 body {
-  background-color: $white;
+  background-color: #ffffff;
   font-size: 14px;
+  min-height: 2000px;
 }
-
+ 
 header {
   height: 60px;
   background-color: $white;
@@ -15,6 +16,11 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
   .logo {
     width: 127px;
     height: 30px;
