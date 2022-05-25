@@ -32,13 +32,18 @@ $duration_5: 0.5s;
 
 $eio: ease-in-out;
 
-@mixin ttl_hidden(){
+@mixin ttl_hidden($rowline){
 	overflow: hidden;
-  display: block;
+  display: box;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
   text-overflow: ellipsis;
   white-space: normal;
+  -webkit-line-clamp: $rowline;
 }
 
 $greyButton: #EEEEEE;
 $greyButtonIcon: #727272;
 $bgBody: #EFEFEF;
+$lineColor: #EDEDED;
+$textGrey: #727272;
