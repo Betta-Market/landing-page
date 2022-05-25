@@ -94,7 +94,8 @@ ul.list-btns {
       font-size: 22px;
       color: #727272; }
   .section .content-section {
-    padding-top: 12px; }
+    padding-top: 12px;
+    padding-bottom: 60px; }
 
 .list-fish-sell {
   display: flex;
