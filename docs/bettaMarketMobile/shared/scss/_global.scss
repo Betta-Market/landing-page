@@ -284,6 +284,15 @@ footer {
       display: none;
     }
   }
+  &.top-modal {
+    width: 100%;
+    border-radius: 0;
+    vertical-align: top;
+    padding: 0;
+    a.close-modal {
+      display: none;
+    }
+  }
   .head-modal {
     padding: 16px;
     border-bottom: 1px solid $lineColor;

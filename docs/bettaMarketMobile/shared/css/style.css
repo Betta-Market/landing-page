@@ -237,6 +237,13 @@ footer {
   padding: 0; }
   .modal.bottom-modal a.close-modal {
     display: none; }
+.modal.top-modal {
+  width: 100%;
+  border-radius: 0;
+  vertical-align: top;
+  padding: 0; }
+  .modal.top-modal a.close-modal {
+    display: none; }
 .modal .head-modal {
   padding: 16px;
   border-bottom: 1px solid #EDEDED; }

@@ -21,7 +21,7 @@
   </a>
   <ul class="list-btns">
     <li>
-      <a href="#"><span class="icon-search"></span></a>
+      <a href="#searchBox"><span class="icon-search"></span></a>
     </li>
     <li>
       <a href="#"><span class="icon-comment"></span></a>
@@ -285,8 +285,37 @@
   </div>
   
 </div>
+  
+<div id="searchBox" class="modal top-modal type-post">
+  <div class="head-modal">
+    <h3>Bạn muốn đăng gì?</h3>
+  </div>
+  <div class="content-modal">
+    <ul class="menu-post">
+      <li>
+        <a href="post-sale-1.html">
+          <span class="pick-type icon-buy"></span>
+          <span class="pick-name">Bán cá</span>
+        </a>
+      </li>
+      <li>
+        <a href="post-bid.html">
+          <span class="pick-type icon-bid"></span>
+          <span class="pick-name">Đấu giá</span>
+        </a>
+      </li>
+      <li>
+        <a href="post-show.html">
+          <span class="pick-type icon-show"></span>
+          <span class="pick-name">Show cá</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+</div>
 <script>
-  $('a[href="#postFish"]').click(function(event) {
+  $('a[href="#postFish"],a[href="#searchBox"]').click(function(event) {
     event.preventDefault();
     $(this).modal({
       fadeDuration: 200
