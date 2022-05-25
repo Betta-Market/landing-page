@@ -4,9 +4,11 @@ a {
   text-decoration: none !important; }
 
 body {
-  background-color: #ffffff;
+  background-color: #EFEFEF;
   font-size: 14px;
-  min-height: 2000px; }
+  min-height: 2000px;
+  font-family: "San Francisco Text";
+  font-weight: normal; }
 
 header {
   height: 60px;
@@ -69,7 +71,8 @@ footer {
   height: 82px;
   display: flex;
   justify-content: space-between;
-  box-shadow: 0px -3px 3px rgba(0, 0, 0, 0.07); }
+  box-shadow: 0px -3px 3px rgba(0, 0, 0, 0.07);
+  background-color: #ffffff; }
   footer .wave-bottom {
     position: absolute;
     left: 50%;
@@ -110,6 +113,9 @@ footer {
         color: #c4c4c4; }
       footer .menu-bottom-l a.active [class^="icon-"], footer .menu-bottom-l a.active [class*=" icon-"], footer .menu-bottom-r a.active [class^="icon-"], footer .menu-bottom-r a.active [class*=" icon-"] {
         color: #363636; }
+      footer .menu-bottom-l a.active .title, footer .menu-bottom-r a.active .title {
+        color: #363636; }
       footer .menu-bottom-l a .title, footer .menu-bottom-r a .title {
         margin-top: 4px;
-        font-size: 11px; }
+        font-size: 11px;
+        color: #c4c4c4; }

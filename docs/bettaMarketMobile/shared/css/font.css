@@ -1,4 +1,18 @@
 @font-face {
+  font-family: "San Francisco Text";
+  src: url("../font/SanFranciscoText-RegularG1.ttf") format("TrueType"),
+       url("/fonts/SanFranciscoText-RegularG1.otf") format("OpenType");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "San Francisco Text";
+  src: url("../font/SanFranciscoText-BoldG1.ttf") format("TrueType"),
+       url("/fonts/SanFranciscoText-BoldG1.otf") format("OpenType");
+  font-weight: bold;
+}
+
+
+@font-face {
   font-family: 'bettamarket';
   src:  url('../font/bettamarket.eot?rbol9w');
   src:  url('../font/bettamarket.eot?rbol9w#iefix') format('embedded-opentype'),
