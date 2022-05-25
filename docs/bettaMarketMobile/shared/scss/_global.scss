@@ -144,7 +144,6 @@ ul.list-btns {
     background-color: $white;
     .title-lfs, .proce-lfs {
       font-size: 13px;
-      font-weight: bold;
       display: block;
       width: 100%;
       box-sizing: border-box;
@@ -177,7 +176,7 @@ ul.list-btns {
     .adress {
       font-size: 11px;
       line-height: 13px;
-      color: $textGrey;
+      color: $textGrey1;
       @include ttl_hidden(2);
       width: calc(100% - 32px);
     }
@@ -269,8 +268,61 @@ footer {
   }
 }
 
+.blocker {
+  z-index: 10;
+  padding: 0;
+}
+.modal {
+  &.bottom-modal {
+    width: 100%;
+    border-radius: 0;
+    vertical-align: bottom;
+    padding: 0;
+    a.close-modal {
+      display: none;
+    }
+  }
+  .head-modal {
+    padding: 16px;
+    border-bottom: 1px solid $lineColor;
+    h3 {
+      font-size: 16px;
+    }
+  }
+  .content-modal {
+    padding: 16px;
+  }
+}
 
-
+ul.menu-post {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 12px;
+  li {
+    a {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+      .pick-type {
+        display: flex;
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba($primary,0.1);
+        font-size: 40px;
+        color: $primary;
+      }
+      .pick-name {
+        font-weight: bold;
+        margin-top: 8px;
+      }
+    }
+  }
+}
 
 
 

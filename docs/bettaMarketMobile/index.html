@@ -252,20 +252,21 @@
       </a>
     </div>
   <div class="wave-bottom">
-    <a href="#" class="btn-post"><span class="icon-plus"></span></a>
+    <a href="#postFish" class="btn-post"><span class="icon-plus"></span></a>
   </div>
 </footer>
 
 <!-- Modal HTML embedded directly into document -->
-<div id="postFish" class="modal type-post">
-  <div class="content-type-post">
+<div id="postFish" class="modal bottom-modal type-post">
+  <div class="head-modal">
     <h3>Bạn muốn đăng gì?</h3>
-    <a href="#close-modal" rel="modal:close" class="btn-close"><span class="icon-close"></span></a>
-    <ul>
+  </div>
+  <div class="content-modal">
+    <ul class="menu-post">
       <li>
         <a href="post-sale-1.html">
           <span class="pick-type icon-buy"></span>
-          <span class="pick-name">Bán Cá</span>
+          <span class="pick-name">Bán cá</span>
         </a>
       </li>
       <li>
@@ -277,13 +278,20 @@
       <li>
         <a href="post-show.html">
           <span class="pick-type icon-show"></span>
-          <span class="pick-name">Show Cá</span>
+          <span class="pick-name">Show cá</span>
         </a>
       </li>
     </ul>
   </div>
   
 </div>
-
+<script>
+  $('a[href="#postFish"]').click(function(event) {
+    event.preventDefault();
+    $(this).modal({
+      fadeDuration: 200
+    });
+  });
+</script>
 </body>
 </html>

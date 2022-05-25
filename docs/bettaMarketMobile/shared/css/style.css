@@ -119,7 +119,6 @@ ul.list-btns {
     background-color: #ffffff; }
     .list-fish-sell .info-lfs .title-lfs, .list-fish-sell .info-lfs .proce-lfs {
       font-size: 13px;
-      font-weight: bold;
       display: block;
       width: 100%;
       box-sizing: border-box; }
@@ -152,7 +151,7 @@ ul.list-btns {
     .list-fish-sell .account-lfs .adress {
       font-size: 11px;
       line-height: 13px;
-      color: #727272;
+      color: #c4c4c4;
       overflow: hidden;
       display: box;
       display: -webkit-box;
@@ -224,3 +223,46 @@ footer {
   @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
     footer {
       height: 72px; } }
+
+.blocker {
+  z-index: 10;
+  padding: 0; }
+
+.modal.bottom-modal {
+  width: 100%;
+  border-radius: 0;
+  vertical-align: bottom;
+  padding: 0; }
+  .modal.bottom-modal a.close-modal {
+    display: none; }
+.modal .head-modal {
+  padding: 16px;
+  border-bottom: 1px solid #EDEDED; }
+  .modal .head-modal h3 {
+    font-size: 16px; }
+.modal .content-modal {
+  padding: 16px; }
+
+ul.menu-post {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 12px; }
+  ul.menu-post li a {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center; }
+    ul.menu-post li a .pick-type {
+      display: flex;
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(29, 155, 240, 0.1);
+      font-size: 40px;
+      color: #1d9bf0; }
+    ul.menu-post li a .pick-name {
+      font-weight: bold;
+      margin-top: 8px; }
