@@ -25,6 +25,7 @@ body {
   font-weight: normal; }
 
 header {
+  z-index: 9;
   height: 60px;
   background-color: #ffffff;
   box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.05);
@@ -172,6 +173,7 @@ footer {
   justify-content: space-between;
   box-shadow: 0px -3px 3px rgba(0, 0, 0, 0.07);
   background-color: #ffffff;
+  z-index: 9;
   /* iPhone 11 Pro Max 2688x1242px at 458ppi */ }
   footer .wave-bottom {
     position: absolute;
@@ -197,7 +199,7 @@ footer {
     justify-content: center;
     margin-top: 16px; }
   footer .menu-bottom-l, footer .menu-bottom-r {
-    width: calc((100% - 86px)/2);
+    width: calc((100% - 72px)/2);
     display: flex;
     align-items: center;
     height: 54px; }
@@ -212,13 +214,13 @@ footer {
         font-size: 26px;
         color: #c4c4c4; }
       footer .menu-bottom-l a.active [class^="icon-"], footer .menu-bottom-l a.active [class*=" icon-"], footer .menu-bottom-r a.active [class^="icon-"], footer .menu-bottom-r a.active [class*=" icon-"] {
-        color: #363636; }
+        color: #1d9bf0; }
       footer .menu-bottom-l a.active .title, footer .menu-bottom-r a.active .title {
-        color: #363636; }
+        color: #1d9bf0; }
       footer .menu-bottom-l a .title, footer .menu-bottom-r a .title {
         margin-top: 4px;
         font-size: 11px;
         color: #888888; }
   @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
     footer {
-      height: 84px; } }
+      height: 72px; } }
