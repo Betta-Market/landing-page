@@ -150,9 +150,17 @@ footer {
       .title {
         margin-top: 4px;
         font-size: 11px;
-        color: #c4c4c4;
+        color: #888888;
       }
     }
+  }
+  
+  /* iPhone 11 Pro Max 2688x1242px at 458ppi */
+  @media only screen 
+    and (device-width: 414px) 
+    and (device-height: 896px) 
+    and (-webkit-device-pixel-ratio: 3) { 
+    height: 54px;
   }
 }
 
