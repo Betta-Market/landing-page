@@ -271,6 +271,8 @@ footer {
 .blocker {
   z-index: 10;
   padding: 0;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 .modal {
   &.bottom-modal {
