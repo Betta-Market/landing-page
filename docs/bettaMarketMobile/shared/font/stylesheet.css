@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'San Francisco Text';
+    src: url('SanFranciscoText-RegularG1.eot');
+    src: url('SanFranciscoText-RegularG1.eot?#iefix') format('embedded-opentype'),
+        url('SanFranciscoText-RegularG1.woff2') format('woff2'),
+        url('SanFranciscoText-RegularG1.woff') format('woff'),
+        url('SanFranciscoText-RegularG1.ttf') format('truetype'),
+        url('SanFranciscoText-RegularG1.svg#SanFranciscoText-RegularG1') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'San Francisco Text';
+    src: url('SanFranciscoText-BoldG1.eot');
+    src: url('SanFranciscoText-BoldG1.eot?#iefix') format('embedded-opentype'),
+        url('SanFranciscoText-BoldG1.woff2') format('woff2'),
+        url('SanFranciscoText-BoldG1.woff') format('woff'),
+        url('SanFranciscoText-BoldG1.ttf') format('truetype'),
+        url('SanFranciscoText-BoldG1.svg#SanFranciscoText-BoldG1') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

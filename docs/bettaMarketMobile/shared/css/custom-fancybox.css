@@ -1,0 +1,76 @@
+.carousel__track {
+  position: relative; }
+  .carousel__track .carousel__slide {
+    position: relative; }
+    .carousel__track .carousel__slide.is-nav-selected:nth-child(1) ~ .indicator {
+      left: 2px; }
+    .carousel__track .carousel__slide.is-nav-selected:nth-child(2) ~ .indicator {
+      left: 102px; }
+    .carousel__track .carousel__slide.is-nav-selected:nth-child(3) ~ .indicator {
+      left: 202px; }
+    .carousel__track .carousel__slide.is-nav-selected:nth-child(4) ~ .indicator {
+      left: 302px; }
+    .carousel__track .carousel__slide.is-nav-selected:nth-child(5) ~ .indicator {
+      left: 402px; }
+    .carousel__track .carousel__slide.is-nav-selected:nth-child(6) ~ .indicator {
+      left: 502px; }
+    .carousel__track .carousel__slide.has-video {
+      overflow: hidden; }
+      .carousel__track .carousel__slide.has-video .fancybox__thumb {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        filter: blur(10px); }
+    .carousel__track .carousel__slide.is-nav-selected .icon-video-thumb:before {
+      opacity: 0; }
+    .carousel__track .carousel__slide.is-nav-selected .icon-video-thumb img {
+      opacity: 1; }
+    .carousel__track .carousel__slide .icon-video-thumb {
+      position: absolute;
+      width: 96px;
+      height: 72px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .carousel__track .carousel__slide .icon-video-thumb:before {
+        content: "\e911";
+        font-size: 24px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: opacity 0.2s ease-in-out; }
+      .carousel__track .carousel__slide .icon-video-thumb img {
+        width: 60px;
+        height: 60px;
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: opacity 0.2s ease-in-out; }
+  .carousel__track .indicator {
+    pointer-events: none;
+    width: 96px;
+    height: 72px;
+    border: 4px solid #ffffff;
+    position: absolute;
+    top: 12px;
+    transition: left 0.2s ease-in-out;
+    z-index: 9; }
+
+.fancybox__thumb {
+  border-radius: 0;
+  padding-top: 75%; }
+
+.fancybox__thumbs .carousel__slide .fancybox__thumb::after {
+  display: none; }
+
+.fancybox__thumbs .carousel__slide {
+  padding: 0;
+  margin: 12px 2px; }
+
+.fancybox__button--zoom, .fancybox__button--slideshow, .fancybox__button--fullscreen, .fancybox__button--thumbs {
+  display: none; }

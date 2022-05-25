@@ -1,0 +1,43 @@
+$primary: #1d9bf0;
+$text_body: #363636;
+$grey: #888;
+$grey2: #555;
+$grey3: #d0d0d0;
+$grey4: #e2e2e2;
+$colorIcon: #c0c0c0;
+$grey_light: #b2b2b2;
+$border_color: #efefef;
+$border_color2: #c4c4c4;
+$bg_grey: #f8f8f8; 
+$bg_grey2: #f2f2f2;
+$bg_blue: #f3faff;
+$white: #ffffff;
+$black1: #000000;
+$black: #363636;
+$yellow: #ffe600;
+$yellow2: #ac6700;
+$yellow3: #ef9309;
+$yellow4: #ffce00;
+$green: #66bd21;
+$green2:#f7fef2;
+$red1: #b10000;
+$red2: #f20000;
+$org_pale: #fff5db;
+$blue_dark: #1d25f0;
+$orange: #F49300;
+
+$duration_2: 0.2s;
+$duration_3: 0.3s;
+$duration_5: 0.5s;
+
+$eio: ease-in-out;
+
+@mixin ttl_hidden(){
+	overflow: hidden;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+$greyButton: #EEEEEE;
+$greyButtonIcon: #727272;
