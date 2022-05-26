@@ -10,6 +10,10 @@ img {
 .mt-60 {
   margin-top: 60px; }
 
+.container {
+  height: calc(100vh - 114px);
+  overflow: auto; }
+
 .btn-icon {
   width: 40px;
   height: 40px;
@@ -33,9 +37,9 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0 16px;
-  position: fixed;
+  /*position: fixed;
   top: 0;
-  left: 0;
+  left: 0;*/
   width: 100%;
   box-sizing: border-box; }
   header .logo {
@@ -94,8 +98,7 @@ ul.list-btns {
       font-size: 22px;
       color: #727272; }
   .section .content-section {
-    padding-top: 12px;
-    padding-bottom: 60px; }
+    padding-top: 12px; }
 
 .list-fish-sell {
   display: flex;
@@ -163,9 +166,10 @@ ul.list-btns {
       width: calc(100% - 32px); }
 
 footer {
-  position: fixed;
+  /*position: fixed;
   left: 0;
-  bottom: 0;
+  bottom: 0;*/
+  position: relative;
   width: 100%;
   box-sizing: border-box;
   height: 54px;
