@@ -1,1 +1,120 @@
 @import "global.scss";
+.notification {
+  .section {
+    padding: 0;
+  }
+}
+.sub-page {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .header-l {
+      display: flex;
+      align-items: center;
+      h1 {
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-left: 8px;
+      }
+    }
+    .header-r {
+      .btn-link {
+        font-size: 13px;
+      }
+    }
+  }
+}
+.list-nh {
+  background-color: $white;
+  padding-top: 8px;
+  margin-top: 0 !important;
+  height: calc(100% - 61px);
+  overflow-y: auto;
+  li.item-notification {
+    position: relative;
+    padding: 12px 16px;
+    display: flex;
+    border-bottom: 1px solid #efefef;
+    a {
+      display: flex;
+      width: 100%;
+      color: $text_body;
+      text-decoration: none;
+    }
+    &:hover {
+      background-color: $bg-grey;
+    }
+    &:after {
+      content: "" !important;
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border-radius: 6px;
+      background-color: $primary;
+      right: 12px;
+      top: 50%;
+      display: none;
+      transform: translateY(-50%);
+    }
+    &.unread {
+      &:after {
+        display: block;
+      }
+      .message {
+        font-weight: bold;
+      }
+    }
+    .ava {
+      width: 44px;
+      height: 44px;
+      margin-right: 8px;
+      &.verified:before {
+        width: 6px;
+        height: 6px;
+        font-size: 6px;
+      }
+      img {
+        border-radius: 22px;
+      }
+    }
+    .content-in {
+      width: calc(100% - 52px);
+      .react-in {
+        display: flex;
+        align-items: center;
+        i {
+          color: $grey_light;
+          margin: 0 4px;
+        }
+        span {
+          max-width: 98px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+        .price {
+          color: $green;
+          font-size: 12px;
+          padding: 2px 8px;
+          border: 1px dashed $green;
+          font-weight: bold;
+          margin-left: 8px;
+          border-radius: 12px;
+        }
+      }
+      .message {
+        margin: 2px 0;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: calc(100% - 40px);
+      }
+      .date-in {
+        color: $grey_light;
+        font-size: 13px;
+      }
+    }
+  }
+}

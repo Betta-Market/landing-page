@@ -31,6 +31,12 @@ img {
   align-items: center;
   justify-content: center; }
 
+.btn-link {
+  color: #1d9bf0;
+  font-weight: bold; }
+  .btn-link:hover {
+    text-decoration: underline; }
+
 input {
   border: 1px solid #e5e5e5;
   box-sizing: border-box; }
@@ -365,3 +371,95 @@ ul.menu-post {
     ul.menu-post li a .pick-name {
       font-weight: bold;
       margin-top: 8px; }
+
+.notification .section {
+  padding: 0; }
+
+.sub-page header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .sub-page header .header-l {
+    display: flex;
+    align-items: center; }
+    .sub-page header .header-l h1 {
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-left: 8px; }
+  .sub-page header .header-r .btn-link {
+    font-size: 13px; }
+
+.list-nh {
+  background-color: #ffffff;
+  padding-top: 8px;
+  margin-top: 0 !important;
+  height: calc(100% - 61px);
+  overflow-y: auto; }
+  .list-nh li.item-notification {
+    position: relative;
+    padding: 12px 16px;
+    display: flex;
+    border-bottom: 1px solid #efefef; }
+    .list-nh li.item-notification a {
+      display: flex;
+      width: 100%;
+      color: #363636;
+      text-decoration: none; }
+    .list-nh li.item-notification:hover {
+      background-color: #f8f8f8; }
+    .list-nh li.item-notification:after {
+      content: "" !important;
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border-radius: 6px;
+      background-color: #1d9bf0;
+      right: 12px;
+      top: 50%;
+      display: none;
+      transform: translateY(-50%); }
+    .list-nh li.item-notification.unread:after {
+      display: block; }
+    .list-nh li.item-notification.unread .message {
+      font-weight: bold; }
+    .list-nh li.item-notification .ava {
+      width: 44px;
+      height: 44px;
+      margin-right: 8px; }
+      .list-nh li.item-notification .ava.verified:before {
+        width: 6px;
+        height: 6px;
+        font-size: 6px; }
+      .list-nh li.item-notification .ava img {
+        border-radius: 22px; }
+    .list-nh li.item-notification .content-in {
+      width: calc(100% - 52px); }
+      .list-nh li.item-notification .content-in .react-in {
+        display: flex;
+        align-items: center; }
+        .list-nh li.item-notification .content-in .react-in i {
+          color: #b2b2b2;
+          margin: 0 4px; }
+        .list-nh li.item-notification .content-in .react-in span {
+          max-width: 98px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis; }
+        .list-nh li.item-notification .content-in .react-in .price {
+          color: #66bd21;
+          font-size: 12px;
+          padding: 2px 8px;
+          border: 1px dashed #66bd21;
+          font-weight: bold;
+          margin-left: 8px;
+          border-radius: 12px; }
+      .list-nh li.item-notification .content-in .message {
+        margin: 2px 0;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: calc(100% - 40px); }
+      .list-nh li.item-notification .content-in .date-in {
+        color: #b2b2b2;
+        font-size: 13px; }
