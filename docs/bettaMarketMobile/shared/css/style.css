@@ -133,7 +133,7 @@ ul.list-btns {
 .list-suggest {
   margin-top: 4px;
   display: block;
-  height: 340px;
+  height: 320px;
   overflow: auto; }
   .list-suggest li {
     padding-left: 60px;
