@@ -65,12 +65,12 @@ button {
   bottom: 0;
   z-index: 12;
   opacity: 0;
-  pointer-events: none;
+  //pointer-events: none;
   transition: 0.2s opacity $eio;
   -webkit-transition: 0.2s opacity $eio;
   &.active {
     opacity: 1;
-    pointer-events: auto;
+    //pointer-events: auto;
     .overlay-modal {
       opacity: 1;
     }

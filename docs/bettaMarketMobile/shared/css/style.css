@@ -61,12 +61,10 @@ button {
   bottom: 0;
   z-index: 12;
   opacity: 0;
-  pointer-events: none;
   transition: 0.2s opacity ease-in-out;
   -webkit-transition: 0.2s opacity ease-in-out; }
   .modal-sheet.active {
-    opacity: 1;
-    pointer-events: auto; }
+    opacity: 1; }
     .modal-sheet.active .overlay-modal {
       opacity: 1; }
     .modal-sheet.active .bottom-modal {

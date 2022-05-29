@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Trang chủ | Betta Market</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="icon" type="image/x-icon" href="shared/img/favicon.ico">
+<link rel="stylesheet" href="shared/css/font.css">
+<link rel="stylesheet" href="shared/css/jquery.modal.min.css">
+<link rel="stylesheet" href="shared/css/style.css">
+	
+<script src="shared/js/jquery-3.6.0.min.js"></script>
+<script src="shared/js/jquery.modal.min.js"></script>
+<script src="shared/js/global.js"></script>
+  
+</head>
+
+<body>
+
+<header>
+  <a href="index.html" class="logo">
+    <img src="shared/img/logo.svg" alt="">
+  </a>
+  <ul class="list-btns">
+    <li>
+      <a href="#searchBox"><span class="icon-search"></span></a>
+    </li>
+    <li>
+      <a href="#"><span class="icon-comment"></span></a>
+    </li>
+    <li>
+      <a href="notification.html" class="has-new"><span class="icon-bell"></span></a>
+    </li>
+    <li>
+      <a href="#"><img src="shared/img/ava/ava1-1.jpg" alt=""></a>
+    </li>
+  </ul>
+</header> 
+  
+<div class="container mt-60">
+  <div class="section">
+    <div class="head-section">
+      <h1>Show cá</h1>
+      <a href="#" class="btn-icon btn-filter"><span class="icon-filter"></span></a>
+    </div>
+    <div class="content-section">
+      sd
+    </div>
+  </div> 
+</div>  
+  
+
+<footer>
+    <div class="menu-bottom-l">
+      <a href="index.html">
+        <span class="icon-buy"></span>
+        <span class="title">Mua cá</span>
+      </a>
+      <a href="auction.html">
+        <span class="icon-bid"></span>
+        <span class="title">Đấu giá</span>
+      </a>
+    </div>
+    <div class="menu-bottom-r">
+      <a href="show.html" class="active">
+        <span class="icon-show"></span>
+        <span class="title">Show cá</span>
+      </a>
+      <a href="event.html">
+        <span class="icon-event"></span>
+        <span class="title">Sự kiện</span>
+      </a>
+    </div>
+  <div class="wave-bottom">
+    <a href="#postFish" class="btn-post"><span class="icon-plus"></span></a>
+  </div>
+</footer>
+
+<!-- Modal HTML embedded directly into document -->
+<div class="modal-sheet">
+  <div class="overlay-modal"></div>
+  <div id="postFish" class="bottom-modal type-post">
+    <div class="head-modal">
+      <h3>Bạn muốn đăng gì?</h3>
+    </div>
+    <div class="content-modal">
+      <ul class="menu-post">
+        <li>
+          <a href="post-sale-1.html">
+            <span class="pick-type icon-buy"></span>
+            <span class="pick-name">Bán cá</span>
+          </a>
+        </li>
+        <li>
+          <a href="post-bid.html">
+            <span class="pick-type icon-bid"></span>
+            <span class="pick-name">Đấu giá</span>
+          </a>
+        </li>
+        <li>
+          <a href="post-show.html">
+            <span class="pick-type icon-show"></span>
+            <span class="pick-name">Show cá</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+<div class="modal-sheet">
+  <div class="overlay-modal"></div>
+  <div id="searchBox" class="top-modal">
+    <div class="content-modal">
+      <div class="content-search-box">
+        <div class="search-box">
+          <input class="form-control" type="text" placeholder="Tìm kiếm">
+          <a href="#" class="btn-submit-search"><span class="icon-search"></span></a>
+        </div>
+        <ul class="list-suggest">
+          <!-- add class hide-list-suggest để ẩn list suggest -->
+          <li>
+            <a href="#"><img src="https://demo.bettamarket.net/userfiles/images/im_1649516994184_bde6AEI2F1_thumb.jpg" alt="Bettatuan1992">Bettatuan1992</a>
+          </li>
+          <li>
+            <a href="#"><img src="https://demo.bettamarket.net/userfiles/images/im_1652453533889_28MO7min1P_thumb.jpg" alt="Betta thanh long">Betta thanh long</a>
+          </li>
+          <li>
+            <a href="#"><img src="https://demo.bettamarket.net/userfiles/images/im_1648481262690_cUHBA8AaTs_thumb.jpg" alt="1000kylo betta">1000kylo betta</a>
+          </li>
+          <li>
+            <a href="#"><span class="icon-search"></span>nemo galaxy</a>
+          </li>
+          <li>
+            <a href="#"><span class="icon-search"></span>nemo classic</a>
+          </li>
+          <li>
+            <a href="#"><span class="icon-search"></span>Koi nemo</a>
+          </li>
+          <li>
+            <a href="#"><span class="icon-search"></span>halfmoon nemo</a>
+          </li>
+          <li>
+            <a href="#"><span class="icon-search"></span>black nemo</a>
+          </li>
+          <li>
+            <a href="#"><span class="icon-search"></span>nemo galaxy</a>
+          </li>
+          <li>
+            <a href="#"><span class="icon-search"></span>nemo classic</a>
+          </li>
+          <li>
+            <a href="#"><span class="icon-search"></span>Koi nemo</a>
+          </li>
+          <li>
+            <a href="#"><span class="icon-search"></span>halfmoon nemo</a>
+          </li>
+          <li>
+            <a href="#"><span class="icon-search"></span>black nemo</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<script>
+  
+  ////// modal top sheet //////
+  var curentSheet;
+  $('a[href="#searchBox"]').click(function(event) {
+    event.preventDefault();
+    curentSheet = $($(this).attr("href"));
+    showModalSheet(curentSheet);
+  });
+  ////// modal bottom sheet //////
+  $('a[href="#postFish"]').click(function(event) {
+    event.preventDefault();
+    var curentSheet = $($(this).attr("href"));
+    showModalSheet(curentSheet);
+  });
+  function showModalSheet(curentSheet) {
+    curentSheet.parent().addClass('active');
+    $('body').css('overflow','hidden');
+  }
+  $('.overlay-modal').click(function() {
+    $(this).parent().removeClass('active');
+    $('body').removeAttr("style");
+  });
+</script>
+</body>
+</html>
