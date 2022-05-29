@@ -67,6 +67,7 @@ button {
   opacity: 0;
   pointer-events: none;
   transition: 0.2s opacity $eio;
+  -webkit-transition: 0.2s opacity $eio;
   &.active {
     opacity: 1;
     pointer-events: auto;
@@ -88,6 +89,7 @@ button {
     left: 0;
     opacity: 0;
     transition: 0.2s opacity $eio;
+    -webkit-transition: 0.2s opacity $eio;
     background-color: rgba($black,0.8);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
@@ -99,7 +101,9 @@ button {
     left: 0;
     background-color: $white;
     transform: translateY(100%);
+    -webkit-transform: translateY(100%);
     transition: 0.2s transform $eio;
+    -webkit-transition: 0.2s transform $eio;
   }
   .top-modal {
     top: 0;
@@ -108,7 +112,9 @@ button {
     left: 0;
     background-color: $white;
     transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
     transition: 0.2s transform $eio;
+    -webkit-transition: 0.2s transform $eio;
   }
   .head-modal {
     padding: 16px;
