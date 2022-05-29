@@ -65,24 +65,19 @@ button {
   bottom: 0;
   z-index: 12;
   opacity: 0;
-  z-index: -1;
-  visibility: hidden;
-  //pointer-events: none;
-  transition: 0.2s all $eio;
-  -webkit-transition: 0.2s all $eio;
+  pointer-events: none;
+  transition: 0.2s opacity $eio;
   &.active {
     opacity: 1;
-    z-index: 10;
-    visibility: visible;
-    //pointer-events: auto;
+    pointer-events: auto;
     .overlay-modal {
       opacity: 1;
     }
     .bottom-modal {
-      transform: translateY(0);
+      bottom: 0;
     }
     .top-modal {
-      transform: translateY(0);
+      top: 0;
     }
   }
   .overlay-modal {
@@ -93,32 +88,25 @@ button {
     left: 0;
     opacity: 0;
     transition: 0.2s opacity $eio;
-    -webkit-transition: 0.2s opacity $eio;
     background-color: rgba($black,0.8);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
   }
   .bottom-modal {
-    bottom: 0;
+    bottom: -50%;
     position: absolute;
     width: 100%;
     left: 0;
     background-color: $white;
-    transform: translateY(100%);
-    -webkit-transform: translateY(100%);
-    transition: 0.2s transform $eio;
-    -webkit-transition: 0.2s transform $eio;
+    transition: 0.2s bottom $eio;
   }
   .top-modal {
-    top: 0;
+    top: -50%;
     position: absolute;
     width: 100%;
     left: 0;
     background-color: $white;
-    transform: translateY(-100%);
-    -webkit-transform: translateY(-100%);
-    transition: 0.2s transform $eio;
-    -webkit-transition: 0.2s transform $eio;
+    transition: 0.2s top $eio;
   }
   .head-modal {
     padding: 16px;

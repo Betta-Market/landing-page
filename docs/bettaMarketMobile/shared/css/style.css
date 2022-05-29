@@ -61,20 +61,17 @@ button {
   bottom: 0;
   z-index: 12;
   opacity: 0;
-  z-index: -1;
-  visibility: hidden;
-  transition: 0.2s all ease-in-out;
-  -webkit-transition: 0.2s all ease-in-out; }
+  pointer-events: none;
+  transition: 0.2s opacity ease-in-out; }
   .modal-sheet.active {
     opacity: 1;
-    z-index: 10;
-    visibility: visible; }
+    pointer-events: auto; }
     .modal-sheet.active .overlay-modal {
       opacity: 1; }
     .modal-sheet.active .bottom-modal {
-      transform: translateY(0); }
+      bottom: 0; }
     .modal-sheet.active .top-modal {
-      transform: translateY(0); }
+      top: 0; }
   .modal-sheet .overlay-modal {
     position: absolute;
     width: 100%;
@@ -83,30 +80,23 @@ button {
     left: 0;
     opacity: 0;
     transition: 0.2s opacity ease-in-out;
-    -webkit-transition: 0.2s opacity ease-in-out;
     background-color: rgba(54, 54, 54, 0.8);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px); }
   .modal-sheet .bottom-modal {
-    bottom: 0;
+    bottom: -50%;
     position: absolute;
     width: 100%;
     left: 0;
     background-color: #ffffff;
-    transform: translateY(100%);
-    -webkit-transform: translateY(100%);
-    transition: 0.2s transform ease-in-out;
-    -webkit-transition: 0.2s transform ease-in-out; }
+    transition: 0.2s bottom ease-in-out; }
   .modal-sheet .top-modal {
-    top: 0;
+    top: -50%;
     position: absolute;
     width: 100%;
     left: 0;
     background-color: #ffffff;
-    transform: translateY(-100%);
-    -webkit-transform: translateY(-100%);
-    transition: 0.2s transform ease-in-out;
-    -webkit-transition: 0.2s transform ease-in-out; }
+    transition: 0.2s top ease-in-out; }
   .modal-sheet .head-modal {
     padding: 16px;
     border-bottom: 1px solid #EDEDED; }
