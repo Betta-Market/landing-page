@@ -153,6 +153,7 @@
     display: block;
     overflow: hidden;
     position: relative;
+    background-color: $white;
     &.fish-video:after{
       content:"";
       background: url("../img/icon_play.svg") no-repeat center / 100% auto;
@@ -203,7 +204,7 @@
   color: #1d9bf0;
   font-weight: bold;
   border-radius: 51px;
-  background-color: #e3f2fc;
+  background-color: $white;
   line-height: 44px;
   margin: 15px 0 40px;
   transition: ease 0.2s;

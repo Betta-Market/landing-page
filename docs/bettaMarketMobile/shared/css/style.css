@@ -141,7 +141,7 @@ button {
     padding: 16px; }
 
 header {
-  z-index: 9;
+  z-index: 20;
   height: 60px;
   background-color: #ffffff;
   box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.05);
@@ -354,7 +354,7 @@ footer {
   justify-content: space-between;
   box-shadow: 0px -3px 3px rgba(0, 0, 0, 0.07);
   background-color: #ffffff;
-  z-index: 9;
+  z-index: 20;
   /* iPhone 11 Pro Max 2688x1242px at 458ppi */ }
   footer .wave-bottom {
     position: absolute;
@@ -560,7 +560,8 @@ ul.menu-post {
     border-radius: 12px 12px 0 0;
     display: block;
     overflow: hidden;
-    position: relative; }
+    position: relative;
+    background-color: #ffffff; }
     .show-dont-sold .fish-img-show.fish-video:after {
       content: "";
       background: url("../img/icon_play.svg") no-repeat center/100% auto;
@@ -600,7 +601,7 @@ ul.menu-post {
   color: #1d9bf0;
   font-weight: bold;
   border-radius: 51px;
-  background-color: #e3f2fc;
+  background-color: #ffffff;
   line-height: 44px;
   margin: 15px 0 40px;
   transition: ease 0.2s; }
