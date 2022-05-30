@@ -118,3 +118,97 @@
     }
   }
 }
+
+.masonry {
+  .masonry-item {
+    width: calc((100% - 12px)/2);
+    margin-bottom: 12px;
+  }
+  .masonry-content {
+    position: relative;
+  }
+ 
+}
+.show-dont-sold{
+  width: 100% !important;
+
+  .ava{
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;  
+    &.verified {
+      &:before {
+        font-size: 5px;
+        right: -5px;
+        width: 3px;
+        height: 3px;
+      }
+    }
+    img {
+      border-radius: 15px;
+    }
+  }
+  .fish-img-show{
+    border-radius: 12px 12px 0 0;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    &.fish-video:after{
+      content:"";
+      background: url("../img/icon_play.svg") no-repeat center / 100% auto;
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      width: 32px;  
+      height: 32px;
+      z-index: 1;
+    }
+  }
+  .fish-tt{
+    justify-content: space-between;
+    align-items: center; 
+    padding: 8px;
+    background-color: $white;
+    border-radius: 0 0 12px 12px;
+    ul {
+      li {
+        margin-left: 12px;
+        color: $textGrey;
+        i {
+          margin-right: 4px;
+          color: $textGrey1;
+        }
+      }
+    }
+  }
+}
+.like-count, .like-cmt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px; 
+}
+.like-count {
+  &.liked {
+    i {
+      color: $red2 !important;
+    }
+  }
+}
+.show-more{
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  text-align: center;
+  color: #1d9bf0;
+  font-weight: bold;
+  border-radius: 51px;
+  background-color: #e3f2fc;
+  line-height: 44px;
+  margin: 15px 0 40px;
+  transition: ease 0.2s;
+  &:hover{
+    background-color: #1d9bf0;
+    color: #fff;
+  }
+}

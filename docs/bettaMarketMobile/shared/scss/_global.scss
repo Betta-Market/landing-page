@@ -7,7 +7,7 @@ body {
   color: $text_body;
   font-size: 14px;
   font-family: "San Francisco Text";
-  font-weight: normal;
+  font-weight: normal; 
   line-height: 1.43;
   letter-spacing: 0;
   min-width: inherit;
@@ -21,6 +21,39 @@ a {
 img {
   width: 100%;
   height: auto;
+}
+.ob-fit {
+  object-fit: cover;
+  height: 100%;
+}
+.ava {
+  position: relative;
+}
+.dis-flex {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+}
+.verified:before {
+  content: "\e907";
+  font-family: 'bettamarket' !important;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  border-radius: 50%;
+  width: 13px;
+  height: 13px;
+  background: #1d9bf0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  padding: 5px;
+  color: #ffffff;
+  z-index: 9;
 }
 .mt-60 {
   margin-top: 60px;

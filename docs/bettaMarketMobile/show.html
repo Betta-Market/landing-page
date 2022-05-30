@@ -10,8 +10,25 @@
 <link rel="stylesheet" href="shared/css/style.css">
 	
 <script src="shared/js/jquery-3.6.0.min.js"></script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 <script src="shared/js/jquery.modal.min.js"></script>
 <script src="shared/js/global.js"></script>
+  
+<script>
+  $(document).ready(function(){
+
+
+    $('.masonry').masonry({
+      // options...
+      itemSelector: '.masonry-item',
+      gutter: 12
+    });
+
+
+  });
+
+  
+</script>
   
 </head>
 
@@ -44,7 +61,153 @@
       <a href="#" class="btn-icon btn-filter"><span class="icon-filter"></span></a>
     </div>
     <div class="content-section">
-      sd
+      <ul class="show-dont-sold masonry">
+        <li class="masonry-item">
+          <div class="masonry-content">
+            <a href="show_detail.html" class="fish-img-show fish-video"><img src="shared/img/fish/pk3.png" width="600" height="460" alt=""/></a>
+            <div class="dis-flex fish-tt">
+              <a href="#" class="ava verified"><img src="shared/img/fish/pk5.png" alt="" class="ob-fit"></a>
+              <ul class="dis-flex">
+                <li><span class="like-count liked"><i class="icon-heart"></i>30</span></li>
+                <li><span class="like-cmt"><i class="icon-chat"></i>330</span></li>
+              </ul>
+            </div>
+          </div>        
+        </li>
+        <li class="masonry-item">
+          <div class="masonry-content">
+            <a href="show_detail.html" class="fish-img-show"><img src="shared/img/fish/hm3_1_02.jpg" width="600" height="460" alt=""/></a>
+            <div class="dis-flex fish-tt">
+              <a href="#" class="ava"><img src="shared/img/ava/ava1-2.jpg" alt="" class="ob-fit"></a>
+              <ul class="dis-flex">
+                <li><span class="like-count"><i class="icon-heart"></i>130</span></li>
+                <li><span class="like-cmt"><i class="icon-chat"></i>2k3</span></li>
+              </ul>
+            </div>
+          </div>        
+        </li>
+        <li class="masonry-item">
+          <div class="masonry-content">
+            <a href="show_detail.html" class="fish-img-show"><img src="shared/img/fish/hm4.png" width="600" height="460" alt=""/></a>
+            <div class="dis-flex fish-tt">
+              <a href="#" class="ava"><img src="shared/img/ava/ava1-1.jpg" alt="" class="ob-fit"></a>
+              <ul class="dis-flex">
+                <li><span class="like-count"><i class="icon-heart"></i>50</span></li>
+                <li><span class="like-cmt"><i class="icon-chat"></i>293</span></li>
+              </ul>
+            </div>
+          </div>        
+        </li>
+        <li class="masonry-item">
+          <div class="masonry-content">
+            <a href="show_detail.html" class="fish-img-show fish-video"><img src="shared/img/fish/hm2_1_02.jpg" width="600" height="460" alt=""/></a>
+            <div class="dis-flex fish-tt">
+              <a href="#" class="ava verified"><img src="shared/img/fish/pk2.png" alt="" class="ob-fit"></a>
+              <ul class="dis-flex">
+                <li><span class="like-count"><i class="icon-heart"></i>30</span></li>
+                <li><span class="like-cmt"><i class="icon-chat"></i>330</span></li>
+              </ul>
+            </div>
+          </div>        
+        </li>
+        <li class="masonry-item">
+          <div class="masonry-content">
+            <a href="show_detail.html" class="fish-img-show"><img src="shared/img/fish/hm3_1_02.jpg" width="600" height="460" alt=""/></a>
+            <div class="dis-flex fish-tt">
+              <a href="#" class="ava"><img src="shared/img/ava/ava1-2.jpg" alt="" class="ob-fit"></a>
+              <ul class="dis-flex">
+                <li><span class="like-count"><i class="icon-heart"></i>130</span></li>
+                <li><span class="like-cmt"><i class="icon-chat"></i>2k3</span></li>
+              </ul>
+            </div>
+          </div>        
+        </li>
+        <li class="masonry-item">
+          <div class="masonry-content">
+            <a href="show_detail.html" class="fish-img-show fish-video"><img src="shared/img/fish/pk3.png" width="600" height="460" alt=""/></a>
+            <div class="dis-flex fish-tt">
+              <a href="#" class="ava verified"><img src="shared/img/fish/pk5.png" alt="" class="ob-fit"></a>
+              <ul class="dis-flex">
+                <li><span class="like-count"><i class="icon-heart"></i>30</span></li>
+                <li><span class="like-cmt"><i class="icon-chat"></i>330</span></li>
+              </ul>
+            </div>
+          </div>        
+        </li>
+        <li class="masonry-item">
+          <div class="masonry-content">
+            <a href="show_detail.html" class="fish-img-show"><img src="shared/img/fish/hm3_1_02.jpg" width="600" height="460" alt=""/></a>
+            <div class="dis-flex fish-tt">
+              <a href="#" class="ava"><img src="shared/img/ava/ava1-2.jpg" alt="" class="ob-fit"></a>
+              <ul class="dis-flex">
+                <li><span class="like-count"><i class="icon-heart"></i>130</span></li>
+                <li><span class="like-cmt"><i class="icon-chat"></i>2k3</span></li>
+              </ul>
+            </div>
+          </div>        
+        </li>
+        <li class="masonry-item">
+          <div class="masonry-content">
+            <a href="show_detail.html" class="fish-img-show"><img src="shared/img/fish/hm4.png" width="600" height="460" alt=""/></a>
+            <div class="dis-flex fish-tt">
+              <a href="#" class="ava"><img src="shared/img/ava/ava1-1.jpg" alt="" class="ob-fit"></a>
+              <ul class="dis-flex">
+                <li><span class="like-count"><i class="icon-heart"></i>50</span></li>
+                <li><span class="like-cmt"><i class="icon-chat"></i>293</span></li>
+              </ul>
+            </div>
+          </div>        
+        </li>
+        <li class="masonry-item">
+          <div class="masonry-content">
+            <a href="show_detail.html" class="fish-img-show fish-video"><img src="shared/img/fish/hm2_1_02.jpg" width="600" height="460" alt=""/></a>
+            <div class="dis-flex fish-tt">
+              <a href="#" class="ava verified"><img src="shared/img/fish/pk2.png" alt="" class="ob-fit"></a>
+              <ul class="dis-flex">
+                <li><span class="like-count"><i class="icon-heart"></i>30</span></li>
+                <li><span class="like-cmt"><i class="icon-chat"></i>330</span></li>
+              </ul>
+            </div>
+          </div>        
+        </li>
+        <li class="masonry-item">
+          <div class="masonry-content">
+            <a href="show_detail.html" class="fish-img-show"><img src="shared/img/fish/hm3_1_02.jpg" width="600" height="460" alt=""/></a>
+            <div class="dis-flex fish-tt">
+              <a href="#" class="ava"><img src="shared/img/ava/ava1-2.jpg" alt="" class="ob-fit"></a>
+              <ul class="dis-flex">
+                <li><span class="like-count"><i class="icon-heart"></i>130</span></li>
+                <li><span class="like-cmt"><i class="icon-chat"></i>2k3</span></li>
+              </ul>
+            </div>
+          </div>        
+        </li>
+        <li class="masonry-item">
+          <div class="masonry-content">
+            <a href="show_detail.html" class="fish-img-show fish-video"><img src="shared/img/fish/hm2_1_02.jpg" width="600" height="460" alt=""/></a>
+            <div class="dis-flex fish-tt">
+              <a href="#" class="ava verified"><img src="shared/img/fish/pk2.png" alt="" class="ob-fit"></a>
+              <ul class="dis-flex">
+                <li><span class="like-count"><i class="icon-heart"></i>30</span></li>
+                <li><span class="like-cmt"><i class="icon-chat"></i>330</span></li>
+              </ul>
+            </div>
+          </div>        
+        </li>
+        <li class="masonry-item">
+          <div class="masonry-content">
+            <a href="show_detail.html" class="fish-img-show"><img src="shared/img/fish/hm3_1_02.jpg" width="600" height="460" alt=""/></a>
+            <div class="dis-flex fish-tt">
+              <a href="#" class="ava"><img src="shared/img/ava/ava1-2.jpg" alt="" class="ob-fit"></a>
+              <ul class="dis-flex">
+                <li><span class="like-count"><i class="icon-heart"></i>130</span></li>
+                <li><span class="like-cmt"><i class="icon-chat"></i>2k3</span></li>
+              </ul>
+            </div>
+          </div>        
+        </li>
+      </ul>
+      <a href="#" class="show-more"> Chưa hết còn nữa</a>
     </div>
   </div> 
 </div>  
