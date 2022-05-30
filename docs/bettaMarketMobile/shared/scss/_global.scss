@@ -22,6 +22,9 @@ img {
   width: 100%;
   height: auto;
 }
+button{
+  cursor: pointer;
+}
 .ob-fit {
   object-fit: cover;
   height: 100%;
@@ -71,6 +74,21 @@ img {
   font-weight: bold;
   &:hover {
     text-decoration: underline;
+  }
+}
+.btn-secondary {
+  height: 34px;
+  padding: 0 16px;
+  background-color: $green;
+  color: $white;
+  border-radius: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  span {
+    margin-right: 8px;
+    font-size: 13px;
   }
 }
 input{
@@ -174,6 +192,32 @@ header {
     height: 30px;
     img {
       width: 100%;
+    }
+  }
+  &.header-transparent {
+    background: none;
+    box-shadow: none;
+    .btn-back {
+      width: 44px;
+      height: 44px;
+      border-radius: 22px;
+      background-color: rgba($black1,0.3);
+      span {
+        color: white;
+      }
+    }
+    .btn-link {
+      display: flex;
+      align-items: center;
+      height: 44px;
+      border-radius: 22px;
+      background-color: rgba($black1,0.3);
+      padding: 0 16px;
+      font-weight: normal;
+      color: $white;
+      strong {
+        margin-left: 4px;
+      }
     }
   }
 }
@@ -526,6 +570,100 @@ ul.menu-post {
   }
 }
 
+/////// ANIMATION CSS ////////
+@keyframes scaleInOut {
+  0% {transform: scale(1);}
+  40% {transform: scale(1.4);}
+  60% {transform: scale(1.4);}
+  100% {transform: scale(1);}
+}
 
+
+
+///// Animation ////////
+@keyframes scaleUp {
+  0% {
+    transform: scale(1) translateY(0);
+    
+  }
+  40% {
+    transform: scale(1.3) translateY(-2px);
+  }
+  60% {
+    transform: scale(1.3) translateY(-2px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+@keyframes moveUp {
+  0% {
+    transform: translateY(0);
+    
+  }
+  40% {
+    transform: translateY(-3px);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes fly40 {
+  0% {
+    top: 10px;
+  }
+  100% {
+    top: -40px;
+  }
+}
+@keyframes fly50 {
+  0% {
+    top: 10px;
+  }
+  100% {
+    top: -50px;
+  }
+}
+@keyframes flyUp {
+  0% {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: 4px;
+  }
+  50% {
+    margin-left: -4px;
+    opacity: 1;
+  }
+  75% {
+    margin-left: 4px;
+  }
+  100% {
+    margin-left: -4px;
+    opacity: 0;
+  }
+}
+@keyframes flyUp1 {
+  0% {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: -4px;
+  }
+  50% {
+    margin-left: 4px;
+    opacity: 1;
+  }
+  75% {
+    margin-left: -2px;
+  }
+  100% {
+    margin-left: 2px;
+    opacity: 0;
+  }
+}
 
 
