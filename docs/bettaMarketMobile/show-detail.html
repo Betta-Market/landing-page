@@ -21,7 +21,18 @@
       event.preventDefault();
       $(this).toogleClass('liked');
     });
-
+    
+    $(window).scroll(function (event) {
+      var scroll = $(window).scrollTop(),
+          ePhoto = $('.photo-show'),
+          hPhoto = ePhoto.height();
+      console.log(scroll);
+      if (scroll > (hPhoto - 60)) {
+        $('.bg-sticky').addClass('show');
+      }else {
+        $('.bg-sticky').removeClass('show');
+      }
+    });
 
   });
 
@@ -31,6 +42,9 @@
 <body class="sub-page">
 
 <header class="header-transparent">
+  <div class="bg-sticky">
+    <div class="photo-clone" style="background-image: url('shared/img/fish/yellow-base.jpg');"></div>
+  </div>
   <div class="header-l"> 
     <a href="#" class="btn-icon btn-back historyBack"><span class="icon-arrow-left"></span></a>
   </div>

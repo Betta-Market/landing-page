@@ -196,6 +196,27 @@ header {
   header.header-transparent {
     background: none;
     box-shadow: none; }
+    header.header-transparent .header-l, header.header-transparent .header-r {
+      position: relative; }
+    header.header-transparent .bg-sticky {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      transition: 0.2s opacity ease-in-out; }
+      header.header-transparent .bg-sticky .photo-clone {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        filter: blur(6px);
+        transform: scale(1.4); }
+      header.header-transparent .bg-sticky.show {
+        opacity: 1; }
     header.header-transparent .btn-back {
       width: 44px;
       height: 44px;
