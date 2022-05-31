@@ -871,23 +871,21 @@ ul.menu-post {
       left: 0;
       width: 100% !important;
       height: 100% !important; }
-  .show-detail .show_info {
+  .show-detail .has-tooltip {
     width: calc(51.1% - 28px);
-    position: relative; }
-    .show-detail .show_info .seller .ava {
-      width: 50px;
-      height: 50px; }
-    .show-detail .show_info .link-tooltip {
+    position: relative;
+    padding-right: 40px; }
+    .show-detail .has-tooltip .link-tooltip {
       position: absolute;
       top: 0;
-      right: 18px;
+      right: 12px;
       font-size: 27px;
       color: #888;
       line-height: 1;
-      cursor: pointer; }
-    .show-detail .show_info .tooltip-info {
+      letter-spacing: -1px; }
+    .show-detail .has-tooltip .tooltip-info {
       position: absolute;
-      right: -130px;
+      right: 0;
       top: 40px;
       z-index: 1;
       padding: 12px;
@@ -895,24 +893,24 @@ ul.menu-post {
       box-shadow: 8px 8px 24px 0 rgba(0, 0, 0, 0.13);
       border: solid 1px #e2e2e2;
       background-color: #ffffff; }
-      .show-detail .show_info .tooltip-info:before {
+      .show-detail .has-tooltip .tooltip-info:before {
         content: "";
         position: absolute;
         top: -7px;
-        left: 20px;
+        right: 15px;
         width: 12px;
         height: 12px;
         transform: rotate(135deg);
         background: #fff;
         border-bottom: solid 1px #e2e2e2;
         border-left: solid 1px #e2e2e2; }
-      .show-detail .show_info .tooltip-info a {
+      .show-detail .has-tooltip .tooltip-info a {
         display: block;
         min-width: 159px;
         line-height: 29px;
         box-sizing: border-box;
         padding-left: 8px; }
-        .show-detail .show_info .tooltip-info a:hover {
+        .show-detail .has-tooltip .tooltip-info a:hover {
           background: #efefef; }
   .show-detail .fish-txt {
     font-size: 16px;
@@ -931,11 +929,13 @@ ul.menu-post {
     .show-detail .row-info .username {
       color: #1d9bf0;
       font-weight: 700; }
-    .show-detail .row-info p:first-child span {
-      color: #b2b2b2;
-      display: inline-block;
-      margin-left: 8px;
-      font-size: 13px; }
+    .show-detail .row-info p:first-child {
+      margin-bottom: 4px; }
+      .show-detail .row-info p:first-child span {
+        color: #b2b2b2;
+        display: inline-block;
+        margin-left: 8px;
+        font-size: 13px; }
   .show-detail .reply {
     font-weight: bold;
     color: #b2b2b2;

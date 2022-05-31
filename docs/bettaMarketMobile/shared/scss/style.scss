@@ -398,25 +398,22 @@
       height: 100% !important;
     }
   }
-  .show_info{
+  .has-tooltip {
     width: calc(51.1% - 28px);
     position: relative;
-    .seller .ava{
-      width: 50px;
-      height: 50px;
-    }
+    padding-right: 40px;
     .link-tooltip{
       position: absolute;
       top: 0;
-      right: 18px;
+      right: 12px;
       font-size: 27px;
       color: $grey;
       line-height: 1;
-      cursor: pointer;
+      letter-spacing: -1px;
     }
     .tooltip-info{
       position: absolute;
-      right: -130px;
+      right: 0;
       top: 40px;
       z-index: 1;
       padding: 12px;
@@ -428,7 +425,7 @@
         content:"";
         position: absolute;
         top: -7px;
-        left: 20px;
+        right: 15px;
         width: 12px;
         height: 12px;
         transform: rotate(135deg);
@@ -468,12 +465,16 @@
       color: $primary;
       font-weight: 700;
     }
-    p:first-child span {
-      color: #b2b2b2;
-      display: inline-block;
-      margin-left: 8px;
-      font-size: 13px;
+    p:first-child {
+      margin-bottom: 4px; 
+      span {
+        color: #b2b2b2;
+        display: inline-block;
+        margin-left: 8px;
+        font-size: 13px;
+      }
     }
+    
   }
   .reply{
     font-weight: bold;
