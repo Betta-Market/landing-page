@@ -31,6 +31,9 @@ button{
 }
 .ava {
   position: relative;
+  img {
+    border-radius: 50%;
+  }
 }
 .dis-flex {
   display: -webkit-flex;
@@ -60,6 +63,9 @@ button{
 }
 .mt-60 {
   margin-top: 60px;
+}
+.mt-8 {
+  margin-top: 8px;
 }
 .btn-icon {
   width: 40px;

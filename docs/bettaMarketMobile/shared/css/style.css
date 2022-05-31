@@ -29,6 +29,8 @@ button {
 
 .ava {
   position: relative; }
+  .ava img {
+    border-radius: 50%; }
 
 .dis-flex {
   display: -webkit-flex;
@@ -58,6 +60,9 @@ button {
 
 .mt-60 {
   margin-top: 60px; }
+
+.mt-8 {
+  margin-top: 8px; }
 
 .btn-icon {
   width: 40px;
@@ -818,3 +823,171 @@ ul.menu-post {
     margin-left: 16px; }
   .reacts-sd .btn-icon {
     font-size: 22px; }
+
+.chatgroup-box {
+  padding: 16px 12px; }
+  .chatgroup-box .ava {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px; }
+
+.chat-row {
+  margin-bottom: 8px;
+  align-items: flex-start; }
+  .chat-row:nth-child(1) .row-info .row-price {
+    border-color: #66bd21;
+    color: #66bd21;
+    background: #f7fef2; }
+
+.show-detail {
+  align-items: flex-start;
+  margin-bottom: 40px; }
+  .show-detail .fish-show-img {
+    width: 48.9%;
+    margin-right: 28px;
+    position: sticky;
+    top: 80px;
+    background-color: #363636; }
+  .show-detail .video-ngang {
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+    position: relative; }
+    .show-detail .video-ngang iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100% !important;
+      height: 100% !important; }
+  .show-detail .video-doc {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    height: calc(100vh - 320px); }
+    .show-detail .video-doc iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100% !important;
+      height: 100% !important; }
+  .show-detail .show_info {
+    width: calc(51.1% - 28px);
+    position: relative; }
+    .show-detail .show_info .seller .ava {
+      width: 50px;
+      height: 50px; }
+    .show-detail .show_info .link-tooltip {
+      position: absolute;
+      top: 0;
+      right: 18px;
+      font-size: 27px;
+      color: #888;
+      line-height: 1;
+      cursor: pointer; }
+    .show-detail .show_info .tooltip-info {
+      position: absolute;
+      right: -130px;
+      top: 40px;
+      z-index: 1;
+      padding: 12px;
+      border-radius: 4px;
+      box-shadow: 8px 8px 24px 0 rgba(0, 0, 0, 0.13);
+      border: solid 1px #e2e2e2;
+      background-color: #ffffff; }
+      .show-detail .show_info .tooltip-info:before {
+        content: "";
+        position: absolute;
+        top: -7px;
+        left: 20px;
+        width: 12px;
+        height: 12px;
+        transform: rotate(135deg);
+        background: #fff;
+        border-bottom: solid 1px #e2e2e2;
+        border-left: solid 1px #e2e2e2; }
+      .show-detail .show_info .tooltip-info a {
+        display: block;
+        min-width: 159px;
+        line-height: 29px;
+        box-sizing: border-box;
+        padding-left: 8px; }
+        .show-detail .show_info .tooltip-info a:hover {
+          background: #efefef; }
+  .show-detail .fish-txt {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 10px 0 5px; }
+  .show-detail .show_sns {
+    border-bottom: 1px solid #efefef;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    margin-bottom: 20px; }
+  .show-detail .row-info {
+    background: #f8f8f8;
+    width: 100%;
+    margin-bottom: 4px; }
+    .show-detail .row-info .username {
+      color: #1d9bf0;
+      font-weight: 700; }
+    .show-detail .row-info p:first-child span {
+      color: #b2b2b2;
+      display: inline-block;
+      margin-left: 8px;
+      font-size: 13px; }
+  .show-detail .reply {
+    font-weight: bold;
+    color: #b2b2b2;
+    margin-left: 12px; }
+  .show-detail .form-group {
+    margin-bottom: 4px; }
+  .show-detail input {
+    width: 100%;
+    height: 48px;
+    box-sizing: border-box;
+    border-radius: 24px;
+    padding-left: 19px; }
+  .show-detail .chat-row {
+    margin-bottom: 12px; }
+    .show-detail .chat-row .react {
+      margin-top: 4px; }
+    .show-detail .chat-row .ava {
+      width: 30px;
+      height: 30px;
+      margin-top: 6px;
+      margin-right: 8px; }
+      .show-detail .chat-row .ava.verified:before {
+        font-size: 5px;
+        width: 4px;
+        height: 4px;
+        right: -4px; }
+    .show-detail .chat-row > div {
+      width: calc(100% - 38px); }
+      .show-detail .chat-row > div .chat-row {
+        margin-bottom: 8px; }
+        .show-detail .chat-row > div .chat-row > div {
+          width: calc(100% - 32px); }
+        .show-detail .chat-row > div .chat-row .row-info {
+          margin-bottom: 0; }
+        .show-detail .chat-row > div .chat-row input {
+          height: 34px;
+          border-radius: 17px; }
+        .show-detail .chat-row > div .chat-row .form-group {
+          margin-bottom: 4px; }
+      .show-detail .chat-row > div .ava {
+        width: 24px;
+        height: 24px; }
+  .show-detail .like-cmt i, .show-detail .like-count i {
+    color: #c0c0c0; }
+  .show-detail .liked .like-count i {
+    color: #f20000; }
+
+.row-info {
+  background: #ffffff;
+  border-radius: 10px;
+  position: relative;
+  box-sizing: border-box;
+  padding: 13px 12px;
+  width: calc(100% - 52px);
+  line-height: 1.36; }
