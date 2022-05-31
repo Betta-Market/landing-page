@@ -102,6 +102,20 @@ input {
 button {
   border: none; }
 
+.form-group {
+  margin-bottom: 20px; }
+  .form-group.inline-form {
+    position: relative; }
+    .form-group.inline-form a {
+      position: absolute;
+      right: 4px;
+      top: 4px;
+      color: #1d9bf0; }
+      .form-group.inline-form a span {
+        font-size: 18px; }
+      .form-group.inline-form a.btn-disable {
+        color: #e2e2e2; }
+
 .form-control {
   display: block;
   width: 100%;
@@ -117,7 +131,7 @@ button {
     border-color: #1d9bf0;
     outline: 0; }
   .form-control::placeholder {
-    color: #727272;
+    color: #c4c4c4;
     opacity: 1; }
 
 .modal-sheet {
@@ -221,7 +235,9 @@ header {
       width: 44px;
       height: 44px;
       border-radius: 22px;
-      background-color: rgba(0, 0, 0, 0.3); }
+      background-color: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px); }
       header.header-transparent .btn-back span {
         color: white; }
     header.header-transparent .btn-link {
@@ -232,7 +248,9 @@ header {
       background-color: rgba(0, 0, 0, 0.3);
       padding: 0 16px;
       font-weight: normal;
-      color: #ffffff; }
+      color: #ffffff;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px); }
       header.header-transparent .btn-link strong {
         margin-left: 4px; }
 
@@ -862,7 +880,7 @@ ul.menu-post {
 
 .show-detail {
   align-items: flex-start;
-  margin-bottom: 40px; }
+  margin-bottom: 20px; }
   .show-detail .fish-show-img {
     width: 48.9%;
     margin-right: 28px;
@@ -996,6 +1014,13 @@ ul.menu-post {
           border-radius: 17px; }
         .show-detail .chat-row > div .chat-row .form-group {
           margin-bottom: 4px; }
+          .show-detail .chat-row > div .chat-row .form-group .btn-icon {
+            width: 34px;
+            height: 34px;
+            top: 0;
+            right: 2px; }
+            .show-detail .chat-row > div .chat-row .form-group .btn-icon span {
+              font-size: 16px; }
       .show-detail .chat-row > div .ava {
         width: 24px;
         height: 24px; }
@@ -1012,3 +1037,10 @@ ul.menu-post {
   padding: 13px 12px;
   width: calc(100% - 52px);
   line-height: 1.36; }
+
+.relate-show {
+  padding: 0 16px; }
+  .relate-show h3 {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 12px !important; }

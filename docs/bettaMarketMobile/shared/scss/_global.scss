@@ -1,5 +1,5 @@
-@import "variables.scss";
 @import "common.css";
+@import "variables.scss";
 @import "font.css";
 
 body {
@@ -108,6 +108,24 @@ input{
 button {
   border: none;
 }
+.form-group {
+  margin-bottom: 20px;
+  &.inline-form {
+    position: relative;
+    a {
+      position: absolute;
+      right: 4px;
+      top: 4px;
+      color: $primary;
+      span {
+        font-size: 18px;
+      }
+      &.btn-disable {
+        color: $colorBorderForm;
+      }
+    }
+  }
+}
 .form-control {
   display: block;
   width: 100%;
@@ -127,7 +145,7 @@ button {
 
   // Placeholder
   &::placeholder {
-    color: $textGrey;
+    color: $textGrey1;
     // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
     opacity: 1;
   }
@@ -252,6 +270,8 @@ header {
       height: 44px;
       border-radius: 22px;
       background-color: rgba($black1,0.3);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
       span {
         color: white;
       }
@@ -265,6 +285,8 @@ header {
       padding: 0 16px;
       font-weight: normal;
       color: $white;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
       strong {
         margin-left: 4px;
       }

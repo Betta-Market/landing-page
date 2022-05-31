@@ -12,6 +12,7 @@
 <script src="shared/js/jquery-3.6.0.min.js"></script>
 <script src="shared/js/jquery.modal.min.js"></script>
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script src="shared/js/imagesloaded.pkgd.min.js"></script>
 <script src="shared/js/global.js"></script>
 <script>
   $(document).ready(function(){
@@ -27,11 +28,20 @@
           ePhoto = $('.photo-show'),
           hPhoto = ePhoto.height();
       console.log(scroll);
-      if (scroll > (hPhoto - 60)) {
+      if (scroll > (hPhoto - 100)) {
         $('.bg-sticky').addClass('show');
       }else {
         $('.bg-sticky').removeClass('show');
       }
+    });
+    
+    //masonry 
+    var $masonry = $('.masonry').masonry({
+      itemSelector: '.masonry-item',
+      gutter: 12
+    });
+    $masonry.imagesLoaded().progress( function() {
+      $masonry.masonry('layout');
     });
 
   });
@@ -86,8 +96,9 @@
   <div class="chatgroup-box">
     <div class="chat-row dis-flex">
       <a href="#" class="ava"><img src="shared/img/fish/pk1.png" width="600" height="460" alt="" class="ob-fit"></a>
-      <div class="form-group">
-          <input class="form-control" type="text" placeholder="Nhập bình luận">    
+      <div class="form-group inline-form">
+        <input class="form-control" type="text" placeholder="Nhập bình luận"> 
+        <a href="#" class="btn-icon btn-disable"><span class="icon-plane"></span></a>
       </div>                                
     </div>
     <div class="chat-row dis-flex">
@@ -137,8 +148,9 @@
         </div>
         <div class="chat-row dis-flex">
           <a href="#" class="ava"><img src="shared/img/fish/pk1.png" width="600" height="460" alt="" class="ob-fit"></a>
-          <div class="form-group">
-              <input class="form-control" type="text" placeholder="Nhập bình luận">    
+          <div class="form-group inline-form">
+            <input class="form-control" type="text" placeholder="Nhập bình luận" value="em muốn mua 1 cặp á anh">  
+            <a href="#" class="btn-icon"><span class="icon-plane"></span></a>
           </div>                                
         </div>
         <div class="chat-row dis-flex">
@@ -199,7 +211,169 @@
 
     <a href="#" class="btn-link">Xem thêm 14 bình luận</a>
   </div>
-</div>  
+</div> 
+  
+<div class="relate-show">
+  <h3>Cùng dòng nemo galaxy</h3>  
+  <ul class="show-dont-sold masonry">
+    <li class="masonry-item">
+      <div class="masonry-content">
+        <a href="show-detail.html" class="fish-img-show fish-video"><img src="shared/img/fish/yellow-base.jpg" alt=""/></a>
+        <div class="dis-flex fish-tt">
+          <a href="#" class="ava verified"><img src="shared/img/fish/pk5.png" alt="" class="ob-fit"></a>
+          <ul class="dis-flex">
+            <li><span class="like-count liked"><i class="icon-heart"></i>30</span></li>
+            <li><span class="like-cmt"><i class="icon-chat"></i>330</span></li>
+          </ul>
+        </div>
+      </div>        
+    </li>
+    <li class="masonry-item">
+      <div class="masonry-content">
+        <a href="show-detail.html" class="fish-img-show"><img src="https://demo.bettamarket.net/userfiles/images/im_1650892216329_gwN4Kgpv1D_thumb.jpg"  alt=""/></a>
+        <div class="dis-flex fish-tt">
+          <a href="#" class="ava"><img src="shared/img/ava/ava1-2.jpg" alt="" class="ob-fit"></a>
+          <ul class="dis-flex">
+            <li><span class="like-count"><i class="icon-heart"></i>130</span></li>
+            <li><span class="like-cmt"><i class="icon-chat"></i>2k3</span></li>
+          </ul>
+        </div>
+      </div>        
+    </li>
+    <li class="masonry-item">
+      <div class="masonry-content">
+        <a href="show-detail.html" class="fish-img-show"><img src="shared/img/fish/hm4.png"  alt=""/></a>
+        <div class="dis-flex fish-tt">
+          <a href="#" class="ava"><img src="shared/img/ava/ava1-1.jpg" alt="" class="ob-fit"></a>
+          <ul class="dis-flex">
+            <li><span class="like-count"><i class="icon-heart"></i>50</span></li>
+            <li><span class="like-cmt"><i class="icon-chat"></i>293</span></li>
+          </ul>
+        </div>
+      </div>        
+    </li>
+    <li class="masonry-item">
+      <div class="masonry-content">
+        <a href="show-detail.html" class="fish-img-show fish-video"><img src="shared/img/fish/hm2_1_02.jpg"  alt=""/></a>
+        <div class="dis-flex fish-tt">
+          <a href="#" class="ava verified"><img src="shared/img/fish/pk2.png" alt="" class="ob-fit"></a>
+          <ul class="dis-flex">
+            <li><span class="like-count"><i class="icon-heart"></i>30</span></li>
+            <li><span class="like-cmt"><i class="icon-chat"></i>330</span></li>
+          </ul>
+        </div>
+      </div>        
+    </li>
+    <li class="masonry-item">
+      <div class="masonry-content">
+        <a href="show-detail.html" class="fish-img-show"><img src="https://demo.bettamarket.net/userfiles/images/im_1650892266701_d45ULoRELm_thumb.jpg"  alt=""/></a>
+        <div class="dis-flex fish-tt">
+          <a href="#" class="ava"><img src="shared/img/ava/ava1-2.jpg" alt="" class="ob-fit"></a>
+          <ul class="dis-flex">
+            <li><span class="like-count"><i class="icon-heart"></i>130</span></li>
+            <li><span class="like-cmt"><i class="icon-chat"></i>2k3</span></li>
+          </ul>
+        </div>
+      </div>        
+    </li>
+    <li class="masonry-item">
+      <div class="masonry-content">
+        <a href="show-detail.html" class="fish-img-show fish-video"><img src="https://demo.bettamarket.net/userfiles/images/im_1648551770637_LdEJQ6Ts81_thumb.jpg"  alt=""/></a>
+        <div class="dis-flex fish-tt">
+          <a href="#" class="ava verified"><img src="shared/img/fish/pk5.png" alt="" class="ob-fit"></a>
+          <ul class="dis-flex">
+            <li><span class="like-count"><i class="icon-heart"></i>30</span></li>
+            <li><span class="like-cmt"><i class="icon-chat"></i>330</span></li>
+          </ul>
+        </div>
+      </div>        
+    </li>
+    <li class="masonry-item">
+      <div class="masonry-content">
+        <a href="show-detail.html" class="fish-img-show"><img src="shared/img/fish/hm3_1_02.jpg"  alt=""/></a>
+        <div class="dis-flex fish-tt">
+          <a href="#" class="ava"><img src="shared/img/ava/ava1-2.jpg" alt="" class="ob-fit"></a>
+          <ul class="dis-flex">
+            <li><span class="like-count"><i class="icon-heart"></i>130</span></li>
+            <li><span class="like-cmt"><i class="icon-chat"></i>2k3</span></li>
+          </ul>
+        </div>
+      </div>        
+    </li>
+    <li class="masonry-item">
+      <div class="masonry-content">
+        <a href="show-detail.html" class="fish-img-show"><img src="https://demo.bettamarket.net/userfiles/images/im_1648551770637_LdEJQ6Ts81_thumb.jpg"  alt=""/></a>
+        <div class="dis-flex fish-tt">
+          <a href="#" class="ava"><img src="shared/img/ava/ava1-1.jpg" alt="" class="ob-fit"></a>
+          <ul class="dis-flex">
+            <li><span class="like-count"><i class="icon-heart"></i>50</span></li>
+            <li><span class="like-cmt"><i class="icon-chat"></i>293</span></li>
+          </ul>
+        </div>
+      </div>        
+    </li>
+    <li class="masonry-item">
+      <div class="masonry-content">
+        <a href="show-detail.html" class="fish-img-show fish-video"><img src="shared/img/fish/hm2_1_02.jpg"  alt=""/></a>
+        <div class="dis-flex fish-tt">
+          <a href="#" class="ava verified"><img src="shared/img/fish/pk2.png" alt="" class="ob-fit"></a>
+          <ul class="dis-flex">
+            <li><span class="like-count"><i class="icon-heart"></i>30</span></li>
+            <li><span class="like-cmt"><i class="icon-chat"></i>330</span></li>
+          </ul>
+        </div>
+      </div>        
+    </li>
+    <li class="masonry-item">
+      <div class="masonry-content">
+        <a href="show-detail.html" class="fish-img-show"><img src="https://demo.bettamarket.net/userfiles/images/im_1648551826210_Gj1Ra0teKa_thumb.jpg" class="ob-fit"  alt=""/></a>
+        <div class="dis-flex fish-tt">
+          <a href="#" class="ava"><img src="shared/img/ava/ava1-2.jpg" alt="" class="ob-fit"></a>
+          <ul class="dis-flex">
+            <li><span class="like-count"><i class="icon-heart"></i>130</span></li>
+            <li><span class="like-cmt"><i class="icon-chat"></i>2k3</span></li>
+          </ul>
+        </div>
+      </div>        
+    </li>
+    <li class="masonry-item">
+      <div class="masonry-content">
+        <a href="show-detail.html" class="fish-img-show fish-video"><img src="shared/img/fish/hm2_1_02.jpg"  alt=""/></a>
+        <div class="dis-flex fish-tt">
+          <a href="#" class="ava verified"><img src="shared/img/fish/pk2.png" alt="" class="ob-fit"></a>
+          <ul class="dis-flex">
+            <li><span class="like-count"><i class="icon-heart"></i>30</span></li>
+            <li><span class="like-cmt"><i class="icon-chat"></i>330</span></li>
+          </ul>
+        </div>
+      </div>        
+    </li>
+    <li class="masonry-item">
+      <div class="masonry-content">
+        <a href="show-detail.html" class="fish-img-show"><img src="shared/img/fish/hm3_1_02.jpg"  alt=""/></a>
+        <div class="dis-flex fish-tt">
+          <a href="#" class="ava"><img src="shared/img/ava/ava1-2.jpg" alt="" class="ob-fit"></a>
+          <ul class="dis-flex">
+            <li><span class="like-count"><i class="icon-heart"></i>130</span></li>
+            <li><span class="like-cmt"><i class="icon-chat"></i>2k3</span></li>
+          </ul>
+        </div>
+      </div>        
+    </li>
+    <li class="masonry-item">
+      <div class="masonry-content">
+        <a href="show-detail.html" class="fish-img-show"><img src="https://demo.bettamarket.net/userfiles/images/im_1648551826210_Gj1Ra0teKa_thumb.jpg"  alt=""/></a>
+        <div class="dis-flex fish-tt">
+          <a href="#" class="ava"><img src="shared/img/ava/ava1-2.jpg" alt="" class="ob-fit"></a>
+          <ul class="dis-flex">
+            <li><span class="like-count"><i class="icon-heart"></i>130</span></li>
+            <li><span class="like-cmt"><i class="icon-chat"></i>2k3</span></li>
+          </ul>
+        </div>
+      </div>        
+    </li>
+  </ul>
+</div>
   
 
 

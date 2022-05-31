@@ -362,7 +362,7 @@
 }
 .show-detail{
   align-items: flex-start;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   .fish-show-img{
     width: 48.9%;
     margin-right: 28px;
@@ -514,6 +514,7 @@
         margin-bottom: 8px;
         & > div{
           width: calc(100% - 32px);
+          
         }
         .row-info{
           margin-bottom: 0;          
@@ -524,8 +525,19 @@
         }
         .form-group{
           margin-bottom: 4px;
-          
+          .btn-icon {
+            width: 34px;
+            height: 34px;
+            top: 0;
+            right: 2px;
+            span {
+              font-size: 16px;
+            }
+          }
         }
+        
+          
+        
       }
       
       .ava{
@@ -552,6 +564,13 @@
   width: calc(100% - 52px);
   line-height: 1.36;
 }
-
+.relate-show {
+  padding: 0 16px;
+  h3 {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 12px !important;
+  }
+}
 
 
