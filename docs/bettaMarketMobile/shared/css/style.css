@@ -98,10 +98,22 @@ button {
   border: none; }
 
 .form-control {
+  display: block;
   width: 100%;
+  padding: 12px 24px;
+  font-weight: bold;
+  color: #363636;
+  background-color: #ffffff;
   border: 1px solid #e2e2e2;
-  padding: 12px 16px;
-  border-radius: 4px; }
+  appearance: none;
+  border-radius: 4px;
+  transition: 0.2s all ease-in-out; }
+  .form-control:focus {
+    border-color: #1d9bf0;
+    outline: 0; }
+  .form-control::placeholder {
+    color: #727272;
+    opacity: 1; }
 
 .modal-sheet {
   position: fixed;
@@ -109,7 +121,7 @@ button {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 12;
+  z-index: 21;
   opacity: 0;
   pointer-events: none;
   transition: 0.2s opacity ease-in-out; }
@@ -446,7 +458,7 @@ footer {
       height: 72px; } }
 
 .blocker {
-  z-index: 10;
+  z-index: 20;
   padding: 0;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px); }
@@ -692,10 +704,8 @@ ul.menu-post {
   .like-count i, .like-cmt i {
     color: #c4c4c4; }
 
-.like-cmt {
-  margin-left: 16px; }
-  .like-cmt i {
-    margin-right: 8px; }
+.like-cmt i {
+  margin-right: 8px; }
 
 .like-count.liked i {
   color: #f20000 !important; }
@@ -797,12 +807,14 @@ ul.menu-post {
   font-size: 16px; }
 
 .reacts-sd {
-  padding: 12px;
+  padding: 8px 12px;
   border-bottom: 1px solid #EDEDED;
   display: flex;
   align-items: center;
   justify-content: space-between; }
   .reacts-sd .like-count i, .reacts-sd .like-cmt i {
     font-size: 20px; }
+  .reacts-sd .like-cmt {
+    margin-left: 16px; }
   .reacts-sd .btn-icon {
     font-size: 22px; }

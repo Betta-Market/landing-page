@@ -194,7 +194,6 @@
   }
 }
 .like-cmt {
-  margin-left: 16px;
   i {
     margin-right: 8px;
   }
@@ -327,13 +326,16 @@
   font-size: 16px;
 }
 .reacts-sd {
-  padding: 12px;
+  padding: 8px 12px;
   border-bottom: 1px solid $lineColor;
   display: flex;
   align-items: center;
   justify-content: space-between;
   .like-count i, .like-cmt i {
     font-size: 20px;
+  }
+  .like-cmt {
+    margin-left: 16px;
   }
   .btn-icon {
     font-size: 22px;

@@ -103,10 +103,28 @@ button {
   border: none;
 }
 .form-control {
+  display: block;
   width: 100%;
+  padding: 12px 24px;
+  font-weight: bold;
+  color: $black;
+  background-color: $white;
   border: 1px solid $colorBorderForm;
-  padding: 12px 16px;
+  appearance: none; // Fix appearance for date inputs in Safari
   border-radius: 4px;
+  transition: 0.2s all $eio;
+
+  &:focus {
+    border-color: $primary;
+    outline: 0;
+  }
+
+  // Placeholder
+  &::placeholder {
+    color: $textGrey;
+    // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+    opacity: 1;
+  }
 }
 .modal-sheet {
   position: fixed;
@@ -114,7 +132,7 @@ button {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 12;
+  z-index: 21;
   opacity: 0;
   pointer-events: none;
   transition: 0.2s opacity $eio;
@@ -521,7 +539,7 @@ footer {
 }
 
 .blocker {
-  z-index: 10;
+  z-index: 20;
   padding: 0;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
