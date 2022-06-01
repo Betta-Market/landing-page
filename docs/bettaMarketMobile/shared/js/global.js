@@ -20,10 +20,14 @@ $(document).ready(function(){
     curentSheet.parent().addClass('active');
     $('body').css('overflow','hidden');
   }
-  $('.overlay-modal').click(function() {
-    $(this).parent().removeClass('active');
-    $('body').removeAttr("style");
+  
+  $(".modal-close").each(function() {
+    $(this).click(function() {
+      $(this).closest('.modal-sheet').removeClass('active');
+      $('body').removeAttr("style");
+    });
   });
+  
   
 });
 

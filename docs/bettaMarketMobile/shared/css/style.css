@@ -64,6 +64,27 @@ button {
 .mt-8 {
   margin-top: 8px; }
 
+.btn-more {
+  width: 44px;
+  height: 44px;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #EEEEEE; }
+  .btn-more.btn-dark {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); }
+    .btn-more.btn-dark span {
+      background-color: #ffffff; }
+  .btn-more span {
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+    margin: 1.5px;
+    background-color: #727272; }
+
 .btn-icon {
   width: 40px;
   height: 40px;
@@ -232,9 +253,15 @@ header {
         height: 100%;
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: center;
-        filter: blur(6px);
-        transform: scale(1.4); }
+        background-position: center; }
+        header.header-transparent .bg-sticky .photo-clone:after {
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.1);
+          backdrop-filter: blur(20px);
+          -webkit-backdrop-filter: blur(20px); }
       header.header-transparent .bg-sticky.show {
         opacity: 1; }
     header.header-transparent .btn-back {
@@ -1140,3 +1167,94 @@ ul.support li {
   ul.support li a {
     font-size: 13px;
     padding: 8px 0; }
+
+.photo-sell {
+  padding-top: 75%;
+  overflow: hidden;
+  position: relative; }
+  .photo-sell .slider-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%; }
+    .photo-sell .slider-photo .owl-carousel {
+      height: 100%; }
+      .photo-sell .slider-photo .owl-carousel .item-photo {
+        padding-top: 75%;
+        overflow: hidden; }
+        .photo-sell .slider-photo .owl-carousel .item-photo img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 100%;
+          height: 100%;
+          transform: translate(-50%, -50%); }
+        .photo-sell .slider-photo .owl-carousel .item-photo .date {
+          background-color: rgba(0, 0, 0, 0.3);
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+          height: 24px;
+          border-radius: 12px;
+          color: #ffffff;
+          font-size: 13px;
+          padding: 0 12px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-left: 8px;
+          position: absolute;
+          bottom: 16px;
+          right: 12px; }
+  .photo-sell .info-photo {
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    z-index: 2; }
+    .photo-sell .info-photo .btn-play {
+      width: 34px;
+      height: 34px;
+      border-radius: 17px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #1d9bf0; }
+      .photo-sell .info-photo .btn-play span {
+        color: #ffffff;
+        font-size: 18px;
+        transform: translateX(1px); }
+  .photo-sell .paging-photo {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    height: 24px;
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 13px;
+    padding: 0 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 8px; }
+  .photo-sell .owl-dots {
+    position: absolute;
+    bottom: 24px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .photo-sell .owl-dots .owl-dot {
+      margin: 0 4px;
+      width: 8px;
+      height: 8px;
+      border-radius: 4px;
+      background-color: rgba(255, 255, 255, 0.2); }
+      .photo-sell .owl-dots .owl-dot.active {
+        background-color: #ffffff; }

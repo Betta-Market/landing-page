@@ -67,6 +67,30 @@ button{
 .mt-8 {
   margin-top: 8px;
 }
+.btn-more {
+  width: 44px;
+  height: 44px;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $greyButton;
+  &.btn-dark {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    span {
+      background-color: $white;
+    }
+  }
+  span {
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+    margin: 1.5px;
+    background-color: $textGrey;
+  }
+}
 .btn-icon {
   width: 40px;
   height: 40px;
@@ -263,9 +287,15 @@ header {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        filter: blur(6px);
-        transform: scale(1.4);
-        
+        &:after {
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 100%;
+          background-color: rgba($black1,0.1);
+          backdrop-filter: blur(20px);
+          -webkit-backdrop-filter: blur(20px);
+        }
       }
       &.show {
         opacity: 1;
