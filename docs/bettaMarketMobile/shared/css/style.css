@@ -169,6 +169,8 @@ button {
     position: absolute;
     width: 100%;
     left: 0;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
     background-color: #ffffff;
     transform: translateY(100%);
     transition: 0.2s transform ease-in-out; }
@@ -177,6 +179,8 @@ button {
     position: absolute;
     width: 100%;
     left: 0;
+    border-radius: 0 0 20px 20px;
+    overflow: hidden;
     background-color: #ffffff;
     transform: translateY(-100%);
     transition: 0.2s transform ease-in-out; }
@@ -201,7 +205,8 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  border-radius: 0 0 20px 20px; }
   header .logo {
     width: 127px;
     height: 30px; }
@@ -220,7 +225,8 @@ header {
       left: 0;
       top: 0;
       opacity: 0;
-      transition: 0.2s opacity ease-in-out; }
+      transition: 0.2s opacity ease-in-out;
+      border-radius: 0 0 20px 20px; }
       header.header-transparent .bg-sticky .photo-clone {
         width: 100%;
         height: 100%;
@@ -255,7 +261,8 @@ header {
         margin-left: 4px; }
 
 ul.list-btns {
-  display: flex; }
+  display: flex;
+  overflow: hidden; }
   ul.list-btns li {
     margin-left: 8px; }
     ul.list-btns li a {
@@ -449,6 +456,7 @@ footer {
   box-shadow: 0px -3px 3px rgba(0, 0, 0, 0.07);
   background-color: #ffffff;
   z-index: 20;
+  border-radius: 20px 20px 0 0;
   /* iPhone 11 Pro Max 2688x1242px at 458ppi */ }
   footer .wave-bottom {
     position: absolute;
@@ -603,7 +611,10 @@ ul.menu-post {
     margin-left: 2px;
     opacity: 0; } }
 .notification .section {
-  padding: 0; }
+  padding: 0;
+  padding-top: 60px; }
+.notification .container {
+  background-color: #ffffff; }
 
 .sub-page header {
   display: flex;
@@ -621,7 +632,6 @@ ul.menu-post {
     font-size: 13px; }
 
 .list-nh {
-  background-color: #ffffff;
   padding-top: 8px;
   margin-top: 0 !important;
   height: calc(100% - 61px);

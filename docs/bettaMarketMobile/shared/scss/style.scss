@@ -2,6 +2,10 @@
 .notification {
   .section {
     padding: 0;
+    padding-top: 60px;
+  }
+  .container {
+    background-color: $white; 
   }
 }
 .sub-page {
@@ -27,7 +31,6 @@
   }
 }
 .list-nh {
-  background-color: $white;
   padding-top: 8px;
   margin-top: 0 !important;
   height: calc(100% - 61px);
