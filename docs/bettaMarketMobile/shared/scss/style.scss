@@ -575,5 +575,122 @@
     margin-bottom: 12px !important;
   }
 }
+.modal-sheet {
+  .modal-account-menu {
+    border-radius: 0;
+    .content-modal {
+      padding: 0;
+    }
+  }
+}
+
+.wrap-account-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  border-bottom: 1px solid $lineColor;
+  .info-am {
+    display: flex;
+    align-items: center;
+    
+    img {
+      width: 36px;
+      height: 36px;
+      border-radius: 18px;
+      margin-right: 12px;
+    }
+    .name {
+      font-weight: bold;
+      margin-right: 4px;
+    }
+    .link-grey {
+      color: $textGrey;
+    }
+  }
+  .btn-close {
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    background-color: $greyButton;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+      font-size: 11px;
+    }
+  }
+}
+.wrap-content-menu {
+  max-height: calc(100vh - 61px);
+  overflow: auto;
+  ul.account-menu {
+    li {
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 16px;
+        border-bottom: 1px solid $lineColor;
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+.footer {
+  .copyright {
+    font-size: 13px;
+    color: $textGrey;
+    padding: 8px 16px;
+    border-top: 1px solid $lineColor;
+  }
+}
+.wrap-menu-footer {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  ul.support {
+    width: calc(50% - 4px);
+  }
+  
+}
+ul.support {
+  &.social {
+    padding: 0 16px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    li:nth-child(1) {
+      width: 100%;
+    }
+    li {
+      width: calc(50% - 4px);
+      
+      a {
+        display: flex;
+        align-items: center;
+        img {
+          width: 24px;
+          height: 24px;
+          margin-right: 12px;
+        }
+      }
+    }
+  }
+  li {
+    margin-bottom: 4px;
+    &:nth-child(1) {
+      margin-bottom: 12px;
+      font-weight: bold;
+    }
+    a {
+      font-size: 13px;
+      padding: 8px 0;
+    }
+  }
+}
 
 

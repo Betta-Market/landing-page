@@ -1054,3 +1054,89 @@ ul.menu-post {
     text-transform: uppercase;
     font-size: 20px;
     margin-bottom: 12px !important; }
+
+.modal-sheet .modal-account-menu {
+  border-radius: 0; }
+  .modal-sheet .modal-account-menu .content-modal {
+    padding: 0; }
+
+.wrap-account-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  border-bottom: 1px solid #EDEDED; }
+  .wrap-account-menu .info-am {
+    display: flex;
+    align-items: center; }
+    .wrap-account-menu .info-am img {
+      width: 36px;
+      height: 36px;
+      border-radius: 18px;
+      margin-right: 12px; }
+    .wrap-account-menu .info-am .name {
+      font-weight: bold;
+      margin-right: 4px; }
+    .wrap-account-menu .info-am .link-grey {
+      color: #727272; }
+  .wrap-account-menu .btn-close {
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    background-color: #EEEEEE;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .wrap-account-menu .btn-close span {
+      font-size: 11px; }
+
+.wrap-content-menu {
+  max-height: calc(100vh - 61px);
+  overflow: auto; }
+  .wrap-content-menu ul.account-menu li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    border-bottom: 1px solid #EDEDED; }
+    .wrap-content-menu ul.account-menu li a span {
+      font-size: 12px; }
+
+.footer .copyright {
+  font-size: 13px;
+  color: #727272;
+  padding: 8px 16px;
+  border-top: 1px solid #EDEDED; }
+
+.wrap-menu-footer {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between; }
+  .wrap-menu-footer ul.support {
+    width: calc(50% - 4px); }
+
+ul.support.social {
+  padding: 0 16px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; }
+  ul.support.social li:nth-child(1) {
+    width: 100%; }
+  ul.support.social li {
+    width: calc(50% - 4px); }
+    ul.support.social li a {
+      display: flex;
+      align-items: center; }
+      ul.support.social li a img {
+        width: 24px;
+        height: 24px;
+        margin-right: 12px; }
+ul.support li {
+  margin-bottom: 4px; }
+  ul.support li:nth-child(1) {
+    margin-bottom: 12px;
+    font-weight: bold; }
+  ul.support li a {
+    font-size: 13px;
+    padding: 8px 0; }
