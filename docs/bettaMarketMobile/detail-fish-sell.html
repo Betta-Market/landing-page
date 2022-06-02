@@ -8,11 +8,13 @@
 <link rel="stylesheet" href="shared/css/font.css">
 <link rel="stylesheet" href="shared/css/jquery.modal.min.css">
 <link rel="stylesheet" href="shared/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="shared/css/fancybox.min.css"/>
 <link rel="stylesheet" href="shared/css/style.css">
 	
 <script src="shared/js/jquery-3.6.0.min.js"></script>
 <script src="shared/js/jquery.modal.min.js"></script>
 <script src="shared/js/owl.carousel.min.js"></script>
+<script src="shared/js/fancybox.umd.js"></script>
 <script src="shared/js/imagesloaded.pkgd.min.js"></script>
 <script src="shared/js/global.js"></script>
 <script>
@@ -63,14 +65,33 @@
       var items     = event.item.count;     // Number of items
       var item      = event.item.index + 1;     // Position of the current item
 
-      // it loop is true then reset counter from 1
+      console.log("owl:" + items);
       if(item > items) {
         item = item - items
       }
       $('#counter').html(item+"/"+items)
     }
     
+    function getCurrentImg(curentIndex) {
+      console.log("fancy:" + curentIndex);
+      owl.trigger('to.owl.carousel', curentIndex);
+    }
+    ///////Gallery////////
     
+		Fancybox.bind("[data-fancybox]", {
+      on: {
+        shouldClose: function (fancybox, event) {
+          console.log($('.fancybox__slide.is-selected')[0].dataset.index);
+          var curentIndex = $('.fancybox__slide.is-selected')[0].dataset.index;
+          getCurrentImg(curentIndex);
+        },
+        "ready": (fancybox, slide) => {
+          var thumbVideo = $('.carousel__track')[0].children[5];
+          $('<div class="icon-video-thumb"><img src="shared/img/fishThumb.svg"></div>').appendTo(thumbVideo);
+          $('<div class="indicator"></div>').appendTo($('.carousel__track')[0]);
+        },
+      },
+    }); 
 
   });
 
@@ -94,31 +115,31 @@
 <div class="photo-sell">
   <div class="slider-photo">
     <div class="owl-carousel">
-      <div class="item-photo">
+      <a data-fancybox="gallery" href="shared/img/fish/nemocp1.jpg" class="item-photo">
         <div class="bg-holder" style="background-image: url('shared/img/fish/nemocp1.jpg')"></div>
         <img src="shared/img/fish/nemocp1.jpg" alt="">
         <span class="date">23/05/2022</span>
-      </div>
-      <div class="item-photo">
+      </a>
+      <a data-fancybox="gallery" href="shared/img/fish/nemocp2.jpg" class="item-photo">
         <div class="bg-holder" style="background-image: url('shared/img/fish/nemocp2.jpg')"></div>
         <img src="shared/img/fish/nemocp2.jpg" alt="">
         <span class="date">23/05/2022</span>
-      </div>
-      <div class="item-photo">
+      </a>
+      <a data-fancybox="gallery" href="shared/img/fish/nemocp3.jpg" class="item-photo">
         <div class="bg-holder" style="background-image: url('shared/img/fish/nemocp3.jpg')"></div>
         <img src="shared/img/fish/nemocp3.jpg" alt="">
         <span class="date">23/05/2022</span>
-      </div>
-      <div class="item-photo">
+      </a>
+      <a data-fancybox="gallery" href="shared/img/fish/nemocp4.jpg" class="item-photo">
         <div class="bg-holder" style="background-image: url('shared/img/fish/nemocp4.jpg')"></div>
         <img src="shared/img/fish/nemocp4.jpg" alt="">
         <span class="date">23/05/2022</span>
-      </div>
-      <div class="item-photo">
+      </a>
+      <a data-fancybox="gallery" href="shared/img/fish/nemocp5.jpg" class="item-photo">
         <div class="bg-holder" style="background-image: url('shared/img/fish/nemocp5.jpg')"></div>
         <img src="shared/img/fish/nemocp5.jpg" alt="">
         <span class="date">23/05/2022</span>
-      </div>
+      </a>
     </div>
     <div class="info-photo">
       <a href="#playVideo" class="btn-play"><span class="icon-play"></span></a>

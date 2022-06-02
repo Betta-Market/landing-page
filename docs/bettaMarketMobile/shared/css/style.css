@@ -1183,6 +1183,7 @@ ul.support li {
     .photo-sell .slider-photo .owl-carousel {
       height: 100%; }
       .photo-sell .slider-photo .owl-carousel .item-photo {
+        display: block;
         padding-top: 75%;
         overflow: hidden;
         position: relative; }
@@ -1196,6 +1197,14 @@ ul.support li {
           background-position: center;
           background-size: cover;
           filter: blur(30px); }
+          .photo-sell .slider-photo .owl-carousel .item-photo .bg-holder:before {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "";
+            background-color: rgba(0, 0, 0, 0.4); }
         .photo-sell .slider-photo .owl-carousel .item-photo img {
           position: absolute;
           top: 50%;
