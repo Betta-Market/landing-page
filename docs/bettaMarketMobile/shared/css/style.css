@@ -235,7 +235,8 @@ header {
       width: 100%; }
   header.header-transparent {
     background: none;
-    box-shadow: none; }
+    box-shadow: none;
+    overflow: hidden; }
     header.header-transparent .header-l, header.header-transparent .header-r {
       position: relative; }
     header.header-transparent .bg-sticky {
