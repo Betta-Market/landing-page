@@ -28,7 +28,7 @@
       var scroll = $(window).scrollTop(),
           ePhoto = $('.slider-photo'),
           hPhoto = ePhoto.height();
-      console.log(scroll);
+      //console.log(scroll);
       if (scroll > (hPhoto - 100)) {
         $('.bg-sticky').addClass('show');
       }else {
@@ -36,12 +36,28 @@
       }
     });
     
-    $(".owl-carousel").owlCarousel({
+    
+    var owl = $('.owl-carousel');    
+    owl.owlCarousel({
       items: 1,
       dots: true,
       onInitialized: counter, 
-      onTranslated: counter
+      onTranslated: counter,
+      onInitialize: initOwl
     });
+    // Listen to owl events:
+    function initOwl(event) {
+      var element   = event.target;
+      
+      var arrayImg = $(element).find('img');
+      $.each(arrayImg, function( index, value ) {
+        var itemWidth = value.naturalWidth;
+        var itemHeight = value.naturalHeight;
+        if (itemWidth < itemHeight) {
+          $(value).addClass('horizontal');
+        }
+      });
+    }
     function counter(event) {
       var element   = event.target;         // DOM element, in this example .owl-carousel
       var items     = event.item.count;     // Number of items
@@ -53,6 +69,8 @@
       }
       $('#counter').html(item+"/"+items)
     }
+    
+    
 
   });
 
@@ -77,18 +95,27 @@
   <div class="slider-photo">
     <div class="owl-carousel">
       <div class="item-photo">
+        <div class="bg-holder" style="background-image: url('shared/img/fish/nemocp1.jpg')"></div>
+        <img src="shared/img/fish/nemocp1.jpg" alt="">
+        <span class="date">23/05/2022</span>
+      </div>
+      <div class="item-photo">
+        <div class="bg-holder" style="background-image: url('shared/img/fish/nemocp2.jpg')"></div>
         <img src="shared/img/fish/nemocp2.jpg" alt="">
         <span class="date">23/05/2022</span>
       </div>
       <div class="item-photo">
+        <div class="bg-holder" style="background-image: url('shared/img/fish/nemocp3.jpg')"></div>
         <img src="shared/img/fish/nemocp3.jpg" alt="">
         <span class="date">23/05/2022</span>
       </div>
       <div class="item-photo">
+        <div class="bg-holder" style="background-image: url('shared/img/fish/nemocp4.jpg')"></div>
         <img src="shared/img/fish/nemocp4.jpg" alt="">
         <span class="date">23/05/2022</span>
       </div>
       <div class="item-photo">
+        <div class="bg-holder" style="background-image: url('shared/img/fish/nemocp5.jpg')"></div>
         <img src="shared/img/fish/nemocp5.jpg" alt="">
         <span class="date">23/05/2022</span>
       </div>
