@@ -17,90 +17,15 @@
 <script src="shared/js/fancybox.umd.js"></script>
 <script src="shared/js/imagesloaded.pkgd.min.js"></script>
 <script src="shared/js/global.js"></script>
-<script>
-  $(document).ready(function(){
-
-  
-    $('.like-count').click(function(event){
-      event.preventDefault();
-      $(this).toogleClass('liked');
-    });
-    
-    $(window).scroll(function (event) {
-      var scroll = $(window).scrollTop(),
-          ePhoto = $('.slider-photo'),
-          hPhoto = ePhoto.height();
-      //console.log(scroll);
-      if (scroll > (hPhoto - 100)) {
-        $('.bg-sticky').addClass('show');
-      }else {
-        $('.bg-sticky').removeClass('show');
-      }
-    });
-    
-    
-    var owl = $('.owl-carousel');    
-    owl.owlCarousel({
-      items: 1,
-      dots: true,
-      onInitialized: counter, 
-      onTranslated: counter,
-      onInitialize: initOwl
-    });
-    // Listen to owl events:
-    function initOwl(event) {
-      var element   = event.target;
-      
-      var arrayImg = $(element).find('img');
-      $.each(arrayImg, function( index, value ) {
-        var itemWidth = value.naturalWidth;
-        var itemHeight = value.naturalHeight;
-        if (itemWidth < itemHeight) {
-          $(value).addClass('horizontal');
-        }
-      });
-    }
-    function counter(event) {
-      var element   = event.target;         // DOM element, in this example .owl-carousel
-      var items     = event.item.count;     // Number of items
-      var item      = event.item.index + 1;     // Position of the current item
-
-      console.log("owl:" + items);
-      if(item > items) {
-        item = item - items
-      }
-      $('#counter').html(item+"/"+items)
-    }
-    
-    function getCurrentImg(curentIndex) {
-      console.log("fancy:" + curentIndex);
-      owl.trigger('to.owl.carousel', curentIndex);
-    }
-    ///////Gallery////////
-    
-		Fancybox.bind("[data-fancybox]", {
-      on: {
-        shouldClose: function (fancybox, event) {
-          console.log($('.fancybox__slide.is-selected')[0].dataset.index);
-          var curentIndex = $('.fancybox__slide.is-selected')[0].dataset.index;
-          getCurrentImg(curentIndex);
-        },
-        "ready": (fancybox, slide) => {
-          $('<div class="indicator"></div>').appendTo($('.carousel__track')[0]);
-        },
-      },
-    }); 
-
-  });
-
-</script>  
+<script src="shared/js/detail.fish.sell.js"></script>
 </head>
 
 <body class="sub-page">
 
 <header class="header-transparent">
   <div class="bg-sticky">
-    <div class="photo-clone" style="background-image: url('shared/img/fish/nemocp2.jpg');"></div>
+  <!--<div class="photo-clone" style="background-image: url('shared/img/fish/nemocp2.jpg');"></div>-->
+    <div class="photo-clone"></div>
   </div>
   <div class="header-l"> 
     <a href="#" class="btn-icon btn-back historyBack"><span class="icon-arrow-left"></span></a>
