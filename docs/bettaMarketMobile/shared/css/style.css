@@ -160,7 +160,6 @@ button {
   display: block;
   width: 100%;
   padding: 12px 24px;
-  font-weight: bold;
   color: #363636;
   background-color: #ffffff;
   border: 1px solid #e2e2e2;
@@ -818,16 +817,16 @@ ul.menu-post {
       .show-dont-sold .fish-tt ul li i {
         margin-right: 4px; }
 
-.like-count, .like-cmt {
+.like-count, .comment-count {
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 13px;
   color: #727272; }
-  .like-count i, .like-cmt i {
+  .like-count i, .comment-count i {
     color: #c4c4c4; }
 
-.like-cmt i {
+.comment-count i {
   margin-right: 8px; }
 
 .like-count.liked i {
@@ -860,7 +859,7 @@ ul.menu-post {
     position: absolute;
     top: 50%;
     left: 50%;
-    font-size: 6px;
+    font-size: 6px !important;
     transform: translate(-50%, -50%);
     margin-right: 0; }
 
@@ -930,17 +929,29 @@ ul.menu-post {
   font-size: 16px; }
 
 .reacts-sd {
-  padding: 8px 12px;
-  border-bottom: 1px solid #EDEDED;
+  width: 100%;
+  padding: 0 16px;
   display: flex;
   align-items: center;
   justify-content: space-between; }
-  .reacts-sd .like-count i, .reacts-sd .like-cmt i {
-    font-size: 20px; }
-  .reacts-sd .like-cmt {
-    margin-left: 16px; }
-  .reacts-sd .btn-icon {
-    font-size: 22px; }
+  .reacts-sd .like-count, .reacts-sd .comment-count {
+    background-color: #EEEEEE;
+    height: 44px;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc((100% - 56px)/2);
+    font-weight: bold; }
+    .reacts-sd .like-count i, .reacts-sd .comment-count i {
+      font-size: 18px; }
+    .reacts-sd .like-count span, .reacts-sd .comment-count span {
+      font-weight: normal; }
+
+.box-comment {
+  margin: 0 16px 12px 16px;
+  background-color: #ffffff;
+  border-radius: 12px; }
 
 .chatgroup-box {
   padding: 16px 12px; }
@@ -957,155 +968,137 @@ ul.menu-post {
     color: #66bd21;
     background: #f7fef2; }
 
-.show-detail {
+.box-comment {
   align-items: flex-start;
-  margin-bottom: 20px; }
-  .show-detail .fish-show-img {
-    width: 48.9%;
-    margin-right: 28px;
-    position: sticky;
-    top: 80px;
-    background-color: #363636; }
-  .show-detail .video-ngang {
-    width: 100%;
-    padding-top: 56.25%;
-    overflow: hidden;
-    position: relative; }
-    .show-detail .video-ngang iframe {
+  margin-bottom: 12px; }
+  .box-comment h3 {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold !important;
+    padding: 12px 16px 0 !important; }
+  .box-comment .link-tooltip {
+    position: absolute;
+    top: 0;
+    right: 12px;
+    font-size: 27px;
+    color: #888;
+    line-height: 1;
+    letter-spacing: -1px;
+    display: none; }
+  .box-comment .tooltip-info {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    z-index: 1;
+    padding: 12px;
+    border-radius: 4px;
+    box-shadow: 8px 8px 24px 0 rgba(0, 0, 0, 0.13);
+    border: solid 1px #e2e2e2;
+    background-color: #ffffff; }
+    .box-comment .tooltip-info:before {
+      content: "";
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100% !important;
-      height: 100% !important; }
-  .show-detail .video-doc {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    height: calc(100vh - 320px); }
-    .show-detail .video-doc iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100% !important;
-      height: 100% !important; }
-  .show-detail .has-tooltip {
+      top: -7px;
+      right: 15px;
+      width: 12px;
+      height: 12px;
+      transform: rotate(135deg);
+      background: #fff;
+      border-bottom: solid 1px #e2e2e2;
+      border-left: solid 1px #e2e2e2; }
+    .box-comment .tooltip-info.show-tooltip {
+      display: block; }
+    .box-comment .tooltip-info a {
+      display: block;
+      min-width: 159px;
+      line-height: 29px;
+      box-sizing: border-box;
+      padding-left: 8px; }
+      .box-comment .tooltip-info a:hover {
+        background: #efefef; }
+  .box-comment .has-tooltip {
     width: calc(51.1% - 28px);
     position: relative;
     padding-right: 40px; }
-    .show-detail .has-tooltip .link-tooltip {
-      position: absolute;
-      top: 0;
-      right: 12px;
-      font-size: 27px;
-      color: #888;
-      line-height: 1;
-      letter-spacing: -1px; }
-    .show-detail .has-tooltip .tooltip-info {
-      position: absolute;
-      right: 0;
-      top: 40px;
-      z-index: 1;
-      padding: 12px;
-      border-radius: 4px;
-      box-shadow: 8px 8px 24px 0 rgba(0, 0, 0, 0.13);
-      border: solid 1px #e2e2e2;
-      background-color: #ffffff; }
-      .show-detail .has-tooltip .tooltip-info:before {
-        content: "";
-        position: absolute;
-        top: -7px;
-        right: 15px;
-        width: 12px;
-        height: 12px;
-        transform: rotate(135deg);
-        background: #fff;
-        border-bottom: solid 1px #e2e2e2;
-        border-left: solid 1px #e2e2e2; }
-      .show-detail .has-tooltip .tooltip-info a {
-        display: block;
-        min-width: 159px;
-        line-height: 29px;
-        box-sizing: border-box;
-        padding-left: 8px; }
-        .show-detail .has-tooltip .tooltip-info a:hover {
-          background: #efefef; }
-  .show-detail .fish-txt {
+    .box-comment .has-tooltip .link-tooltip {
+      display: block; }
+  .box-comment .fish-txt {
     font-size: 16px;
     line-height: 1.5;
     margin: 10px 0 5px; }
-  .show-detail .show_sns {
+  .box-comment .show_sns {
     border-bottom: 1px solid #efefef;
     justify-content: space-between;
     align-items: center;
     height: 50px;
     margin-bottom: 20px; }
-  .show-detail .row-info {
+  .box-comment .row-info {
     background: #f8f8f8;
     width: 100%;
     margin-bottom: 4px; }
-    .show-detail .row-info .username {
+    .box-comment .row-info .username {
       color: #1d9bf0;
       font-weight: 700; }
-    .show-detail .row-info p:first-child {
+    .box-comment .row-info p:first-child {
       margin-bottom: 4px; }
-      .show-detail .row-info p:first-child span {
+      .box-comment .row-info p:first-child span {
         color: #b2b2b2;
         display: inline-block;
         margin-left: 8px;
         font-size: 13px; }
-  .show-detail .reply {
+  .box-comment .reply {
     font-weight: bold;
     color: #b2b2b2;
     margin-left: 12px; }
-  .show-detail .form-group {
+  .box-comment .form-group {
     margin-bottom: 4px; }
-  .show-detail input {
+  .box-comment input {
     width: 100%;
     height: 48px;
     box-sizing: border-box;
     border-radius: 24px;
     padding-left: 19px; }
-  .show-detail .chat-row {
+  .box-comment .chat-row {
     margin-bottom: 12px; }
-    .show-detail .chat-row .react {
+    .box-comment .chat-row .react {
       margin-top: 4px; }
-    .show-detail .chat-row .ava {
+    .box-comment .chat-row .ava {
       width: 30px;
       height: 30px;
       margin-top: 6px;
       margin-right: 8px; }
-      .show-detail .chat-row .ava.verified:before {
+      .box-comment .chat-row .ava.verified:before {
         font-size: 5px;
         width: 4px;
         height: 4px;
         right: -4px; }
-    .show-detail .chat-row > div {
+    .box-comment .chat-row > div {
       width: calc(100% - 38px); }
-      .show-detail .chat-row > div .chat-row {
+      .box-comment .chat-row > div .chat-row {
         margin-bottom: 8px; }
-        .show-detail .chat-row > div .chat-row > div {
+        .box-comment .chat-row > div .chat-row > div {
           width: calc(100% - 32px); }
-        .show-detail .chat-row > div .chat-row .row-info {
+        .box-comment .chat-row > div .chat-row .row-info {
           margin-bottom: 0; }
-        .show-detail .chat-row > div .chat-row input {
+        .box-comment .chat-row > div .chat-row input {
           height: 34px;
           border-radius: 17px; }
-        .show-detail .chat-row > div .chat-row .form-group {
+        .box-comment .chat-row > div .chat-row .form-group {
           margin-bottom: 4px; }
-          .show-detail .chat-row > div .chat-row .form-group .btn-icon {
+          .box-comment .chat-row > div .chat-row .form-group .btn-icon {
             width: 34px;
             height: 34px;
             top: 0;
             right: 2px; }
-            .show-detail .chat-row > div .chat-row .form-group .btn-icon span {
+            .box-comment .chat-row > div .chat-row .form-group .btn-icon span {
               font-size: 16px; }
-      .show-detail .chat-row > div .ava {
+      .box-comment .chat-row > div .ava {
         width: 24px;
         height: 24px; }
-  .show-detail .like-cmt i, .show-detail .like-count i {
+  .box-comment .comment-count i, .box-comment .like-count i {
     color: #c0c0c0; }
-  .show-detail .liked .like-count i {
+  .box-comment .liked .like-count i {
     color: #f20000; }
 
 .row-info {
@@ -1118,10 +1111,11 @@ ul.menu-post {
   line-height: 1.36; }
 
 .relate-show {
-  padding: 0 16px; }
+  padding: 16px 16px 80px; }
   .relate-show h3 {
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 16px;
+    font-weight: bold !important;
     margin-bottom: 12px !important; }
 
 .modal-sheet .modal-account-menu {
@@ -1391,7 +1385,8 @@ ul.support li {
   padding: 16px; }
   .relate-fish-sell h3 {
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 16px;
+    font-weight: bold !important;
     margin-bottom: 12px !important; }
 
 .action-dfs {

@@ -187,7 +187,7 @@
     }
   }
 }
-.like-count, .like-cmt {
+.like-count, .comment-count {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -197,7 +197,7 @@
     color: $textGrey1;
   }
 }
-.like-cmt {
+.comment-count {
   i {
     margin-right: 8px;
   }
@@ -247,7 +247,7 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      font-size: 6px;
+      font-size: 6px !important;
       transform: translate(-50%, -50%);
       margin-right: 0;
     }
@@ -330,20 +330,33 @@
   font-size: 16px;
 }
 .reacts-sd {
-  padding: 8px 12px;
-  border-bottom: 1px solid $lineColor;
+  width: 100%;
+  padding: 0 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  .like-count i, .like-cmt i {
-    font-size: 20px;
+  .like-count, .comment-count {
+    background-color: $greyButton;
+    height: 44px;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc((100% - 56px)/2);
+    font-weight: bold;
+    i {
+      font-size: 18px;
+    }
+    span {
+      font-weight: normal;
+    }
   }
-  .like-cmt {
-    margin-left: 16px;
-  }
-  .btn-icon {
-    font-size: 22px;
-  }
+}
+.box-comment {
+  margin: 0 16px 12px 16px;
+  background-color: $white;
+  border-radius: 12px;
+  
 }
 .chatgroup-box{
   padding: 16px 12px;
@@ -364,89 +377,68 @@
     }
   }
 }
-.show-detail{
+.box-comment {
   align-items: flex-start;
-  margin-bottom: 20px;
-  .fish-show-img{
-    width: 48.9%;
-    margin-right: 28px;
-    position: sticky;
-    top: 80px;
-    background-color: $black;
-    
+  margin-bottom: 12px;
+  h3 {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold !important;
+    padding: 12px 16px 0 !important;
   }
-  .video-ngang {
-    width: 100%;
-    padding-top: 56.25%;
-    overflow: hidden;
-    position: relative;
-    iframe {
+  .link-tooltip{
+    position: absolute;
+    top: 0;
+    right: 12px;
+    font-size: 27px;
+    color: $grey;
+    line-height: 1;
+    letter-spacing: -1px;
+    display: none;
+  }
+  .tooltip-info{
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    z-index: 1;
+    padding: 12px;
+    border-radius: 4px;
+    box-shadow: 8px 8px 24px 0 rgba(0, 0, 0, 0.13);
+    border: solid 1px $grey4;
+    background-color: $white;
+    &:before{
+      content:"";
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100% !important;
-      height: 100% !important;
+      top: -7px;
+      right: 15px;
+      width: 12px;
+      height: 12px;
+      transform: rotate(135deg);
+      background: #fff;
+      border-bottom: solid 1px $grey4;
+      border-left: solid 1px $grey4;
     }
-  }
-  .video-doc {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    height: calc(100vh - 320px);
-    iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100% !important;
-      height: 100% !important;
+    &.show-tooltip {
+      display: block;
+    }
+    a{
+      display: block;
+      min-width: 159px;
+      line-height: 29px;
+      box-sizing: border-box;
+      padding-left: 8px;
+      &:hover{
+        background: $border_color;
+      }
     }
   }
   .has-tooltip {
     width: calc(51.1% - 28px);
     position: relative;
     padding-right: 40px;
-    .link-tooltip{
-      position: absolute;
-      top: 0;
-      right: 12px;
-      font-size: 27px;
-      color: $grey;
-      line-height: 1;
-      letter-spacing: -1px;
-    }
-    .tooltip-info{
-      position: absolute;
-      right: 0;
-      top: 40px;
-      z-index: 1;
-      padding: 12px;
-      border-radius: 4px;
-      box-shadow: 8px 8px 24px 0 rgba(0, 0, 0, 0.13);
-      border: solid 1px $grey4;
-      background-color: $white;
-      &:before{
-        content:"";
-        position: absolute;
-        top: -7px;
-        right: 15px;
-        width: 12px;
-        height: 12px;
-        transform: rotate(135deg);
-        background: #fff;
-        border-bottom: solid 1px $grey4;
-        border-left: solid 1px $grey4;
-      }
-      a{
-        display: block;
-        min-width: 159px;
-        line-height: 29px;
-        box-sizing: border-box;
-        padding-left: 8px;
-        &:hover{
-          background: $border_color;
-        }
-      }
+    .link-tooltip {
+      display: block;
     }
   }
   .fish-txt{
@@ -552,7 +544,7 @@
     
   }
 
-  .like-cmt i, .like-count i{
+  .comment-count i, .like-count i{
     color: #c0c0c0;
   }
   .liked .like-count i{
@@ -569,10 +561,11 @@
   line-height: 1.36;
 }
 .relate-show {
-  padding: 0 16px;
+  padding: 16px 16px 80px;
   h3 {
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 16px;
+    font-weight: bold !important;
     margin-bottom: 12px !important;
   }
 }
@@ -909,7 +902,8 @@ ul.support {
   padding: 16px;
   h3 {
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 16px;
+    font-weight: bold !important;
     margin-bottom: 12px !important;
   }
 }

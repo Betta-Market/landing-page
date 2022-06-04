@@ -18,16 +18,16 @@
   $(document).ready(function(){
 
   
-    $('.like-count').click(function(event){
+    $('a.like-count').click(function(event){
       event.preventDefault();
-      $(this).toogleClass('liked');
+      $(this).toggleClass('liked');
     });
     
     $(window).scroll(function (event) {
       var scroll = $(window).scrollTop(),
           ePhoto = $('.photo-show'),
           hPhoto = ePhoto.height();
-      console.log(scroll);
+      //console.log(scroll);
       if (scroll > (hPhoto - 100)) {
         $('.bg-sticky').addClass('show');
       }else {
@@ -82,17 +82,9 @@
   <div class="desc-sd">
     Hình sưu tầm con nemo đẹp quá! Ai có hàng giống vậy ib tui nhé, cám ơn!
   </div>
-  <div class="reacts-sd">
-    <ul class="dis-flex">
-      <li>
-        <a href="#" class="like-count ">
-          <i class="icon-heart m"><i class="icon-heart m1"></i><i class="icon-heart m2"></i><i class="icon-heart m3"></i><i class="icon-heart m4"></i></i> 36
-        </a>
-      </li>
-      <li><span class="like-cmt"><i class="icon-chat"></i>5</span></li>
-    </ul>
-    <a href="#" class="btn-icon"><span class="icon-share"></span></a>
-  </div>
+</div> 
+<div class="box-comment">
+  <h3>Bình luận</h3>
   <div class="chatgroup-box">
     <div class="chat-row dis-flex">
       <a href="#" class="ava"><img src="shared/img/fish/pk1.png" width="600" height="460" alt="" class="ob-fit"></a>
@@ -108,7 +100,8 @@
           <p><a href="#"><strong>Chim Sẻ Betta</strong></a><span>2 phút trước</span></p>
           <p>Đẹp quá em phải theo tới cùng!</p>                       
           <a href="#" class="link-tooltip">...</a>
-          <div class="tooltip-info">
+          <div class="tooltip-info show-tooltip">
+            <!-- Hide tooltip thì xóa class show-tooltip -->
             <ul>
               <li><a href="#">Chỉnh sửa</a></li>
               <li><a href="#">Xóa</a></li>
@@ -211,7 +204,8 @@
 
     <a href="#" class="btn-link">Xem thêm 14 bình luận</a>
   </div>
-</div> 
+</div>
+
   
 <div class="relate-show">
   <h3>Cùng dòng nemo galaxy</h3>  
@@ -375,7 +369,17 @@
   </ul>
 </div>
   
-
+<div class="bottom-bar">
+  <div class="reacts-sd">
+    <a href="#" class="like-count ">
+      <i class="icon-heart m"><i class="icon-heart m1"></i><i class="icon-heart m2"></i><i class="icon-heart m3"></i><i class="icon-heart m4"></i></i> Thích <span>(786)</span>
+    </a>
+    <a href="#" class="comment-count">
+      <i class="icon-chat"></i>Bình luận <span>(36)</span>
+    </a>
+    <a href="#" class="btn-more"><span></span><span></span><span></span></a> 
+  </div>  
+</div>
 
 
 
