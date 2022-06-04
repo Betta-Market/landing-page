@@ -106,6 +106,26 @@ button{
     text-decoration: underline;
   }
 }
+.btn-primary {
+  height: 34px;
+  padding: 0 16px;
+  background-color: $primary;
+  color: $white;
+  border-radius: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  &.sub-btn{
+    border: 1px solid $primary;
+    color: $primary;
+    background-color: $white;
+  }
+  span {
+    margin-right: 8px;
+    font-size: 13px;
+  }
+}
 .btn-secondary {
   height: 34px;
   padding: 0 16px;
@@ -229,6 +249,16 @@ button {
     overflow: hidden;
     background-color: $white;
     transform: translateY(-100%);
+    transition: 0.2s transform $eio;
+  }
+  .middle-modal {
+    top: 50%;
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    overflow: hidden;
+    background-color: $white;
+    transform: translate(-50%,-50%);
     transition: 0.2s transform $eio;
   }
   .head-modal {
@@ -481,6 +511,7 @@ ul.list-btns {
 .list-fish-sell {
   display: flex;
   flex-wrap: wrap;
+  
   .item-lfs {
     width: calc((100% - 12px)/2);
     margin-bottom: 12px;
@@ -503,6 +534,7 @@ ul.list-btns {
   }
   .info-lfs {
     background-color: $white;
+    padding-bottom: 8px;
     .title-lfs, .proce-lfs {
       font-size: 13px;
       display: block;
@@ -549,7 +581,7 @@ ul.list-btns {
 
 
 
-footer {
+.bottom-bar {
   position: fixed;
   left: 0;
   bottom: 0;

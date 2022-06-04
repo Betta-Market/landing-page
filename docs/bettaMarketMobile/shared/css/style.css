@@ -99,6 +99,24 @@ button {
   .btn-link:hover {
     text-decoration: underline; }
 
+.btn-primary {
+  height: 34px;
+  padding: 0 16px;
+  background-color: #1d9bf0;
+  color: #ffffff;
+  border-radius: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold; }
+  .btn-primary.sub-btn {
+    border: 1px solid #1d9bf0;
+    color: #1d9bf0;
+    background-color: #ffffff; }
+  .btn-primary span {
+    margin-right: 8px;
+    font-size: 13px; }
+
 .btn-secondary {
   height: 34px;
   padding: 0 16px;
@@ -204,6 +222,15 @@ button {
     overflow: hidden;
     background-color: #ffffff;
     transform: translateY(-100%);
+    transition: 0.2s transform ease-in-out; }
+  .modal-sheet .middle-modal {
+    top: 50%;
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    overflow: hidden;
+    background-color: #ffffff;
+    transform: translate(-50%, -50%);
     transition: 0.2s transform ease-in-out; }
   .modal-sheet .head-modal {
     padding: 16px;
@@ -427,7 +454,8 @@ ul.list-btns {
         object-fit: cover;
         top: 0; }
   .list-fish-sell .info-lfs {
-    background-color: #ffffff; }
+    background-color: #ffffff;
+    padding-bottom: 8px; }
     .list-fish-sell .info-lfs .title-lfs, .list-fish-sell .info-lfs .proce-lfs {
       font-size: 13px;
       display: block;
@@ -472,7 +500,7 @@ ul.list-btns {
       -webkit-line-clamp: 2;
       width: calc(100% - 32px); }
 
-footer {
+.bottom-bar {
   position: fixed;
   left: 0;
   bottom: 0;
@@ -486,19 +514,19 @@ footer {
   z-index: 20;
   border-radius: 20px 20px 0 0;
   /* iPhone 11 Pro Max 2688x1242px at 458ppi */ }
-  footer .wave-bottom {
+  .bottom-bar .wave-bottom {
     position: absolute;
     left: 50%;
     top: -24px;
     transform: translateX(-50%); }
-    footer .wave-bottom:before {
+    .bottom-bar .wave-bottom:before {
       content: "";
       width: 92px;
       left: -24px;
       height: 24px;
       position: absolute;
       background: url("../img/wave-bottom.svg") no-repeat; }
-  footer .btn-post {
+  .bottom-bar .btn-post {
     position: relative;
     width: 44px;
     height: 44px;
@@ -509,32 +537,32 @@ footer {
     align-items: center;
     justify-content: center;
     margin-top: 16px; }
-  footer .menu-bottom-l, footer .menu-bottom-r {
+  .bottom-bar .menu-bottom-l, .bottom-bar .menu-bottom-r {
     width: calc((100% - 72px)/2);
     display: flex;
     align-items: center;
     height: 54px; }
-    footer .menu-bottom-l a, footer .menu-bottom-r a {
+    .bottom-bar .menu-bottom-l a, .bottom-bar .menu-bottom-r a {
       height: 100%;
       display: flex;
       flex-flow: column;
       width: 50%;
       justify-content: center;
       align-items: center; }
-      footer .menu-bottom-l a [class^="icon-"], footer .menu-bottom-l a [class*=" icon-"], footer .menu-bottom-r a [class^="icon-"], footer .menu-bottom-r a [class*=" icon-"] {
+      .bottom-bar .menu-bottom-l a [class^="icon-"], .bottom-bar .menu-bottom-l a [class*=" icon-"], .bottom-bar .menu-bottom-r a [class^="icon-"], .bottom-bar .menu-bottom-r a [class*=" icon-"] {
         font-size: 26px;
         color: #c4c4c4; }
-      footer .menu-bottom-l a.active [class^="icon-"], footer .menu-bottom-l a.active [class*=" icon-"], footer .menu-bottom-r a.active [class^="icon-"], footer .menu-bottom-r a.active [class*=" icon-"] {
+      .bottom-bar .menu-bottom-l a.active [class^="icon-"], .bottom-bar .menu-bottom-l a.active [class*=" icon-"], .bottom-bar .menu-bottom-r a.active [class^="icon-"], .bottom-bar .menu-bottom-r a.active [class*=" icon-"] {
         color: #1d9bf0; }
-      footer .menu-bottom-l a.active .title, footer .menu-bottom-r a.active .title {
+      .bottom-bar .menu-bottom-l a.active .title, .bottom-bar .menu-bottom-r a.active .title {
         color: #1d9bf0; }
-      footer .menu-bottom-l a .title, footer .menu-bottom-r a .title {
+      .bottom-bar .menu-bottom-l a .title, .bottom-bar .menu-bottom-r a .title {
         margin-top: 4px;
         font-size: 11px;
         color: #888888;
         line-height: 10px; }
   @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
-    footer {
+    .bottom-bar {
       height: 72px; } }
 
 .blocker {
@@ -1166,6 +1194,13 @@ ul.menu-post {
   .modal-sheet .modal-account-menu .content-modal {
     padding: 0; }
 
+.modal-video .content-modal {
+  padding: 0; }
+.modal-video .video-zoom {
+  padding-top: 56.25%;
+  overflow: hidden;
+  position: relative; }
+
 .wrap-account-menu {
   display: flex;
   align-items: center;
@@ -1250,7 +1285,8 @@ ul.support li {
 .photo-sell {
   padding-top: 75%;
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.2); }
   .photo-sell .slider-photo {
     display: flex;
     justify-content: center;
@@ -1360,3 +1396,78 @@ ul.support li {
       background-color: rgba(255, 255, 255, 0.2); }
       .photo-sell .owl-dots .owl-dot.active {
         background-color: #ffffff; }
+
+.detail-fish-sell {
+  border-radius: 0 0 12px 12px;
+  background-color: #ffffff;
+  margin: 0 16px 12px 16px; }
+  .detail-fish-sell .info-dfs h1 {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: bold;
+    padding: 12px 12px 4px 12px; }
+  .detail-fish-sell .info-dfs .price {
+    color: #1d9bf0;
+    font-weight: bold;
+    padding: 0 12px; }
+  .detail-fish-sell .info-dfs .entry-dfs {
+    border-top: 1px dashed #EDEDED;
+    border-bottom: 1px dashed #EDEDED;
+    padding: 12px;
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between; }
+    .detail-fish-sell .info-dfs .entry-dfs dl dt {
+      color: #c4c4c4;
+      font-size: 13px; }
+  .detail-fish-sell .info-dfs .desc-dfs {
+    padding: 12px 12px 16px 12px; }
+
+.brand-shop {
+  border-radius: 12px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 16px 12px 16px;
+  padding: 12px; }
+  .brand-shop .account-shop {
+    display: flex;
+    align-items: center; }
+    .brand-shop .account-shop .ava {
+      display: block;
+      margin-right: 12px; }
+      .brand-shop .account-shop .ava img {
+        width: 50px;
+        height: 50px; }
+    .brand-shop .account-shop .name-shop {
+      display: flex;
+      flex-flow: column; }
+      .brand-shop .account-shop .name-shop a {
+        font-weight: bold; }
+      .brand-shop .account-shop .name-shop .status {
+        font-size: 12px;
+        color: #c4c4c4;
+        position: relative; }
+        .brand-shop .account-shop .name-shop .status:before {
+          content: ""; }
+
+.relate-fish-sell {
+  padding: 16px; }
+  .relate-fish-sell h3 {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 12px !important; }
+
+.action-dfs {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+  align-items: center;
+  width: 100%; }
+  .action-dfs a {
+    margin-right: 8px;
+    width: calc((100% - 8px)/2); }
+    .action-dfs a:nth-last-child(1) {
+      margin-right: 0;
+      width: 32%; }

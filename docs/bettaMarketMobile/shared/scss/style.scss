@@ -584,6 +584,16 @@
     }
   }
 }
+.modal-video {
+  .content-modal {
+    padding: 0;
+  }
+  .video-zoom {
+    padding-top: 56.25%;
+    overflow: hidden;
+    position: relative;
+  }
+}
 
 .wrap-account-menu {
   display: flex;
@@ -697,6 +707,7 @@ ul.support {
   padding-top: 75%;
   overflow: hidden;
   position: relative;
+  box-shadow: (0px 2px 20px rgba($black1, 0.2));
   .slider-photo {
     display: flex;
     justify-content: center;
@@ -822,4 +833,114 @@ ul.support {
     }
   }
 }
+
+.detail-fish-sell {
+  border-radius: 0 0 12px 12px;
+  background-color: $white;
+  margin: 0 16px 12px 16px;
+  .info-dfs {
+    h1 {
+      font-size: 18px;
+      line-height: 22px;
+      font-weight: bold;
+      padding: 12px 12px 4px 12px;
+    }
+    .price {
+      color: $primary;
+      font-weight: bold;
+      padding: 0 12px;
+    }
+    .entry-dfs {
+      border-top: 1px dashed $lineColor;
+      border-bottom: 1px dashed $lineColor;
+      padding: 12px;
+      margin-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      dl {
+        dt {
+          color: $textGrey1;
+          font-size: 13px;
+        }
+      }
+    }
+    .desc-dfs {
+      padding: 12px 12px 16px 12px;
+    }
+  }
+}
+.brand-shop {
+  border-radius: 12px;
+  background-color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 16px 12px 16px;
+  padding: 12px;
+  .account-shop {
+    display: flex;
+    align-items: center;
+    .ava {
+      display: block;
+      margin-right: 12px;
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+    .name-shop {
+      display: flex;
+      flex-flow: column;
+      a {
+        font-weight: bold;
+      }
+      .status {
+        font-size: 12px;
+        color: $textGrey1;
+        position: relative;
+        &:before {
+          content: "";
+        }
+      }
+    }
+  }
+}
+.relate-fish-sell {
+  padding: 16px;
+  h3 {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 12px !important;
+  }
+}
+.action-dfs {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+  align-items: center;
+  width: 100%;
+  a {
+    margin-right: 8px;
+    &:nth-last-child(1) {
+      margin-right: 0;
+      width: 32%;
+    }
+    width: calc((100% - 8px)/2);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

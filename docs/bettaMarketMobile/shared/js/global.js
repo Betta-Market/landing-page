@@ -6,7 +6,9 @@ $(document).ready(function(){
     history.back(1);
   });
  
-  ////// modal top sheet //////
+
+
+  ////// modal sheet //////
   var curentSheet;
   $(".callModal").each(function() {
     $(this).click(function(event) {
@@ -25,9 +27,15 @@ $(document).ready(function(){
     $(this).click(function() {
       $(this).closest('.modal-sheet').removeClass('active');
       $('body').removeAttr("style");
+      /*var iframe = $('#video')[0];
+      var player = $f(iframe);
+      player.api('pause');*/
     });
   });
+  ////// end modal sheet //////
+  
+
   
   
 });
-
+  
