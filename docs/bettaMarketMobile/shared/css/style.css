@@ -946,7 +946,8 @@ ul.menu-post {
     .reacts-sd .like-count i, .reacts-sd .comment-count i {
       font-size: 18px; }
     .reacts-sd .like-count span, .reacts-sd .comment-count span {
-      font-weight: normal; }
+      font-weight: normal;
+      margin-left: 2px; }
 
 .box-comment {
   margin: 0 16px 12px 16px;
