@@ -34,7 +34,15 @@ $(document).ready(function(){
   });
   ////// end modal sheet //////
   
-
+  ///scroll to element
+  $(".gotoElement").click(function (event){
+    event.preventDefault();
+    var curentElement = $(this).attr('href');
+      $('html, body').animate({
+          scrollTop: $(curentElement).offset().top - 60
+      }, 400);
+    
+  });
   
   
 });

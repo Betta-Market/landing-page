@@ -83,7 +83,7 @@
     Hình sưu tầm con nemo đẹp quá! Ai có hàng giống vậy ib tui nhé, cám ơn!
   </div>
 </div> 
-<div class="box-comment">
+<div id="boxComment" class="box-comment">
   <h3>Bình luận</h3>
   <div class="chatgroup-box">
     <div class="chat-row dis-flex">
@@ -374,19 +374,56 @@
     <a href="#" class="like-count ">
       <i class="icon-heart m"><i class="icon-heart m1"></i><i class="icon-heart m2"></i><i class="icon-heart m3"></i><i class="icon-heart m4"></i></i> Thích <span>(786)</span>
     </a>
-    <a href="#" class="comment-count">
+    <a href="#boxComment" class="comment-count gotoElement">
       <i class="icon-chat"></i>Bình luận <span>(36)</span>
     </a>
-    <a href="#" class="btn-more"><span></span><span></span><span></span></a> 
+    <a href="#boxShare" class="btn-more callModal"><span></span><span></span><span></span></a> 
   </div>  
+</div>
+
+<div class="modal-sheet">
+  <div class="overlay-modal modal-close"></div>
+  <div id="boxShare" class="bottom-modal box-share">
+    <div class="head-modal">
+      <h3>Chia sẻ tin này?</h3>
+    </div>
+    <div class="content-modal">
+      <ul class="social-share">
+        <li>
+          <a href="#">
+            <img src="shared/img/icon_fb_elip.png" alt="">
+            Facebook
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="shared/img/icon_sms.png" alt="">
+            Messenger
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="shared/img/icon_zalo_elip.png" alt="">
+            Zalo
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="shared/img/icon_share.png" alt="">
+            Sao chép
+          </a>
+        </li>
+      </ul>
+      <div class="reacts-share">
+        <a href="#" class="btn-secondary btn-blue-light"><span class="icon-heart"></span>Lưu tin</a>
+        <a href="#" class="btn-secondary btn-blue-light"><span class="icon-report"></span>Báo cáo</a>
+      </div>
+    </div>
+
+  </div>
 </div>
 
 
 
-
-<script>
-  
-  
-</script>
 </body>
 </html>

@@ -127,11 +127,12 @@ button{
   }
 }
 .btn-secondary {
-  height: 34px;
+  height: 44px;
   padding: 0 16px;
+  box-sizing: border-box;
   background-color: $green;
   color: $white;
-  border-radius: 17px;
+  border-radius: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -140,6 +141,10 @@ button{
     margin-right: 8px;
     font-size: 13px;
   }
+}
+.btn-blue-light {
+  background-color: rgba($primary,0.1);
+  color: $primary;
 }
 input{
   border: 1px solid #e5e5e5;
@@ -641,6 +646,46 @@ ul.menu-post {
       .pick-name {
         font-weight: bold;
         margin-top: 8px;
+      }
+    }
+  }
+}
+
+
+.box-share {
+  ul.social-share {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    li {
+      width: 50%;
+      
+      a {
+        padding: 12px 0;
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+        img {
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+  .reacts-share {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    a {
+      width: calc((100% - 8px)/2);
+      span {
+        font-size: 18px;
+        &.icon-report {
+          font-size: 20px;
+        }
       }
     }
   }

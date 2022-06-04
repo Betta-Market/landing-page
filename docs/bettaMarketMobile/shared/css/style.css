@@ -119,11 +119,12 @@ button {
     font-size: 13px; }
 
 .btn-secondary {
-  height: 34px;
+  height: 44px;
   padding: 0 16px;
+  box-sizing: border-box;
   background-color: #66bd21;
   color: #ffffff;
-  border-radius: 17px;
+  border-radius: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -131,6 +132,10 @@ button {
   .btn-secondary span {
     margin-right: 8px;
     font-size: 13px; }
+
+.btn-blue-light {
+  background-color: rgba(29, 155, 240, 0.1);
+  color: #1d9bf0; }
 
 input {
   border: 1px solid #e5e5e5;
@@ -536,6 +541,34 @@ ul.menu-post {
     ul.menu-post li a .pick-name {
       font-weight: bold;
       margin-top: 8px; }
+
+.box-share ul.social-share {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; }
+  .box-share ul.social-share li {
+    width: 50%; }
+    .box-share ul.social-share li a {
+      padding: 12px 0;
+      display: flex;
+      align-items: center;
+      font-size: 13px; }
+      .box-share ul.social-share li a img {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        margin-right: 8px; }
+.box-share .reacts-share {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .box-share .reacts-share a {
+    width: calc((100% - 8px)/2); }
+    .box-share .reacts-share a span {
+      font-size: 18px; }
+      .box-share .reacts-share a span.icon-report {
+        font-size: 20px; }
 
 @keyframes scaleInOut {
   0% {
@@ -1059,7 +1092,7 @@ ul.menu-post {
     height: 48px;
     box-sizing: border-box;
     border-radius: 24px;
-    padding-left: 19px; }
+    padding-right: 48px; }
   .box-comment .chat-row {
     margin-bottom: 12px; }
     .box-comment .chat-row .react {
@@ -1084,7 +1117,8 @@ ul.menu-post {
           margin-bottom: 0; }
         .box-comment .chat-row > div .chat-row input {
           height: 34px;
-          border-radius: 17px; }
+          border-radius: 17px;
+          padding: 8px 36px 8px 16px; }
         .box-comment .chat-row > div .chat-row .form-group {
           margin-bottom: 4px; }
           .box-comment .chat-row > div .chat-row .form-group .btn-icon {
@@ -1383,7 +1417,7 @@ ul.support li {
           content: ""; }
 
 .relate-fish-sell {
-  padding: 16px; }
+  padding: 16px 16px 80px; }
   .relate-fish-sell h3 {
     text-transform: uppercase;
     font-size: 16px;
