@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(common.css);
 @import url(font.css);
 body {
@@ -100,11 +101,11 @@ button {
     text-decoration: underline; }
 
 .btn-primary {
-  height: 34px;
+  height: 44px;
   padding: 0 16px;
   background-color: #1d9bf0;
   color: #ffffff;
-  border-radius: 17px;
+  border-radius: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -434,79 +435,13 @@ ul.list-btns {
     padding-top: 12px;
     padding-bottom: 60px; }
 
-.list-fish-sell {
-  display: flex;
-  flex-wrap: wrap; }
-  .list-fish-sell .item-lfs {
-    width: calc((100% - 12px)/2);
-    margin-bottom: 12px; }
-    .list-fish-sell .item-lfs:nth-child(2n+2) {
-      margin-left: 12px; }
-    .list-fish-sell .item-lfs .thumb-lfs {
-      display: block;
-      padding-top: 75%;
-      overflow: hidden;
-      position: relative; }
-      .list-fish-sell .item-lfs .thumb-lfs img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        top: 0; }
-  .list-fish-sell .info-lfs {
-    background-color: #ffffff;
-    padding-bottom: 8px; }
-    .list-fish-sell .info-lfs .title-lfs, .list-fish-sell .info-lfs .proce-lfs {
-      font-size: 13px;
-      display: block;
-      width: 100%;
-      box-sizing: border-box; }
-    .list-fish-sell .info-lfs .title-lfs {
-      padding: 8px 8px 0;
-      text-transform: capitalize;
-      overflow: hidden;
-      display: box;
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      text-overflow: ellipsis;
-      white-space: normal;
-      -webkit-line-clamp: 1; }
-    .list-fish-sell .info-lfs .proce-lfs {
-      margin-top: 4px;
-      color: #1d9bf0;
-      padding: 0 8px; }
-  .list-fish-sell .account-lfs {
-    display: flex;
-    border-top: 1px solid #EDEDED;
-    padding: 8px;
-    margin-top: 8px;
-    justify-content: space-between;
-    align-items: center; }
-    .list-fish-sell .account-lfs .avatar {
-      width: 24px;
-      height: 24px; }
-      .list-fish-sell .account-lfs .avatar img {
-        border-radius: 12px; }
-    .list-fish-sell .account-lfs .adress {
-      font-size: 11px;
-      line-height: 13px;
-      color: #c4c4c4;
-      overflow: hidden;
-      display: box;
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      text-overflow: ellipsis;
-      white-space: normal;
-      -webkit-line-clamp: 2;
-      width: calc(100% - 32px); }
-
 .bottom-bar {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   box-sizing: border-box;
-  height: 54px;
+  padding: 12px 0 12px 0;
   display: flex;
   justify-content: space-between;
   box-shadow: 0px -3px 3px rgba(0, 0, 0, 0.07);
@@ -541,7 +476,7 @@ ul.list-btns {
     width: calc((100% - 72px)/2);
     display: flex;
     align-items: center;
-    height: 54px; }
+    height: 44px; }
     .bottom-bar .menu-bottom-l a, .bottom-bar .menu-bottom-r a {
       height: 100%;
       display: flex;
@@ -563,7 +498,7 @@ ul.list-btns {
         line-height: 10px; }
   @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
     .bottom-bar {
-      height: 72px; } }
+      padding-bottom: 34px; } }
 
 .blocker {
   z-index: 20;
@@ -1471,3 +1406,96 @@ ul.support li {
     .action-dfs a:nth-last-child(1) {
       margin-right: 0;
       width: 32%; }
+
+.list-fish-sell {
+  display: flex;
+  flex-wrap: wrap; }
+  .list-fish-sell .item-lfs {
+    width: calc((100% - 12px)/2);
+    margin-bottom: 12px; }
+    .list-fish-sell .item-lfs:nth-child(2n+2) {
+      margin-left: 12px; }
+    .list-fish-sell .item-lfs.hot .thumb-lfs:after, .list-fish-sell .item-lfs.foru .thumb-lfs:after {
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 3px;
+      height: 20px;
+      font-size: 10px;
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      z-index: 1;
+      padding: 0 6px;
+      font-weight: 600;
+      text-transform: uppercase;
+      box-sizing: border-box; }
+    .list-fish-sell .item-lfs.hot .thumb-lfs:after {
+      content: "HOT";
+      background-color: #f20000; }
+    .list-fish-sell .item-lfs.foru .thumb-lfs:after {
+      content: "DÀNH CHO BẠN";
+      background-color: #1d9bf0; }
+    .list-fish-sell .item-lfs .thumb-lfs {
+      display: block;
+      padding-top: 75%;
+      overflow: hidden;
+      position: relative; }
+      .list-fish-sell .item-lfs .thumb-lfs img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        top: 0; }
+        .list-fish-sell .item-lfs .thumb-lfs img.sold-out {
+          width: 34px;
+          height: 34px;
+          top: 8px;
+          right: 8px; }
+  .list-fish-sell .info-lfs {
+    background-color: #ffffff;
+    padding-bottom: 8px; }
+    .list-fish-sell .info-lfs .title-lfs, .list-fish-sell .info-lfs .proce-lfs {
+      font-size: 13px;
+      display: block;
+      width: 100%;
+      box-sizing: border-box; }
+    .list-fish-sell .info-lfs .title-lfs {
+      padding: 8px 8px 0;
+      text-transform: capitalize;
+      overflow: hidden;
+      display: box;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      white-space: normal;
+      -webkit-line-clamp: 1; }
+    .list-fish-sell .info-lfs .proce-lfs {
+      margin-top: 4px;
+      color: #1d9bf0;
+      padding: 0 8px; }
+  .list-fish-sell .account-lfs {
+    display: flex;
+    border-top: 1px solid #EDEDED;
+    padding: 8px 8PX 0;
+    margin-top: 8px;
+    justify-content: space-between;
+    align-items: center; }
+    .list-fish-sell .account-lfs .avatar {
+      width: 24px;
+      height: 24px; }
+      .list-fish-sell .account-lfs .avatar img {
+        border-radius: 12px; }
+    .list-fish-sell .account-lfs .adress {
+      font-size: 11px;
+      line-height: 13px;
+      color: #c4c4c4;
+      overflow: hidden;
+      display: box;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      white-space: normal;
+      -webkit-line-clamp: 2;
+      width: calc(100% - 32px); }
