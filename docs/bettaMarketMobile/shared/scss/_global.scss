@@ -599,7 +599,7 @@ ul.list-btns {
       align-items: center;
       [class^="icon-"], [class*=" icon-"] {
         font-size: 26px;
-        color: #c4c4c4;
+        color: $black;
       }
       &.active {
         [class^="icon-"], [class*=" icon-"] {
@@ -608,9 +608,24 @@ ul.list-btns {
         .title {
           color: $primary;
         }
+        span {
+          &.icon-buy-fish-o:before {
+            content: "\e905";
+          }
+          &.icon-auction-fish-o:before {
+            content: "\e900";
+          }
+          &.icon-show-fish-o:before {
+            content: "\e903";
+          }
+          &.icon-event-fish-o:before {
+            content: "\e901";
+          }
+        }
       }
+      
       .title {
-        margin-top: 4px;
+        margin-top: 8px;
         font-size: 11px;
         color: #888888;
         line-height: 10px; 

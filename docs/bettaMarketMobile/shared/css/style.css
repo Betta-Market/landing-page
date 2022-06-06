@@ -509,13 +509,21 @@ ul.list-btns {
       align-items: center; }
       .bottom-bar .menu-bottom-l a [class^="icon-"], .bottom-bar .menu-bottom-l a [class*=" icon-"], .bottom-bar .menu-bottom-r a [class^="icon-"], .bottom-bar .menu-bottom-r a [class*=" icon-"] {
         font-size: 26px;
-        color: #c4c4c4; }
+        color: #363636; }
       .bottom-bar .menu-bottom-l a.active [class^="icon-"], .bottom-bar .menu-bottom-l a.active [class*=" icon-"], .bottom-bar .menu-bottom-r a.active [class^="icon-"], .bottom-bar .menu-bottom-r a.active [class*=" icon-"] {
         color: #1d9bf0; }
       .bottom-bar .menu-bottom-l a.active .title, .bottom-bar .menu-bottom-r a.active .title {
         color: #1d9bf0; }
+      .bottom-bar .menu-bottom-l a.active span.icon-buy-fish-o:before, .bottom-bar .menu-bottom-r a.active span.icon-buy-fish-o:before {
+        content: "\e905"; }
+      .bottom-bar .menu-bottom-l a.active span.icon-auction-fish-o:before, .bottom-bar .menu-bottom-r a.active span.icon-auction-fish-o:before {
+        content: "\e900"; }
+      .bottom-bar .menu-bottom-l a.active span.icon-show-fish-o:before, .bottom-bar .menu-bottom-r a.active span.icon-show-fish-o:before {
+        content: "\e903"; }
+      .bottom-bar .menu-bottom-l a.active span.icon-event-fish-o:before, .bottom-bar .menu-bottom-r a.active span.icon-event-fish-o:before {
+        content: "\e901"; }
       .bottom-bar .menu-bottom-l a .title, .bottom-bar .menu-bottom-r a .title {
-        margin-top: 4px;
+        margin-top: 8px;
         font-size: 11px;
         color: #888888;
         line-height: 10px; }

@@ -1,8 +1,6 @@
 $(document).ready(function(){
   
-    //image loaded
     
-  
   
     $(window).scroll(function () {
       var scroll = $(window).scrollTop(),
@@ -20,14 +18,17 @@ $(document).ready(function(){
     var photoClone = $('.photo-clone');
     
     
-    var owl = $('.owl-carousel');    
-    owl.owlCarousel({
-      items: 1,
-      dots: true,
-      onInitialized: counter, 
-      onTranslated: counter,
-      onInitialize: initOwl
+    var owl = $('.owl-carousel');  
+    $('.photo-sell').imagesLoaded().done( function( instance ) {
+      owl.owlCarousel({
+        items: 1,
+        dots: true,
+        onInitialized: counter, 
+        onTranslated: counter,
+        onInitialize: initOwl
+      });
     });
+    
     // Listen to owl events:
     function initOwl(event) {
       var element   = event.target;
@@ -38,9 +39,7 @@ $(document).ready(function(){
         var itemHeight = value.naturalHeight;
         if (itemWidth < itemHeight) {
           
-          $('.photo-sell').imagesLoaded( function() {
             $(value).addClass('horizontal');
-          });
         }
       });
     }
