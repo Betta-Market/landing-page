@@ -1201,14 +1201,34 @@ button {
   .modal-sheet .modal-account-menu .content-modal {
     padding: 0; }
 
-.modal-video .content-modal {
-  padding: 0; }
-.modal-video .video-zoom {
-  padding-top: 56.25%;
-  overflow: hidden;
-  position: relative; }
-  .modal-video .video-zoom.horizontal {
-    padding-top: 177.777777%; }
+.modal-video {
+  background: none !important; }
+  .modal-video.horizontal {
+    top: 0;
+    transform: translate(-50%, 40px); }
+    .modal-video.horizontal .video-zoom {
+      padding-top: 150%; }
+  .modal-video .content-modal {
+    padding: 0;
+    padding-bottom: 60px; }
+  .modal-video .video-zoom {
+    padding-top: 56.25%;
+    overflow: hidden;
+    position: relative; }
+  .modal-video .btn-close {
+    position: fixed;
+    bottom: 2px;
+    left: 50%;
+    margin-left: -22px;
+    width: 44px;
+    height: 44px;
+    border-radius: 22px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .modal-video .btn-close span {
+      color: #ffffff; }
 
 .wrap-account-menu {
   display: flex;
