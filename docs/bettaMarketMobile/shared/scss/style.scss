@@ -587,6 +587,9 @@
     padding-top: 56.25%;
     overflow: hidden;
     position: relative;
+    &.horizontal {
+      padding-top: 177.777777%;
+    }
   }
 }
 

@@ -42,7 +42,7 @@ button {
   align-items: center; }
 
 .verified:before {
-  content: "\e907";
+  content: "\e92c";
   font-family: 'bettamarket' !important;
   position: absolute;
   bottom: 0px;
@@ -1207,6 +1207,8 @@ button {
   padding-top: 56.25%;
   overflow: hidden;
   position: relative; }
+  .modal-video .video-zoom.horizontal {
+    padding-top: 177.777777%; }
 
 .wrap-account-menu {
   display: flex;
