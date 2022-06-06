@@ -1,7 +1,10 @@
 $(document).ready(function(){
-
+  
+    //image loaded
     
-    $(window).scroll(function (event) {
+  
+  
+    $(window).scroll(function () {
       var scroll = $(window).scrollTop(),
           ePhoto = $('.slider-photo'),
           hPhoto = ePhoto.height();
@@ -34,7 +37,10 @@ $(document).ready(function(){
         var itemWidth = value.naturalWidth;
         var itemHeight = value.naturalHeight;
         if (itemWidth < itemHeight) {
-          $(value).addClass('horizontal');
+          
+          $('.photo-sell').imagesLoaded( function() {
+            $(value).addClass('horizontal');
+          });
         }
       });
     }
