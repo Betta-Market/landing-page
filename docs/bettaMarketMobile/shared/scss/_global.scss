@@ -598,7 +598,7 @@ ul.list-btns {
       justify-content: center;
       align-items: center;
       [class^="icon-"], [class*=" icon-"] {
-        font-size: 26px;
+        font-size: 32px;
         color: $black;
       }
       &.active {
@@ -625,7 +625,7 @@ ul.list-btns {
       }
       
       .title {
-        margin-top: 8px;
+        margin-top: 4px;
         font-size: 11px;
         color: #888888;
         line-height: 10px; 

@@ -871,6 +871,12 @@ ul.support {
     font-weight: bold !important;
     padding: 12px 12px 4px 12px!important;
   }
+  h2 {
+    font-size: 14px;
+    font-weight: bold !important;
+    padding: 12px 12px 4px 12px!important;
+    text-transform: capitalize;
+  }
   h3 {
     font-size: 14px;
     text-transform: uppercase;
@@ -986,14 +992,14 @@ ul.support {
           display: flex;
           justify-content: center;
           align-items: center;
-          border-radius: 3px;
+          border-radius: 10px;
           height: 20px;
           font-size: 10px;
           position: absolute;
           top: 4px;
           right: 4px;
           z-index: 1;
-          padding: 0 6px;
+          padding: 0 8px;
           font-weight: 600;
           text-transform: uppercase;
           box-sizing: border-box;
@@ -1027,6 +1033,7 @@ ul.support {
         height: 100%;
         object-fit: cover;
         top: 0;
+        border-radius: 12px 12px 0 0;
         &.sold-out {
           width: 34px;
           height: 34px;
@@ -1039,6 +1046,7 @@ ul.support {
   .info-lfs {
     background-color: $white;
     padding-bottom: 8px;
+    border-radius: 0 0 12px 12px;
     .title-lfs, .proce-lfs {
       font-size: 13px;
       display: block;
@@ -1078,10 +1086,25 @@ ul.support {
       width: calc(100% - 32px);
     }
   }
+  
+  &.list-auction {
+    .item-lfs {
+      width: 100%;
+      .info-dfs {
+        margin: 0;
+        border-radius: 0 0 12px 12px;
+      }
+      &:nth-child(2n+2) {
+        margin-left: 0;
+      }
+    }
+  }
+  
 }
 
 .info-dfs {
   &.auction-fish {
+    padding-bottom: 12px;
     .entry-dfs {
         dl {
           dd {
@@ -1146,7 +1169,18 @@ ul.timeline-auction {
     }
   }
 }
-
+.countdown-auction {
+  background-color: rgba($primary,0.1);
+  padding: 4px 12px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $primary;
+  border-radius: 14px;
+  margin: 0 12px;
+  span {
+    font-weight: bold;
+  }
+}
 
 
 
