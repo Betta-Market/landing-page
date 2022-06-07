@@ -605,12 +605,13 @@
     width: 44px;
     height: 44px;
     border-radius: 22px;
-    border: 1px solid rgba($white,0.3);
+    background-color: rgba($black1,0.6);
     display: flex;
     align-items: center;
     justify-content: center;
     span {
       color: $white;
+      font-size: 12px;
     }
   }
 }
@@ -1060,7 +1061,63 @@ ul.support {
   }
 }
 
-
+.detail-fish-sell {
+  &.auction-fish {
+    .info-dfs {
+      .entry-dfs {
+        dl {
+          dd {
+            color: $green;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+ul.timeline-auction {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 16px 12px;
+  li {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    &:nth-last-child(1) {
+      img {
+        width: 36px;
+        height: 36px;
+      }
+      .bid {
+        font-weight: bold;
+        color: $green;
+      }
+      .dot {
+        border-color: $green;
+      }
+    }
+    img {
+      width: 24px;
+      height: 24px;
+      border-radius: 100%;
+    }
+    .icon-start {
+      color: $green;
+    }
+    .dot {
+      width: 8px;
+      height: 8px;
+      border: 1px solid $lineColor;
+      border-radius: 5px;
+      margin: 8px 0;
+      position: relative;
+    }
+    .bid {
+      font-size: 12px;
+    }
+  }
+}
 
 
 

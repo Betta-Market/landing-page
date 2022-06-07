@@ -1223,12 +1223,13 @@ button {
     width: 44px;
     height: 44px;
     border-radius: 22px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(0, 0, 0, 0.6);
     display: flex;
     align-items: center;
     justify-content: center; }
     .modal-video .btn-close span {
-      color: #ffffff; }
+      color: #ffffff;
+      font-size: 12px; }
 
 .wrap-account-menu {
   display: flex;
@@ -1594,3 +1595,40 @@ ul.support li {
       white-space: normal;
       -webkit-line-clamp: 2;
       width: calc(100% - 32px); }
+
+.detail-fish-sell.auction-fish .info-dfs .entry-dfs dl dd {
+  color: #66bd21;
+  font-weight: bold; }
+
+ul.timeline-auction {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 16px 12px; }
+  ul.timeline-auction li {
+    display: flex;
+    flex-flow: column;
+    align-items: center; }
+    ul.timeline-auction li:nth-last-child(1) img {
+      width: 36px;
+      height: 36px; }
+    ul.timeline-auction li:nth-last-child(1) .bid {
+      font-weight: bold;
+      color: #66bd21; }
+    ul.timeline-auction li:nth-last-child(1) .dot {
+      border-color: #66bd21; }
+    ul.timeline-auction li img {
+      width: 24px;
+      height: 24px;
+      border-radius: 100%; }
+    ul.timeline-auction li .icon-start {
+      color: #66bd21; }
+    ul.timeline-auction li .dot {
+      width: 8px;
+      height: 8px;
+      border: 1px solid #EDEDED;
+      border-radius: 5px;
+      margin: 8px 0;
+      position: relative; }
+    ul.timeline-auction li .bid {
+      font-size: 12px; }
