@@ -1427,30 +1427,40 @@ ul.support li {
       .photo-sell .owl-dots .owl-dot.active {
         background-color: #ffffff; }
 
-.detail-fish-sell {
-  border-radius: 0 0 12px 12px;
+.sub-page {
+  padding-bottom: 80px; }
+
+.info-dfs {
+  border-radius: 12px;
   background-color: #ffffff;
   margin: 0 16px 12px 16px; }
-  .detail-fish-sell .info-dfs h1 {
+  .info-dfs:nth-child(1) {
+    border-radius: 0 0 12px 12px; }
+  .info-dfs h1 {
     font-size: 18px;
     line-height: 22px;
-    font-weight: bold;
-    padding: 12px 12px 4px 12px; }
-  .detail-fish-sell .info-dfs .price {
+    font-weight: bold !important;
+    padding: 12px 12px 4px 12px !important; }
+  .info-dfs h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold !important;
+    padding: 12px 12px 0 12px !important; }
+  .info-dfs .price {
     color: #1d9bf0;
     font-weight: bold;
     padding: 0 12px; }
-  .detail-fish-sell .info-dfs .entry-dfs {
+  .info-dfs .entry-dfs {
     border-top: 1px dashed #EDEDED;
     border-bottom: 1px dashed #EDEDED;
     padding: 12px;
     margin-top: 12px;
     display: flex;
     justify-content: space-between; }
-    .detail-fish-sell .info-dfs .entry-dfs dl dt {
-      color: #c4c4c4;
+    .info-dfs .entry-dfs dl dt {
+      color: #727272;
       font-size: 13px; }
-  .detail-fish-sell .info-dfs .desc-dfs {
+  .info-dfs .desc-dfs {
     padding: 12px 12px 16px 12px; }
 
 .brand-shop {
@@ -1483,7 +1493,7 @@ ul.support li {
           content: ""; }
 
 .relate-fish-sell {
-  padding: 16px 16px 80px; }
+  padding: 16px; }
   .relate-fish-sell h3 {
     text-transform: uppercase;
     font-size: 16px;
@@ -1502,6 +1512,11 @@ ul.support li {
     .action-dfs a:nth-last-child(1) {
       margin-right: 0;
       width: 32%; }
+  .action-dfs.one-btn a {
+    margin-right: 0;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 18px; }
 
 .list-fish-sell {
   display: flex;
@@ -1596,7 +1611,7 @@ ul.support li {
       -webkit-line-clamp: 2;
       width: calc(100% - 32px); }
 
-.detail-fish-sell.auction-fish .info-dfs .entry-dfs dl dd {
+.info-dfs.auction-fish .entry-dfs dl dd {
   color: #66bd21;
   font-weight: bold; }
 
@@ -1604,7 +1619,16 @@ ul.timeline-auction {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  padding: 16px 12px; }
+  padding: 16px 12px;
+  position: relative; }
+  ul.timeline-auction:before {
+    content: "";
+    width: calc(100% - 55px);
+    height: 1px;
+    background-color: #EDEDED;
+    position: absolute;
+    bottom: 45px;
+    left: 25px; }
   ul.timeline-auction li {
     display: flex;
     flex-flow: column;
@@ -1626,9 +1650,10 @@ ul.timeline-auction {
     ul.timeline-auction li .dot {
       width: 8px;
       height: 8px;
-      border: 1px solid #EDEDED;
+      border: 1px solid #e2e2e2;
       border-radius: 5px;
       margin: 8px 0;
-      position: relative; }
+      position: relative;
+      background-color: #ffffff; }
     ul.timeline-auction li .bid {
       font-size: 12px; }
