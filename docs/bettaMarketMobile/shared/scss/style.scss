@@ -932,11 +932,26 @@ ul.support {
         font-weight: bold;
       }
       .status {
+        display: block;
         font-size: 12px;
         color: $textGrey1;
         position: relative;
+        padding-left: 10px;
+        &.online {
+          &:before {
+            background-color: $green;
+          }
+        }
         &:before {
           content: "";
+          width: 6px;
+          height: 6px;
+          border-radius: 3px;
+          background-color: $textGrey1;
+          display: block;
+          top: 5px;
+          left: 0;
+          position: absolute;
         }
       }
     }

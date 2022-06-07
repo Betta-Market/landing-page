@@ -168,6 +168,9 @@ button{
     transition: background 0s;
   }
 }
+.btn-md {
+  height: 34px;
+}
 .btn-blue-light {
   background-color: rgba($primary,0.1);
   color: $primary;
