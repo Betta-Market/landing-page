@@ -1688,6 +1688,11 @@ ul.timeline-auction {
       background-color: #ffffff; }
     ul.timeline-auction li .bid {
       font-size: 12px; }
+  ul.timeline-auction .ava.verified:before {
+    width: 5px;
+    height: 5px;
+    font-size: 5px;
+    right: -4px; }
 
 .countdown-auction {
   background-color: rgba(29, 155, 240, 0.1);
@@ -1699,3 +1704,7 @@ ul.timeline-auction {
   margin: 0 12px; }
   .countdown-auction span {
     font-weight: bold; }
+
+.modal-bid .countdown-auction {
+  margin: 0;
+  text-align: left; }
