@@ -267,9 +267,9 @@ button {
     left: 0;
     opacity: 0;
     transition: 0.2s opacity $eio;
-    background-color: rgba($black,0.8);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    background-color: rgba($black1,0.5);
+    //backdrop-filter: blur(15px);
+    //-webkit-backdrop-filter: blur(15px);
   }
   .bottom-modal {
     bottom: 0;
