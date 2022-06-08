@@ -72,7 +72,8 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #EEEEEE; }
+  background-color: #EEEEEE;
+  box-sizing: border-box; }
   .btn-more.btn-dark {
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
@@ -92,7 +93,8 @@ button {
   border-radius: 20px;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  box-sizing: border-box; }
 
 .btn-link {
   color: #1d9bf0;
@@ -101,6 +103,7 @@ button {
     text-decoration: underline; }
 
 .btn-primary {
+  box-sizing: border-box;
   height: 44px;
   padding: 0 16px;
   background-color: #1d9bf0;
@@ -129,6 +132,7 @@ button {
     transition: background 0s; }
 
 .btn-secondary {
+  box-sizing: border-box;
   height: 44px;
   padding: 0 16px;
   box-sizing: border-box;
@@ -1711,7 +1715,7 @@ ul.timeline-auction {
 
 ul.list-bid {
   margin-top: 12px;
-  max-height: 360px;
+  max-height: 500px;
   overflow: auto; }
   ul.list-bid li {
     display: flex;
@@ -1768,3 +1772,65 @@ ul.list-bid {
       border-color: #66bd21; }
     ul.list-bid li .chat-cb {
       margin-top: 4px; }
+
+.form-bid {
+  margin: 0 -16px -16px;
+  padding: 16px;
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.05); }
+  .form-bid .box-bid {
+    border: 1px solid #e2e2e2;
+    border-radius: 12px; }
+  .form-bid .input-bid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e2e2e2;
+    padding: 8px 12px; }
+    .form-bid .input-bid input {
+      border: none;
+      padding: 12px; }
+    .form-bid .input-bid img {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%; }
+  .form-bid .pick-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px; }
+    .form-bid .pick-price .default-price {
+      color: #c4c4c4;
+      width: calc(100% - 216px);
+      display: flex;
+      align-items: center; }
+      .form-bid .pick-price .default-price span {
+        display: inline-block;
+        font-weight: bold;
+        color: #363636;
+        width: calc(100% - 32px);
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        padding-left: 4px; }
+    .form-bid .pick-price .add-price {
+      display: flex; }
+      .form-bid .pick-price .add-price .btn-add-price {
+        display: block;
+        color: #66bd21;
+        font-size: 13px;
+        padding: 8px 12px;
+        border-radius: 20px;
+        background-color: rgba(102, 189, 33, 0.2);
+        font-weight: bold;
+        margin-right: 4px; }
+        .form-bid .pick-price .add-price .btn-add-price:nth-last-child(1) {
+          background-color: #f8f8f8;
+          color: #c4c4c4;
+          margin-right: 0; }
+  .form-bid .action-bid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 12px; }
+    .form-bid .action-bid a {
+      width: calc((100% - 8px)/2); }
