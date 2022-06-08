@@ -163,6 +163,11 @@ button {
   background-color: rgba(29, 155, 240, 0.1);
   color: #1d9bf0; }
 
+.btn-disable {
+  background-color: #f8f8f8;
+  color: #c4c4c4;
+  pointer-events: none; }
+
 input {
   border: 1px solid #e5e5e5;
   box-sizing: border-box; }
@@ -1530,12 +1535,14 @@ ul.support li {
   padding: 0 16px;
   align-items: center;
   width: 100%; }
+  .action-dfs .btn-primary {
+    width: calc(60% - 8px);
+    margin-right: 8px; }
+  .action-dfs .sub-btn {
+    width: 40%;
+    margin-right: 0; }
   .action-dfs a {
-    margin-right: 8px;
-    width: calc((100% - 8px)/2); }
-    .action-dfs a:nth-last-child(1) {
-      margin-right: 0;
-      width: 32%; }
+    box-sizing: border-box; }
   .action-dfs.one-btn a {
     margin-right: 0;
     width: 100%;
@@ -1645,7 +1652,30 @@ ul.support li {
       margin-left: 0; }
 
 .info-dfs.auction-fish {
-  padding-bottom: 12px; }
+  padding-bottom: 12px;
+  position: relative; }
+  .info-dfs.auction-fish:before {
+    content: "";
+    position: absolute;
+    width: 68px;
+    height: 19px;
+    background: url(../img/wave-bottom.svg) no-repeat;
+    top: -19px;
+    background-size: cover; }
+  .info-dfs.auction-fish h2 {
+    display: flex;
+    padding-left: 16px !important; }
+    .info-dfs.auction-fish h2 .ava {
+      width: 40px;
+      height: 40px;
+      margin-right: 12px;
+      margin-top: -20px; }
+      .info-dfs.auction-fish h2 .ava.verified:before {
+        width: 6px;
+        height: 6px;
+        font-size: 6px; }
+      .info-dfs.auction-fish h2 .ava img {
+        border-radius: 50%; }
   .info-dfs.auction-fish .entry-dfs dl dd {
     color: #66bd21;
     font-weight: bold; }
@@ -1834,3 +1864,81 @@ ul.list-bid {
     margin-top: 12px; }
     .form-bid .action-bid a {
       width: calc((100% - 8px)/2); }
+
+.end-3min {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background-color: #FFF9E9;
+  border: 1px solid #FFE7AB;
+  overflow: hidden; }
+  .end-3min .progress-bar {
+    background-color: #FFE7AB;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    transition: 0.2s width ease-in-out; }
+  .end-3min .countdown-3min {
+    color: #D78100;
+    position: relative; }
+  .end-3min .more-time {
+    color: #D78100;
+    font-weight: bold;
+    position: relative; }
+
+.end-auction {
+  background-color: rgba(177, 0, 0, 0.1);
+  font-weight: bold;
+  color: #b10000; }
+
+.congrat .winner-bid {
+  display: flex;
+  padding: 40px;
+  align-items: center;
+  justify-content: center; }
+  .congrat .winner-bid .img-winner {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    margin-right: 24px; }
+    .congrat .winner-bid .img-winner img {
+      border-radius: 50%; }
+    .congrat .winner-bid .img-winner:before {
+      content: "";
+      border: 2px solid #FFCE00;
+      width: 66px;
+      height: 66px;
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      border-radius: 50%; }
+    .congrat .winner-bid .img-winner:after {
+      content: "";
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%) scale(0.7);
+      top: -58px;
+      background: url("../img/king.svg") no-repeat; }
+  .congrat .winner-bid .text-winner {
+    display: flex;
+    flex-flow: column; }
+    .congrat .winner-bid .text-winner .congrat-winner {
+      font-size: 18px;
+      font-weight: bold; }
+    .congrat .winner-bid .text-winner .note-winner {
+      color: #c4c4c4;
+      margin: 4px 0; }
+    .congrat .winner-bid .text-winner .price-winner {
+      font-size: 16px;
+      font-weight: bold;
+      color: #66bd21; }
+.congrat .contact-boss {
+  color: #b10000;
+  padding: 0 16px;
+  text-align: center; }
+  .congrat .contact-boss a {
+    font-weight: bold; }

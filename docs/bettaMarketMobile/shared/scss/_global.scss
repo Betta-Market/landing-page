@@ -179,6 +179,11 @@ button{
   background-color: rgba($primary,0.1);
   color: $primary;
 }
+.btn-disable {
+  background-color: $bg_grey;
+  color: $textGrey1;
+  pointer-events: none;
+}
 input{
   border: 1px solid #e5e5e5;
   box-sizing: border-box;
