@@ -1211,7 +1211,78 @@ ul.timeline-auction {
     text-align: left;
   }
 }
+ul.list-bid {
+  margin-top: 12px;
+  max-height: 360px;
+  overflow: auto;
+  li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    .ava {
+      width: 40px;
+      height: 40px;
+      margin-right: 8px;
+      img {
+        border-radius: 50%;
+      }
+      &.verified:before {
+        width: 6px;
+        height: 6px;
+        font-size: 5px;
+      }
+    }
+    .content-bid {
+      width: calc(100% - 48px);
+      padding: 12px;
+      background-color: $bg_grey;
+      border-radius: 12px;
+    }
+    
+    .info-cb {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      a {
+        font-size: 13px;
+        width: calc(100% - 90px);
+        display: flex;
+        align-items: center;
+        .name {
+          font-weight: bold;  
+          @include ttl_hidden(1);
+          max-width: calc(100% - 90px);
+        }
+        .time {
+          margin-left: 8px;
+          color: $textGrey;
+        }
+      }
+      
+      .price-bid {
+        font-size: 13px;
+        font-weight: bold;
+        color: $textGrey1;
+        padding: 2px 8px;
+        border-radius: 12px;
+        background-color: $bg_grey;
+        border: 1px dashed $textGrey1;
+      }
+      
+    }
+    &:nth-child(1) {
+      .price-bid {
+        color: $green;
+        background-color: rgba($green,0.1);
+        border-color: $green;
+      }
 
+    }
+    .chat-cb {
+      margin-top: 4px;
+    }
+  } 
+}
 
 
 
