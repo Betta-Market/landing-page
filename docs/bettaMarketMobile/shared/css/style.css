@@ -236,7 +236,9 @@ button {
     left: 0;
     opacity: 0;
     transition: 0.2s opacity ease-in-out;
-    background-color: rgba(0, 0, 0, 0.5); }
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px); }
   .modal-sheet .bottom-modal {
     bottom: 0;
     position: absolute;
@@ -1639,7 +1641,7 @@ ul.support li {
       -webkit-box-orient: vertical;
       text-overflow: ellipsis;
       white-space: normal;
-      -webkit-line-clamp: 2;
+      -webkit-line-clamp: 1;
       width: calc(100% - 32px); }
   .list-fish-sell.list-auction .item-lfs {
     width: 100%; }
@@ -1695,7 +1697,8 @@ ul.timeline-auction {
   ul.timeline-auction li {
     display: flex;
     flex-flow: column;
-    align-items: center; }
+    align-items: center;
+    position: relative; }
     ul.timeline-auction li:nth-last-child(1) img {
       width: 36px;
       height: 36px; }
@@ -1720,6 +1723,8 @@ ul.timeline-auction {
       background-color: #ffffff; }
     ul.timeline-auction li .bid {
       font-size: 12px; }
+    ul.timeline-auction li .btn-primary {
+      margin-bottom: 12px; }
   ul.timeline-auction .ava.verified:before {
     width: 5px;
     height: 5px;

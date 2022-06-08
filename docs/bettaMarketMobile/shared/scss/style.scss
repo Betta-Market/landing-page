@@ -1099,7 +1099,7 @@ ul.support {
       font-size: 11px;
       line-height: 13px;
       color: $textGrey1;
-      @include ttl_hidden(2);
+      @include ttl_hidden(1);
       width: calc(100% - 32px);
     }
   }
@@ -1179,6 +1179,7 @@ ul.timeline-auction {
     display: flex;
     flex-flow: column;
     align-items: center;
+    position: relative;
     &:nth-last-child(1) {
       img {
         width: 36px;
@@ -1211,6 +1212,9 @@ ul.timeline-auction {
     }
     .bid {
       font-size: 12px;
+    }
+    .btn-primary {
+      margin-bottom: 12px;
     }
   }
   .ava {

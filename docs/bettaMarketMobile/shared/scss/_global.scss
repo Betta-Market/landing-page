@@ -268,8 +268,8 @@ button {
     opacity: 0;
     transition: 0.2s opacity $eio;
     background-color: rgba($black1,0.5);
-    //backdrop-filter: blur(15px);
-    //-webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
   }
   .bottom-modal {
     bottom: 0;
