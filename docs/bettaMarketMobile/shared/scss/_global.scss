@@ -246,6 +246,19 @@ button {
   opacity: 0;
   pointer-events: none;
   transition: 0.2s opacity $eio;
+  .btn-close {
+    width: 44px;
+    height: 44px;
+    border-radius: 22px;
+    background-color: rgba($black1,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+      color: $white;
+      font-size: 12px;
+    }
+  }
   &.active {
     opacity: 1;
     pointer-events: auto;
@@ -257,6 +270,9 @@ button {
     }
     .top-modal {
       transform: translateY(0);
+    }
+    .left-modal {
+      transform: translateX(0);
     }
   }
   .overlay-modal {
@@ -293,6 +309,22 @@ button {
     transform: translateY(-100%);
     transition: 0.2s transform $eio;
   }
+  .left-modal {
+    left: 0;
+    position: absolute;
+    width: calc(100% - 60px);
+    height: 100vh;
+    top: 0;
+    border-radius: 0 20px 20px 0;
+    background-color: $white;
+    transform: translateX(-100%);
+    transition: 0.2s transform $eio;
+    .btn-close {
+      position: absolute;
+      right: -52px;
+      top: 10px;
+    }
+  }
   .middle-modal {
     top: 50%;
     position: absolute;
@@ -314,7 +346,42 @@ button {
     padding: 16px;
   }
 }
-
+.modal-video {
+  background: none !important;
+  &.horizontal {
+    top: 0;
+    transform: translate(-50%,40px);
+    .video-zoom {
+      padding-top: 150%;
+    }
+  }
+  .content-modal {
+    padding: 0;
+    padding-bottom: 60px;
+  }
+  .video-zoom {
+    padding-top: 56.25%;
+    overflow: hidden;
+    position: relative;
+  }
+  .btn-close {
+    position: fixed;
+    bottom: 2px;
+    left: 50%;
+    margin-left: -22px;
+    width: 44px;
+    height: 44px;
+    border-radius: 22px;
+    background-color: rgba($black1,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+      color: $white;
+      font-size: 12px;
+    }
+  }
+}
 header {
   z-index: 20;
   height: 60px;
@@ -888,4 +955,17 @@ button {
     text-transform: uppercase;
   }
 }
+
+////// radio input ///////
+
+
+
+
+
+
+
+
+
+
+
 
