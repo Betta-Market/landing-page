@@ -62,6 +62,9 @@ button {
 .mt-60 {
   margin-top: 60px; }
 
+.mt-12 {
+  margin-top: 12px; }
+
 .mt-8 {
   margin-top: 8px; }
 
@@ -162,6 +165,11 @@ button {
 .btn-blue-light {
   background-color: rgba(29, 155, 240, 0.1);
   color: #1d9bf0; }
+
+.btn-blue-border {
+  background-color: #ffffff;
+  color: #1d9bf0;
+  border: 1px solid #1d9bf0; }
 
 .btn-disable {
   background-color: #f8f8f8;
@@ -278,7 +286,6 @@ button {
     width: calc(100% - 60px);
     height: 100vh;
     top: 0;
-    border-radius: 0 20px 20px 0;
     background-color: #ffffff;
     transform: translateX(-100%);
     transition: 0.2s transform ease-in-out; }
@@ -774,6 +781,152 @@ button {
     margin-top: 24px;
     padding: 0 32px;
     text-transform: uppercase; }
+
+.filter-fish .content-modal {
+  position: relative;
+  height: 100vh;
+  box-sizing: border-box; }
+.filter-fish .filter-form {
+  height: calc(100vh - 60px);
+  overflow: auto;
+  box-sizing: border-box;
+  padding-bottom: 20px; }
+
+.box-filter .head-bf {
+  font-weight: bold;
+  text-transform: uppercase; }
+.box-filter .parent-filter {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .box-filter .parent-filter:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #EDEDED;
+    bottom: 10px; }
+  .box-filter .parent-filter span {
+    font-size: 13px;
+    font-weight: bold;
+    position: relative;
+    display: block;
+    padding: 0 12px;
+    background-color: #ffffff; }
+
+ul.list-radio-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 8px;
+  margin-bottom: 12px; }
+  ul.list-radio-filter li {
+    width: calc((100% - 8px)/2);
+    margin-bottom: 8px; }
+    ul.list-radio-filter li:nth-child(1) {
+      width: 100%; }
+    ul.list-radio-filter li a {
+      display: flex;
+      align-items: center;
+      padding: 12px 16px;
+      background-color: #f8f8f8;
+      border-radius: 4px;
+      font-size: 13px;
+      position: relative;
+      line-height: normal;
+      padding-left: 34px;
+      border: 1px solid #f8f8f8;
+      transition: 0.2s all ease-in-out;
+      box-sizing: border-box; }
+      ul.list-radio-filter li a:before {
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        border: 1px solid #e2e2e2;
+        left: 12px;
+        top: 12px; }
+      ul.list-radio-filter li a:after {
+        opacity: 0;
+        content: "";
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #1d9bf0;
+        left: 15px;
+        top: 15px;
+        transition: 0.2s all ease-in-out; }
+      ul.list-radio-filter li a.selected {
+        background-color: #ffffff;
+        border: 1px solid #1d9bf0;
+        color: #1d9bf0; }
+        ul.list-radio-filter li a.selected:before {
+          border: 1px solid #1d9bf0; }
+        ul.list-radio-filter li a.selected:after {
+          opacity: 1; }
+
+ul.list-check-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 8px;
+  margin-bottom: 12px; }
+  ul.list-check-filter li {
+    width: calc((100% - 8px)/2);
+    margin-bottom: 8px; }
+    ul.list-check-filter li a {
+      display: flex;
+      align-items: center;
+      padding: 12px 16px;
+      background-color: #f8f8f8;
+      border-radius: 4px;
+      font-size: 13px;
+      border: 1px solid #f8f8f8;
+      transition: 0.2s all ease-in-out;
+      box-sizing: border-box;
+      position: relative; }
+      ul.list-check-filter li a:after {
+        opacity: 0;
+        position: absolute;
+        content: "\e92c";
+        font-family: 'bettamarket' !important;
+        speak: never;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        position: absolute;
+        color: #1d9bf0;
+        left: 12px;
+        top: 15px;
+        font-size: 8px;
+        transition: 0.2s all ease-in-out; }
+      ul.list-check-filter li a.selected {
+        background-color: #ffffff;
+        border: 1px solid #1d9bf0;
+        color: #1d9bf0;
+        padding-left: 30px; }
+        ul.list-check-filter li a.selected:after {
+          opacity: 1; }
+
+.filter-action {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  padding: 12px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.1); }
+  .filter-action a {
+    width: calc((100% - 8px)/2); }
 
 .carousel__track {
   position: relative; }
