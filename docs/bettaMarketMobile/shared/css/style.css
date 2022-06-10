@@ -688,6 +688,36 @@ button {
   100% {
     margin-left: 2px;
     opacity: 0; } }
+.page-status {
+  display: flex;
+  padding: 16px;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 170px); }
+  .page-status span {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    color: rgba(54, 54, 54, 0.3);
+    margin-bottom: 40px; }
+  .page-status h1 {
+    font-size: 18px;
+    margin-bottom: 8px !important;
+    font-weight: bold !important; }
+  .page-status p {
+    font-size: 16px;
+    color: #727272; }
+  .page-status .btn-primary {
+    margin-top: 24px;
+    padding: 0 32px;
+    text-transform: uppercase; }
+
 .carousel__track {
   position: relative; }
   .carousel__track .carousel__slide {
@@ -1896,19 +1926,19 @@ ul.list-bid {
   font-weight: bold;
   color: #b10000; }
 
-.congrat .winner-bid {
+.end-auction-fish .winner-bid {
   display: flex;
   padding: 40px;
   align-items: center;
   justify-content: center; }
-  .congrat .winner-bid .img-winner {
+  .end-auction-fish .winner-bid .img-winner {
     width: 60px;
     height: 60px;
     position: relative;
     margin-right: 24px; }
-    .congrat .winner-bid .img-winner img {
+    .end-auction-fish .winner-bid .img-winner img {
       border-radius: 50%; }
-    .congrat .winner-bid .img-winner:before {
+    .end-auction-fish .winner-bid .img-winner:before {
       content: "";
       border: 2px solid #FFCE00;
       width: 66px;
@@ -1917,7 +1947,7 @@ ul.list-bid {
       top: -5px;
       left: -5px;
       border-radius: 50%; }
-    .congrat .winner-bid .img-winner:after {
+    .end-auction-fish .winner-bid .img-winner:after {
       content: "";
       width: 80px;
       height: 80px;
@@ -1926,22 +1956,34 @@ ul.list-bid {
       transform: translateX(-50%) scale(0.7);
       top: -58px;
       background: url("../img/king.svg") no-repeat; }
-  .congrat .winner-bid .text-winner {
+  .end-auction-fish .winner-bid .text-winner {
     display: flex;
     flex-flow: column; }
-    .congrat .winner-bid .text-winner .congrat-winner {
+    .end-auction-fish .winner-bid .text-winner .congrat-winner {
       font-size: 18px;
       font-weight: bold; }
-    .congrat .winner-bid .text-winner .note-winner {
+    .end-auction-fish .winner-bid .text-winner .note-winner {
       color: #c4c4c4;
       margin: 4px 0; }
-    .congrat .winner-bid .text-winner .price-winner {
+    .end-auction-fish .winner-bid .text-winner .price-winner {
       font-size: 16px;
       font-weight: bold;
       color: #66bd21; }
-.congrat .contact-boss {
+.end-auction-fish .contact-boss {
   color: #b10000;
   padding: 0 16px;
   text-align: center; }
-  .congrat .contact-boss a {
+  .end-auction-fish .contact-boss a {
     font-weight: bold; }
+.end-auction-fish .content-eaf {
+  display: flex;
+  flex-flow: column;
+  padding: 40px;
+  align-items: center;
+  text-align: center; }
+  .end-auction-fish .content-eaf .status {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 12px; }
+  .end-auction-fish .content-eaf .refer {
+    color: #b10000; }

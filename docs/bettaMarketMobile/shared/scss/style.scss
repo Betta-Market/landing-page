@@ -1423,7 +1423,7 @@ ul.list-bid {
   font-weight: bold;
   color: $red1;
 }
-.congrat {
+.end-auction-fish {
   .winner-bid {
     display: flex;
     padding: 40px;
@@ -1482,6 +1482,21 @@ ul.list-bid {
     text-align: center;
     a {
       font-weight: bold;
+    }
+  }
+  .content-eaf {
+    display: flex;
+    flex-flow: column;
+    padding: 40px;
+    align-items: center;
+    text-align: center;
+    .status {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+    .refer {
+      color: $red1;
     }
   }
 }
