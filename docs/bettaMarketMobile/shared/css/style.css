@@ -694,7 +694,7 @@ button {
   flex-flow: column;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 170px); }
+  margin-top: 120px; }
   .page-status span {
     width: 180px;
     height: 180px;
