@@ -970,7 +970,7 @@ button {
     padding: 0;
   }
   .filter-form {
-    height: 100%;
+    height: calc(100% - 70px);
     overflow: auto;
     box-sizing: border-box;
     padding: 12px 12px 62px 12px;
@@ -1120,9 +1120,10 @@ ul.list-check-filter {
   }
 }
 .filter-action {
-  position: fixed;
+/*  position: fixed;
   bottom: 0;
-  left: 0;
+  left: 0;*/
+  position: relative;
   width: 100%;
   padding: 12px;
   background-color: $white;
