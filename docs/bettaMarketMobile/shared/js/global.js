@@ -11,10 +11,17 @@ $(document).ready(function(){
   ////// modal sheet //////
   var curentSheet;
   $(".callModal").each(function() {
-    $(this).click(function(event) {
+    var $this = $(this);
+    $this.click(function(event) {
       event.preventDefault();
-      curentSheet = $($(this).attr("href"));
-      showModalSheet(curentSheet);
+      $('html, body').animate({
+            scrollTop: 50
+      }, 200);
+      setTimeout(function() { 
+        curentSheet = $($this.attr("href"));
+        showModalSheet(curentSheet);
+      }, 200);
+      
     });
   });
   
