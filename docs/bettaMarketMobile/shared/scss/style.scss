@@ -576,10 +576,14 @@
     border-radius: 0;
     .content-modal {
       padding: 0;
+      .btn-close {
+        span {
+          color: $textGrey;
+        }
+      }
     }
   }
 }
-
 
 .wrap-account-menu {
   display: flex;

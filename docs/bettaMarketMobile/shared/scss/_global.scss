@@ -967,12 +967,13 @@ button {
     position: relative;
     height: 100vh;
     box-sizing: border-box;
+    padding: 0;
   }
   .filter-form {
-    height: calc(100vh - 60px);
+    height: calc(100vh - 70px);
     overflow: auto;
     box-sizing: border-box;
-    padding-bottom: 20px;
+    padding: 12px;
   }
 }
 .box-filter {
@@ -1119,10 +1120,7 @@ ul.list-check-filter {
   }
 }
 .filter-action {
-  position: absolute;
-  bottom: 0;
   width: 100%;
-  left: 0;
   padding: 12px;
   background-color: $white;
   box-sizing: border-box;

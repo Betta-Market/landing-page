@@ -785,12 +785,13 @@ button {
 .filter-fish .content-modal {
   position: relative;
   height: 100vh;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  padding: 0; }
 .filter-fish .filter-form {
-  height: calc(100vh - 60px);
+  height: calc(100vh - 70px);
   overflow: auto;
   box-sizing: border-box;
-  padding-bottom: 20px; }
+  padding: 12px; }
 
 .box-filter .head-bf {
   font-weight: bold;
@@ -914,10 +915,7 @@ ul.list-check-filter {
           opacity: 1; }
 
 .filter-action {
-  position: absolute;
-  bottom: 0;
   width: 100%;
-  left: 0;
   padding: 12px;
   background-color: #ffffff;
   box-sizing: border-box;
@@ -1452,6 +1450,8 @@ ul.list-check-filter {
   border-radius: 0; }
   .modal-sheet .modal-account-menu .content-modal {
     padding: 0; }
+    .modal-sheet .modal-account-menu .content-modal .btn-close span {
+      color: #727272; }
 
 .wrap-account-menu {
   display: flex;
