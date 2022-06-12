@@ -788,7 +788,7 @@ button {
   box-sizing: border-box;
   padding: 0; }
 .filter-fish .filter-form {
-  height: calc(100vh - 70px);
+  height: calc(100% - 70px);
   overflow: auto;
   box-sizing: border-box;
   padding: 12px; }
